@@ -100,10 +100,13 @@ def main() -> None:
     cfg = yaml.safe_load((ROOT / "config" / "demo.yaml").read_text(encoding="utf-8"))
     cfg["model"] = {"max_tokens_pass1": 2500, "max_tokens_pass2": 4000}
     cfg["chunking"] = {"size": 1500, "overlap": 100}
-    cfg["pass2_prompt"] = "v3"
-    client = OllamaClient(args.build_model, max_tokens=3000, num_ctx=4096)
+    cfg["pass2_prompt"] = "v4"
+    cfg["pass2_cache_variant"] = "v4_relation_centered_20260822"
+    cfg["entity_consolidation"] = {"enabled": True, "cap": 360, "batch_size": 60, "anchor_count": 12}
+    cfg["quality_gate"] = {"enabled": True, "max_isolate_rate": 0.60, "min_edge_node_ratio": 0.50, "max_dropped_relation_rate": 0.55}
+    client = OllamaClient(args.build_model, max_tokens=4000, num_ctx=8192)
     progress = BuildProgress(args.graph_root, args.novels, cases)
-    manifest = {"created": time.strftime("%Y-%m-%d %H:%M:%S"), "model": args.build_model, "chunk_size": 1500, "overlap": 100, "pass2_prompt": "v3", "novels": {}}
+    manifest = {"created": time.strftime("%Y-%m-%d %H:%M:%S"), "model": args.build_model, "chunk_size": 1500, "overlap": 100, "pass2_prompt": "v4", "novels": {}}
     try:
         for novel in args.novels:
             progress.current = novel
@@ -113,8 +116,18 @@ def main() -> None:
             else:
                 print(f"[{novel}] building graph", flush=True)
                 build_case_graph(client, cases[novel], graph_path.parent, cfg, workers=args.workers, resume=True)
+            graph = json.loads(graph_path.read_text(encoding="utf-8"))
+            quality = dict(graph.get("quality") or {})
+            if not quality.get("passed"):
+                raise RuntimeError(f"[{novel}] cached graph is missing a passing quality report")
             data = graph_path.read_bytes()
-            manifest["novels"][novel] = {"path": str(graph_path), "sha256": hashlib.sha256(data).hexdigest(), "mtime_ns": graph_path.stat().st_mtime_ns, "bytes": len(data)}
+            manifest["novels"][novel] = {
+                "path": str(graph_path),
+                "sha256": hashlib.sha256(data).hexdigest(),
+                "mtime_ns": graph_path.stat().st_mtime_ns,
+                "bytes": len(data),
+                "quality": quality.get("metrics") or {},
+            }
             if novel not in progress.completed:
                 progress.completed.append(novel)
             (args.graph_root / "build_manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")

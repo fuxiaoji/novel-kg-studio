@@ -1,4 +1,4 @@
-﻿"""Quick evaluation of Novel KG Studio on the four paper datasets.
+"""Quick evaluation of Novel KG Studio on the four paper datasets.
 
 For each sampled case we compare:
   - graph RAG : pass1 -> pass2 -> merge -> coref -> consolidate -> LLM retrieval -> answer
@@ -28,6 +28,7 @@ from novel_kg_studio.pipeline import run_pass1, run_pass2
 from novel_kg_studio.pipeline.consolidate import consolidate_person_nodes
 from novel_kg_studio.pipeline.coref import repair_graph
 from novel_kg_studio.pipeline.merge import build_graph
+from novel_kg_studio.pipeline.quality import evaluate_graph_quality
 from novel_kg_studio.schema import KeptSpan
 from novel_kg_studio.store import GraphStore
 from novel_kg_studio.store.bm25 import BM25Index
@@ -328,8 +329,15 @@ def build_case_graph(client: Any, case: dict, out_dir: Path, cfg: dict, *, worke
         coref_stats = {"error": str(exc)}
         raise RuntimeError(f"coreference repair failed: {exc}") from exc
     try:
+        consolidation_cfg = dict(cfg.get("entity_consolidation") or {})
         consolidated, consolidation_stats = consolidate_person_nodes(
-            {"nodes": nodes, "edges": edges}, client, out_dir, cap=120, resume=resume
+            {"nodes": nodes, "edges": edges},
+            client,
+            out_dir,
+            cap=int(consolidation_cfg.get("cap") or 360),
+            batch_size=int(consolidation_cfg.get("batch_size") or 60),
+            anchor_count=int(consolidation_cfg.get("anchor_count") or 12),
+            resume=resume,
         )
         nodes, edges = consolidated["nodes"], consolidated["edges"]
     except Exception as exc:
@@ -354,6 +362,18 @@ def build_case_graph(client: Any, case: dict, out_dir: Path, cfg: dict, *, worke
         "nodes": nodes,
         "edges": edges,
     }
+    quality_cfg = dict(cfg.get("quality_gate") or {})
+    quality = evaluate_graph_quality(
+        graph,
+        max_isolate_rate=float(quality_cfg.get("max_isolate_rate") or 0.60),
+        min_edge_node_ratio=float(quality_cfg.get("min_edge_node_ratio") or 0.50),
+        max_dropped_relation_rate=float(quality_cfg.get("max_dropped_relation_rate") or 0.55),
+    )
+    graph["quality"] = quality
+    save_json(out_dir / "quality_report.json", quality)
+    if bool(quality_cfg.get("enabled", False)) and not quality["passed"]:
+        save_json(out_dir / "graph_rejected.json", graph)
+        raise RuntimeError("graph quality gate failed: " + "; ".join(quality["failures"]))
     save_json(graph_path, graph)
     return graph
 

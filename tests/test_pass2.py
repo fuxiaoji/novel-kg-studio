@@ -1,4 +1,9 @@
-from novel_kg_studio.pipeline.pass2_graph import build_pass2_user, parse_pass2_payload, parse_pass2_payload_v2
+from novel_kg_studio.pipeline.pass2_graph import (
+    build_pass2_user,
+    parse_pass2_payload,
+    parse_pass2_payload_v2,
+    pass2_fingerprint,
+)
 
 
 def test_build_pass2_user_numbers_lines():
@@ -65,3 +70,9 @@ def test_parse_pass2_payload_v2_captures_rich_fields():
     assert entities[0]["salience"] == 5
     assert entities[0]["attributes"] == {"role": "exit route"}
     assert relations[1]["decoy"] is True
+
+def test_pass2_fingerprint_separates_prompt_variants():
+    class Span:
+        text = "Poirot arrived."
+
+    assert pass2_fingerprint([Span()], 1500, "v3") != pass2_fingerprint([Span()], 1500, "v4")

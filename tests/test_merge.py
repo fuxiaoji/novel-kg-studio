@@ -35,3 +35,53 @@ def test_merge_resolves_aliases_and_dedupes():
     poirot = next(n for n in nodes if n["name"] == "Hercule Poirot")
     assert poirot["type"] == "person"
 
+def test_merge_two_pass_recovers_ellipsis_and_prunes_ungrounded_isolate():
+    spans = [
+        _span(0, "Detective Poirot quietly stayed at the country villa overnight.", 1),
+    ]
+    records = [
+        {
+            "entities": [
+                {
+                    "name": "Detective Poirot",
+                    "type": "person",
+                    "aliases": ["Poirot"],
+                    "mentions": [{"text": "Detective Poirot", "sentence_index": 0}],
+                },
+                {
+                    "name": "unused object",
+                    "type": "clue_object",
+                    "aliases": [],
+                    "mentions": [{"text": "not in source", "sentence_index": 0}],
+                },
+            ],
+            "relations": [
+                {
+                    "source": "Poirot",
+                    "target": "country villa",
+                    "type": "located_at",
+                    "evidence": "Detective Poirot...the country villa",
+                    "sentence_index": 0,
+                    "confidence": 0.9,
+                }
+            ],
+        },
+        {
+            "entities": [
+                {
+                    "name": "country villa",
+                    "type": "location",
+                    "aliases": [],
+                    "mentions": [{"text": "country villa", "sentence_index": 0}],
+                }
+            ],
+            "relations": [],
+        },
+    ]
+    nodes, edges, stats = build_graph(records, {0: spans[0]}, novel_len=1000, log=lambda msg: None)
+    assert {node["name"] for node in nodes} == {"Detective Poirot", "country villa"}
+    assert len(edges) == 1
+    assert "quietly stayed at the country villa" in edges[0]["evidence"]
+    assert stats["recovered_relation_evidence"] == 1
+    assert stats["dropped_relation_endpoints"] == 0
+    assert stats["pruned_ungrounded_isolates"] == 1

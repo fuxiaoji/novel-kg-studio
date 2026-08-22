@@ -109,18 +109,50 @@ Relation rules:
 - Aim for completeness: 30-60 entities and 40-80 relations per chunk when the text supports it.
 - Never invent facts that are not in the excerpt."""
 
+PASS2_SYSTEM_V4 = """You are building a RELATION-CENTERED knowledge graph from time-ordered detective-novel excerpts.
+Each input line is numbered [i] text.
 
-def pass2_fingerprint(kept_spans: list, size: int) -> str:
+Return strict JSON only:
+{
+  "entities": [
+    {"name":"canonical name","type":"person|location|time_anchor|clue_object|event|evidence_sentence",
+     "aliases":["..."],"description":"one short sentence","salience":3,
+     "attributes":{"role":"..."},
+     "mentions":[{"text":"verbatim continuous span","sentence_index":0}]}
+  ],
+  "relations": [
+    {"source":"entity name","target":"entity name",
+     "type":"located_at|appears_at|belongs_to|mentions|temporal_sequence|supports|contradicts|related_to|motive|means|opportunity|witnessed_by",
+     "evidence":"verbatim continuous span","sentence_index":0,"confidence":0.9,
+     "decoy":false,"importance":3}
+  ]
+}
+
+Hard grounding rules:
+- First identify plot-relevant RELATIONS, then emit only entities participating in at least one relation.
+- Every relation source and target MUST exactly match an emitted entity name or alias in this response.
+- Copy mention text and relation evidence character-for-character from ONE referenced input line.
+- NEVER abbreviate evidence with "..." or "…", reorder words, combine lines, or include [i] line labels.
+- Prefer a smaller connected graph over a long list of isolated objects, places, actions, or statements.
+- Do not create generic mood, prose-description, body-part, or whole-sentence nodes unless essential to a clue.
+- Do not create pronoun entities. Resolve a pronoun only when its referent is clear in the excerpt.
+- Use evidence_sentence only for testimony or statements that directly support or contradict a mystery claim.
+- Aim for 8-24 entities and 12-40 relations when supported. It is valid to return fewer.
+- Names should be stable across excerpts; put surface variants in aliases.
+- Never invent facts."""
+
+
+def pass2_fingerprint(kept_spans: list, size: int, variant: str = "v2") -> str:
     digest = hashlib.sha1()
     for seq, span in enumerate(kept_spans):
         digest.update(f"{seq}\t{span.text}\n".encode("utf-8"))
     digest.update(str(size).encode("utf-8"))
-    digest.update(b"schema_v2")
+    digest.update(f"schema_v2|{variant}".encode("utf-8"))
     return digest.hexdigest()[:12]
 
 
-def pass2_cache_dir(out_dir: Path, kept_spans: list, size: int) -> Path:
-    return out_dir / "pass2" / f"s{size}_{pass2_fingerprint(kept_spans, size)}"
+def pass2_cache_dir(out_dir: Path, kept_spans: list, size: int, variant: str = "v2") -> Path:
+    return out_dir / "pass2" / f"s{size}_{pass2_fingerprint(kept_spans, size, variant)}"
 
 
 def build_pass2_user(lines: list[tuple[int, str]]) -> str:
@@ -332,10 +364,13 @@ def run_pass2(
     packed = chunk_lines(numbered, size=size, prefix="pass2")
     if max_chunks is not None:
         packed = packed[:max_chunks]
-    cache_dir = pass2_cache_dir(out_dir, kept_spans, size)
     max_tokens = int((config.get("model") or {}).get("max_tokens_pass2") or 4000)
     prompt_ver = str(config.get("pass2_prompt") or "v2")
-    if prompt_ver == "v3":
+    cache_variant = str(config.get("pass2_cache_variant") or prompt_ver)
+    cache_dir = pass2_cache_dir(out_dir, kept_spans, size, cache_variant)
+    if prompt_ver == "v4":
+        prompt, max_entities, max_rels = PASS2_SYSTEM_V4, 24, 40
+    elif prompt_ver == "v3":
         prompt, max_entities, max_rels = PASS2_SYSTEM_V3, 60, 80
     else:
         prompt, max_entities, max_rels = PASS2_SYSTEM_V2, 40, 60
