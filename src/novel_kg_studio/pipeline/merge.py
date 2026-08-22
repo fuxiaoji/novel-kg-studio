@@ -22,6 +22,9 @@ class GraphMerger:
         self.dropped_relation_sentence = 0
         self.dropped_relation_evidence = 0
         self.recovered_relation_evidence = 0
+        self.recovered_relation_sentence_index = 0
+        self.recovered_mentions = 0
+        self.skipped_unreferenced_entities = 0
         self.pruned_ungrounded_isolates = 0
 
     def _new_node_id(self) -> str:
@@ -191,39 +194,111 @@ class GraphMerger:
             "dropped_relation_sentence": self.dropped_relation_sentence,
             "dropped_relation_evidence": self.dropped_relation_evidence,
             "recovered_relation_evidence": self.recovered_relation_evidence,
+            "recovered_relation_sentence_index": self.recovered_relation_sentence_index,
+            "recovered_mentions": self.recovered_mentions,
+            "skipped_unreferenced_entities": self.skipped_unreferenced_entities,
             "pruned_ungrounded_isolates": self.pruned_ungrounded_isolates,
         }
         return nodes, edges, stats
 
 
-def _ground_relation_evidence(text: str, evidence: str) -> tuple[str | None, bool]:
-    """Return grounded text; conservatively repair only ordered ellipsis abbreviations."""
-    normalized_text = norm_text(text)
-    normalized_evidence = norm_text(evidence)
-    if not normalized_evidence:
-        return None, False
-    start, end = find_span(text, evidence)
-    if start >= 0:
-        return normalized_text[start:end], False
+_TOKEN_RE = re.compile(r"[a-z0-9]+|[\u4e00-\u9fff]+", re.IGNORECASE)
 
-    pieces = [norm_text(part) for part in re.split(r"(?:\.\.\.|…)", evidence)]
-    pieces = [part for part in pieces if part]
-    if len(pieces) < 2 or any(len(part) < 8 for part in pieces):
+
+def _tokens_with_offsets(value: str) -> list[tuple[str, int, int]]:
+    return [(match.group(0).lower(), match.start(), match.end()) for match in _TOKEN_RE.finditer(value)]
+
+
+def _find_token_sequence(text: str, phrase: str, *, after: int = 0) -> tuple[int, int]:
+    """Find the same lexical sequence while tolerating punctuation only."""
+    text_tokens = _tokens_with_offsets(text)
+    phrase_tokens = [token for token, _, _ in _tokens_with_offsets(phrase)]
+    if not phrase_tokens:
+        return (-1, -1)
+    width = len(phrase_tokens)
+    for start in range(len(text_tokens) - width + 1):
+        if text_tokens[start][1] < after:
+            continue
+        if [token for token, _, _ in text_tokens[start : start + width]] == phrase_tokens:
+            return (text_tokens[start][1], text_tokens[start + width - 1][2])
+    return (-1, -1)
+
+
+def _ground_relation_evidence(text: str, evidence: str) -> tuple[str | None, bool]:
+    """Return an original-text substring; never accept semantic paraphrases."""
+    evidence = str(evidence or "").strip()
+    if not evidence:
+        return None, False
+    raw_start = text.find(evidence)
+    if raw_start >= 0:
+        return text[raw_start : raw_start + len(evidence)], False
+
+    has_ellipsis = bool(re.search(r"(?:\.\.\.|…)", evidence))
+    pieces = [part.strip() for part in re.split(r"(?:\.\.\.|…)", evidence) if part.strip()]
+    if not pieces:
+        return None, False
+    lexical_lengths = [sum(len(token) for token, _, _ in _tokens_with_offsets(part)) for part in pieces]
+    if sum(lexical_lengths) < (16 if has_ellipsis else 12):
+        return None, False
+    if len(pieces) > 1 and any(length < 8 for length in lexical_lengths):
         return None, False
     cursor = 0
     first = -1
     last = -1
     for part in pieces:
-        pos = normalized_text.find(part, cursor)
-        if pos < 0:
+        start, end = _find_token_sequence(text, part, after=cursor)
+        if start < 0:
             return None, False
         if first < 0:
-            first = pos
-        last = pos + len(part)
-        cursor = last
-    if sum(len(part) for part in pieces) < 20:
-        return None, False
-    return normalized_text[first:last], True
+            first = start
+        last = end
+        cursor = end
+    return text[first:last], True
+
+
+def _allowed_line_indices(record: dict[str, Any]) -> list[int]:
+    result: list[int] = []
+    for value in record.get("line_indices") or []:
+        try:
+            result.append(int(value))
+        except (TypeError, ValueError):
+            continue
+    return list(dict.fromkeys(result))
+
+
+def _relocate_mention(
+    kept_by_seq: dict[int, Any], requested_index: int, text: str, allowed: list[int]
+) -> tuple[Any | None, int]:
+    span = kept_by_seq.get(requested_index)
+    if span is not None and find_span(span.text, text)[0] >= 0:
+        return span, requested_index
+    matches = [
+        (kept_by_seq[index], index)
+        for index in allowed
+        if index in kept_by_seq and find_span(kept_by_seq[index].text, text)[0] >= 0
+    ]
+    return matches[0] if len(matches) == 1 else (None, requested_index)
+
+
+def _relocate_relation(
+    kept_by_seq: dict[int, Any], requested_index: int, evidence: str, allowed: list[int]
+) -> tuple[Any | None, str | None, bool, int]:
+    span = kept_by_seq.get(requested_index)
+    if span is not None:
+        grounded, repaired = _ground_relation_evidence(span.text, evidence)
+        if grounded is not None:
+            return span, grounded, repaired, requested_index
+    matches: list[tuple[Any, str, bool, int]] = []
+    for index in allowed:
+        candidate = kept_by_seq.get(index)
+        if candidate is None:
+            continue
+        grounded, repaired = _ground_relation_evidence(candidate.text, evidence)
+        if grounded is not None:
+            matches.append((candidate, grounded, repaired, index))
+    if len(matches) == 1:
+        return matches[0]
+    return None, None, False, requested_index
 
 
 def build_graph(
@@ -234,17 +309,37 @@ def build_graph(
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
     merger = GraphMerger()
 
+    referenced_entity_keys = {
+        key
+        for record in pass2_records
+        for relation in (record.get("relations") or [])
+        for key in (canonical_name(relation.get("source")), canonical_name(relation.get("target")))
+        if key
+    }
+
     # Register every entity and alias before resolving relations. This permits a
     # relation to refer to a canonical entity introduced in a later Pass2 chunk.
     for record in pass2_records:
+        allowed_indices = _allowed_line_indices(record)
         for entity in record.get("entities") or []:
+            entity_keys = {
+                key
+                for key in [canonical_name(entity.get("name")), *(canonical_name(alias) for alias in entity.get("aliases") or [])]
+                if key
+            }
+            if entity_keys.isdisjoint(referenced_entity_keys):
+                merger.skipped_unreferenced_entities += 1
+                merger.pruned_ungrounded_isolates += 1
+                continue
             mention_positions: list[float] = []
             mention_time_positions: list[float] = []
             mention_days: list[int | None] = []
             kept_mentions: list[dict[str, Any]] = []
             for mention in entity.get("mentions") or []:
                 sentence_index = int(mention["sentence_index"])
-                span = kept_by_seq.get(sentence_index)
+                span, actual_index = _relocate_mention(
+                    kept_by_seq, sentence_index, str(mention.get("text") or ""), allowed_indices
+                )
                 if span is None:
                     merger.dropped_mentions += 1
                     continue
@@ -252,7 +347,9 @@ def build_graph(
                 if start < 0:
                     merger.dropped_mentions += 1
                     continue
-                kept_mentions.append(mention)
+                kept_mentions.append({**mention, "sentence_index": actual_index})
+                if actual_index != sentence_index:
+                    merger.recovered_mentions += 1
                 mention_positions.append(span.char_start + start)
                 mention_time_positions.append(span.time_position)
                 mention_days.append(span.day)
@@ -270,6 +367,7 @@ def build_graph(
             )
 
     for record in pass2_records:
+        allowed_indices = _allowed_line_indices(record)
         for relation in record.get("relations") or []:
             source_id = merger.resolve(relation["source"])
             target_id = merger.resolve(relation["target"])
@@ -277,16 +375,19 @@ def build_graph(
                 merger.dropped_relations += 1
                 merger.dropped_relation_endpoints += 1
                 continue
-            span = kept_by_seq.get(int(relation["sentence_index"]))
+            requested_index = int(relation["sentence_index"])
+            span, grounded, recovered, actual_index = _relocate_relation(
+                kept_by_seq, requested_index, str(relation.get("evidence") or ""), allowed_indices
+            )
             if span is None:
                 merger.dropped_relations += 1
-                merger.dropped_relation_sentence += 1
+                if kept_by_seq.get(requested_index) is None:
+                    merger.dropped_relation_sentence += 1
+                else:
+                    merger.dropped_relation_evidence += 1
                 continue
-            grounded, recovered = _ground_relation_evidence(span.text, relation["evidence"])
-            if grounded is None:
-                merger.dropped_relations += 1
-                merger.dropped_relation_evidence += 1
-                continue
+            if actual_index != requested_index:
+                merger.recovered_relation_sentence_index += 1
             if recovered:
                 merger.recovered_relation_evidence += 1
             merger.add_relation(
@@ -305,6 +406,9 @@ def build_graph(
         f"[merge] dropped_mentions={merger.dropped_mentions} dropped_relations={merger.dropped_relations} "
         f"(endpoints={merger.dropped_relation_endpoints}, sentence={merger.dropped_relation_sentence}, "
         f"evidence={merger.dropped_relation_evidence}) recovered_evidence={merger.recovered_relation_evidence} "
+        f"relocated_relations={merger.recovered_relation_sentence_index} "
+        f"relocated_mentions={merger.recovered_mentions} "
+        f"skipped_unreferenced={merger.skipped_unreferenced_entities} "
         f"pruned_ungrounded_isolates={merger.pruned_ungrounded_isolates} "
         f"dedup_relations={merger.deduplicated_relations}"
     )

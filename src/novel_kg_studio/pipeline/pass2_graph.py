@@ -385,7 +385,13 @@ def run_pass2(
         done = 0
         for future in as_completed(futures):
             idx = futures[future]
-            records[idx] = future.result()
+            record = future.result()
+            # Preserve the provenance of every model output. Some local models
+            # occasionally emit chunk-local sentence indexes even though the
+            # prompt displays global indexes. Merge may use this allow-list to
+            # relocate verbatim evidence, but never text outside this chunk.
+            record["line_indices"] = list(packed[idx][1])
+            records[idx] = record
             done += 1
             if done % 20 == 0 or done == len(packed):
                 log(f"[pass2] {done}/{len(packed)} chunks")

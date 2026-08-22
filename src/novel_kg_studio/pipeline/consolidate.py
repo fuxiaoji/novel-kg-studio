@@ -2,12 +2,48 @@
 
 from __future__ import annotations
 
+from difflib import SequenceMatcher
 import hashlib
 from pathlib import Path
 from typing import Any, Callable
 
 from ..cache import load_json, save_json
 from ..schema import norm_text
+from .coref import _generic
+
+
+_TITLE_TOKENS = {
+    "mr", "mrs", "miss", "ms", "m", "mme", "madame", "lady", "lord", "sir",
+    "dr", "doctor", "prof", "professor", "captain", "inspector", "detective",
+}
+_MALE_TITLES = {"mr", "lord", "sir"}
+_FEMALE_TITLES = {"mrs", "miss", "ms", "mme", "madame", "lady"}
+
+
+def _name_parts(value: str) -> tuple[list[str], set[str]]:
+    tokens = norm_text(value).replace(".", " ").replace("-", " ").split()
+    titles = {token for token in tokens if token in _TITLE_TOKENS}
+    return [token for token in tokens if token not in _TITLE_TOKENS], titles
+
+
+def _compatible_names(left: str, right: str) -> bool:
+    """Deterministic guardrail for LLM-proposed translation-name merges."""
+    left_parts, left_titles = _name_parts(left)
+    right_parts, right_titles = _name_parts(right)
+    if not left_parts or not right_parts:
+        return False
+    if (left_titles & _MALE_TITLES and right_titles & _FEMALE_TITLES) or (
+        left_titles & _FEMALE_TITLES and right_titles & _MALE_TITLES
+    ):
+        return False
+    if left_parts == right_parts:
+        return True
+    if set(left_parts).issubset(right_parts) or set(right_parts).issubset(left_parts):
+        return True
+    left_joined = "".join(left_parts)
+    right_joined = "".join(right_parts)
+    ratio = SequenceMatcher(None, left_joined, right_joined).ratio()
+    return left_joined[0] == right_joined[0] and ratio >= 0.65
 
 
 def consolidate_person_nodes(
@@ -26,6 +62,7 @@ def consolidate_person_nodes(
         for node in graph["nodes"]
         if node["type"] == "person"
         and (node.get("degree", 0) > 0 or int(node.get("salience", 0) or 0) >= 3)
+        and not _generic(node["name"])
     ]
     ranked = sorted(
         persons,
@@ -97,11 +134,13 @@ def consolidate_person_nodes(
         ids = list(dict.fromkeys(node_id for node_id in ids if node_id))
         if len(ids) <= 1:
             continue
+        protected_canonicals = set(member_to_canonical.values())
         existing_canonicals = {
             member_to_canonical[node_id]
             for node_id in ids
             if node_id in member_to_canonical
         }
+        existing_canonicals.update(node_id for node_id in ids if node_id in protected_canonicals)
         # Permit an anchor to collect variants across overlapping batches, but
         # reject a transitive bridge whose prior canonical is absent here.
         if len(existing_canonicals) > 1 or any(canonical not in ids for canonical in existing_canonicals):
@@ -111,12 +150,17 @@ def consolidate_person_nodes(
             if existing_canonicals
             else max(ids, key=lambda node_id: by_id[node_id].get("degree", 0))
         )
-        for node_id in ids:
+        compatible_ids = [
+            node_id
+            for node_id in ids
+            if node_id == canonical_id or _compatible_names(by_id[canonical_id]["name"], by_id[node_id]["name"])
+        ]
+        for node_id in compatible_ids:
             if node_id != canonical_id and node_id not in member_to_canonical:
                 member_to_canonical[node_id] = canonical_id
                 merged += 1
         group_examples.append(
-            (by_id[canonical_id]["name"], [by_id[node_id]["name"] for node_id in ids if node_id != canonical_id][:4])
+            (by_id[canonical_id]["name"], [by_id[node_id]["name"] for node_id in compatible_ids if node_id != canonical_id][:4])
         )
 
     base_stats = {

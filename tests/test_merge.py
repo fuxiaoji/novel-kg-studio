@@ -85,3 +85,70 @@ def test_merge_two_pass_recovers_ellipsis_and_prunes_ungrounded_isolate():
     assert stats["recovered_relation_evidence"] == 1
     assert stats["dropped_relation_endpoints"] == 0
     assert stats["pruned_ungrounded_isolates"] == 1
+
+
+def test_merge_relocates_chunk_local_indexes_and_preserves_original_evidence():
+    spans = [
+        _span(48, "An unrelated sentence.", 1),
+        _span(49, "Poirot found the blue diamond inside the locked drawer.", 1),
+    ]
+    records = [
+        {
+            "line_indices": [48, 49],
+            "entities": [
+                {
+                    "name": "Poirot",
+                    "type": "person",
+                    "aliases": [],
+                    "mentions": [{"text": "Poirot", "sentence_index": 1}],
+                },
+                {
+                    "name": "blue diamond",
+                    "type": "clue_object",
+                    "aliases": [],
+                    "mentions": [{"text": "blue diamond", "sentence_index": 1}],
+                },
+            ],
+            "relations": [
+                {
+                    "source": "Poirot",
+                    "target": "blue diamond",
+                    "type": "related_to",
+                    "evidence": "Poirot found the blue diamond...",
+                    "sentence_index": 1,
+                    "confidence": 0.9,
+                }
+            ],
+        }
+    ]
+    nodes, edges, stats = build_graph(
+        records, {span.seq: span for span in spans}, novel_len=1000, log=lambda msg: None
+    )
+    assert len(nodes) == 2
+    assert len(edges) == 1
+    assert edges[0]["evidence"] == "Poirot found the blue diamond"
+    assert stats["recovered_relation_sentence_index"] == 1
+    assert stats["recovered_mentions"] == 2
+    assert stats["recovered_relation_evidence"] == 1
+
+
+def test_merge_repairs_punctuation_only_but_rejects_paraphrase():
+    span = _span(0, "She is afraid of divorce, and therefore accepted his demands.", 1)
+    entities = [
+        {"name": "She", "type": "person", "aliases": [], "mentions": [{"text": "She", "sentence_index": 0}]},
+        {"name": "divorce", "type": "event", "aliases": [], "mentions": [{"text": "divorce", "sentence_index": 0}]},
+    ]
+    records = [
+        {
+            "line_indices": [0],
+            "entities": entities,
+            "relations": [
+                {"source": "She", "target": "divorce", "type": "motive", "evidence": "She is afraid of divorce.", "sentence_index": 0, "confidence": 0.9},
+                {"source": "She", "target": "divorce", "type": "motive", "evidence": "She feared that her marriage would end.", "sentence_index": 0, "confidence": 0.9},
+            ],
+        }
+    ]
+    _, edges, stats = build_graph(records, {0: span}, novel_len=1000, log=lambda msg: None)
+    assert len(edges) == 1
+    assert edges[0]["evidence"] == "She is afraid of divorce"
+    assert stats["dropped_relation_evidence"] == 1
