@@ -1,0 +1,197 @@
+[
+    {
+        "novel_id": 117,
+        "num_paragraphs": 2097,
+        "time_cost": "7H",
+        "questions": [
+            {
+                "question": " The true purpose of Elena Marshall going to Fairy Bay is ( ).",
+                "options": {
+                    "A": " Browse the seaside",
+                    "B": " Going on a date with Patrick",
+                    "C": "Sunbathing",
+                    "D": " See other people"
+                },
+                "answer": "D",
+                "distraction": {
+                    "A": " The scenery at Fairy Bay is delightful.",
+                    "B": " Patrick Redfern was utterly enchanted by Mrs. Marshall.",
+                    "C": " Today the weather is good."
+                },
+                "reasoning": [
+                    " Poirot told Marshall that he should not tell anyone that he had seen her.",
+                    " Patrick Redford also arrived, and it was clear that he was looking for Elena Marshall as well.",
+                    " Poirot said that Elena Marshall was not a woman who liked to be alone, she only lived in the admiration of men.",
+                    " Based on this inference, Elena Marshall's visit to Elven Bay must have been to meet someone, and this person is not Patrick Redford."
+                ],
+                "clue_position": [
+                    883,
+                    884,
+                    890,
+                    -1
+                ],
+                "answer_position": 1106
+            },
+            {
+                "question": " The clues on Linda's fireplace mantel show that ( )",
+                "options": {
+                    "A": " Someone was cooking in the room.",
+                    "B": " Someone wants to burn the evidence of the ritual",
+                    "C": " Smoking residue left by someone",
+                    "D": " Room usage time is too long."
+                },
+                "answer": "B",
+                "distraction": {
+                    "A": " What have you been burning?",
+                    "C": " There is fire and debris.",
+                    "D": " The fireplace mantle has been burning"
+                },
+                "reasoning": [
+                    " Linda hates Mrs. Marshall and has thoughts of killing her.",
+                    " Linda was reading in the bookstore, putting back books she didn't like, and then picked up a small book with a brown leather cover that she was holding, lost in time while reading it.",
+                    " The room contains melted wax from burnt candles, scraps of green paper or cardstock, and scribbled words '…and so on…', along with a common needle, remnants of burned animal material, possibly hair. ",
+                    " On the left side of the fireplace, there is a shelf with a row of books. There is a Bible, an old collection of Shakespeare's plays, \"The Marriage of William Ash\" written by Lady Hume, \"Younger Sister\" by Charlotte Yong, \"The Young Persons of Shropshire\" by Charlotte Yong, \"The Cathedral Murder\" by T.S. Eliot, \"Saint Joan\" by George Bernard Shaw, \"Gone with the Wind\" by Margaret Mitchell, and \"The Burning Court\" by Dashiell Hammett, all of which are about stepmothers.",
+                    " Poirot discovered that there was another book inserted between these pages, a smaller one with a brown leather cover, inscribed with the words, 'I was right... Yes, I was right, but the other thing – could it possibly be true? No, impossible, unless...'",
+                    " Poirot discovered that the small book with the brown leather cover was titled \"The History of Sorcery and Invisible Poison\" ",
+                    " Based on the clues, Linda does not like Mrs. Marshall, the books in the room are about stepmothers, she has bought books on witchcraft to study methods of murder, and there are wax and needles, hair, etc. in the fireplace. Therefore, the items burned in the fireplace are evidence that Linda was practicing witchcraft to kill Mrs. Marshall. "
+                ],
+                "clue_position": [
+                    208,
+                    345,
+                    1272,
+                    1275,
+                    1276,
+                    1671,
+                    -1
+                ],
+                "answer_position": 1983
+            },
+            {
+                "question": " Miss Dunnery's real purpose for returning to the hotel was ( ).",
+                "options": {
+                    "A": " Bring the forgotten sunglasses",
+                    "B": " Exonerate oneself",
+                    "C": " Goodbye, Marshall",
+                    "D": " Testifying for Marshall"
+                },
+                "answer": "C",
+                "distraction": {
+                    "A": " I forgot to wear sunglasses.",
+                    "B": " Explain why she is not at Sunset Cliff",
+                    "D": " Mr. Marshall's suspicions were completely ruled out."
+                },
+                "reasoning": [
+                    " Miss Dunnely stated that she had returned to the hotel at eleven fifteen.",
+                    " Miss Darnley said she came back to get her sunglasses, and saw Mr. Marshall by chance. Seeing such good weather, she wanted to ask Mr. Marshall to go out. ",
+                    " Chief Inspector Colgate suggests that Mrs. Gardner hinted that Miss Danglars was very fond of M. de Morcerf.",
+                    " Based on the clues provided, Miss Dunnely is in love with Mr. Marshall, and she has returned to the hotel to see him again."
+                ],
+                "clue_position": [
+                    1399,
+                    1405,
+                    1415,
+                    -1
+                ],
+                "answer_position": 1416
+            },
+            {
+                "question": " The motive behind Mrs. Redford's involvement in the case was ( ).",
+                "options": {
+                    "A": " Envy Mrs. Marshall's beauty",
+                    "B": " Having marital issues with your husband",
+                    "C": " Wanting to Make Your Husband Value You",
+                    "D": " Because of the improper relationship between the husband and Mrs. Marshall "
+                },
+                "answer": "D",
+                "distraction": {
+                    "A": " Mrs. Marshall was described as a bewitching female sorceress.",
+                    "B": " Patrick Redford was enchanted by Mrs. Marshall ",
+                    "C": " Mrs. Redford is very fond of Patrick Redford."
+                },
+                "reasoning": [
+                    " Patrick Redford expresses his deep affection for Elena. ",
+                    " Detective Chief Inspector Coghett said that Mrs. Redfin was very fond of her husband, Patrick Redfin. ",
+                    " Linda says that because Redfin's husband is dating Alicia, she thinks Redfin would want Alicia to die.",
+                    " Kristin Redfern described Mrs. Marshall as being useless, having no value, lacking intelligence and wisdom, and being a degenerate.",
+                    " Based on the above clues, Mrs. Redfin is deeply in love with her husband, but she is extremely disgusted with Mrs. Marshall due to her husband's inappropriate relationship with Marshall, so her motive for being involved in the case is due to Mrs. Marshall's inappropriate relationship with Patrick Redfin. "
+                ],
+                "clue_position": [
+                    441,
+                    866,
+                    884,
+                    1086,
+                    -1
+                ],
+                "answer_position": 2012
+            },
+            {
+                "question": " Mr. Marshall in the murder case ( )",
+                "options": {
+                    "A": " He has no motive to commit a crime.",
+                    "B": " He has no doubts about his wife's relationship with Redford.",
+                    "C": " He has no alibi",
+                    "D": " He has suspicion of killing Mrs. Marshall"
+                },
+                "answer": "D",
+                "distraction": {
+                    "A": " Our marriage is very happy.",
+                    "B": " I never listen to gossip and rumors.",
+                    "C": " Go back to the room at 10:50, start typing emails, and keep typing until 11:50. Then change into tennis gear."
+                },
+                "reasoning": [
+                    " Forensic experts stated that Mrs. Marshall was strangled to death, with the killer having a strong grip. ",
+                    " Mrs. Marshall is actually a wealthy woman and has not made a will.",
+                    " Mrs. Marshall and Patrick Redford are attracted to each other.",
+                    " Polly encountered Mrs. Marshall and Patrick Redford together on the road, and shortly afterwards met a tense-faced Marshall. Therefore, it seems that Mr. Marshall is aware of their relationship.",
+                    " The maid heard Mr. Marshall typing around 10:55, and after going to another room to clean, she could no longer hear the typing sound.",
+                    " Based on the clues, Marshall has a motive for murder and an opportunity to commit the crime, and he is a male, fitting the profile of a suspect."
+                ],
+                "clue_position": [
+                    567,
+                    788,
+                    442,
+                    802,
+                    1294,
+                    -1
+                ],
+                "answer_position": 2046
+            },
+            {
+                "question": " The murderer of Mrs. Marshall is ( ).",
+                "options": {
+                    "A": " The Redfin couple",
+                    "B": " Mr. Marshall",
+                    "C": " Extort Marshall's wife",
+                    "D": " Rosamond Darnley"
+                },
+                "answer": "A",
+                "distraction": {
+                    "B": " Mr. Marshall met with Mrs. Marshall and Patrick Redford for a date.",
+                    "C": " Elena Marshall was speaking to a person who was threatening her the day before.",
+                    "D": " Mrs. Gardner hinted that Miss Darnley was very fond of Mr. Marshall."
+                },
+                "reasoning": [
+                    " Patrick Redford expresses his deep love for Elena. ",
+                    " Mrs. Marshall has a lot of property.",
+                    " Alice Corey was strangled to death in the Caisarine of Black Mountain, where she married Edward Corey against the objections of her relatives and took out a life insurance policy with him as the beneficiary. She spent a considerable amount of money on the policy. ",
+                    " A jogging physical education teacher, Kristen Davila, provided an alibi for Edward Caulkin.",
+                    " The Redfern couple were identified by Surrey police as Edward Colgate and Christine DeVere.",
+                    " Miss Bustle said that Mrs. Redfever's fear of heights was even worse than hers. A few days ago, on the cliff-top path to Harford, Mrs. Redfever was so dizzy and disoriented that she clung to Miss Bustle tightly. ",
+                    " Christine Redfern carelessly ran across the narrow footbridge.",
+                    " Based on the above clues, Patrick Redfern approached Mrs. Marshall only to deceive her for money, as Patrick Redfern had previously murdered his wife and Redfern's wife provided an alibi for him. This case is very similar to the previous one. Additionally, Christine Redfern claimed to be afraid of heights but could run across a narrow footbridge without concern, indicating that she was lying. Therefore, it can be inferred that Patrick and Christine Redfern killed Mrs. Marshall."
+                ],
+                "clue_position": [
+                    441,
+                    787,
+                    1868,
+                    1869,
+                    2014,
+                    59,
+                    1936,
+                    -1
+                ],
+                "answer_position": 2046
+            }
+        ]
+    }
+]

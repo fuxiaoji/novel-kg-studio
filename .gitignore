@@ -1,0 +1,22 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+.venv_recovered/
+
+# ---- Runtime logs / process artifacts (started via .ps1 / Start-Process) ----
+*.log
+*.err
+*.pid
+*.bak
+*.pre_json_repair.bak
+
+# ---- Vendored / regenerable browser bundles ----
+plotly_inline.js
+
+# ---- Experiment outputs: heavy data stays local; keep markdown reports only ----
+outputs/**
+!outputs/**/
+!outputs/**/*.md

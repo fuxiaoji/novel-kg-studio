@@ -1,0 +1,297 @@
+[
+    {
+        "novel_id": 104,
+        "num_paragraphs": 1899,
+        "time_cost": "8H",
+        "questions": [
+            {
+                "question": " Why did Miss Marple insist on wearing the gem to the Adler's hunting lodge?",
+                "options": {
+                    "A": " Miss Marple thinks it is very attractive to wear jewels while acting in films.",
+                    "B": " Lady Yadley requested Miss Marvell to wear jewels.",
+                    "C": " Miss Marvell is afraid that the gem will be stolen.",
+                    "D": " Miss Marvell could not bear other women to outshine her in jewelry."
+                },
+                "answer": "D",
+                "distraction": {
+                    "A": " Miss Marple will be performing in the movie.",
+                    "B": " Lady Yadley is a key figure.",
+                    "C": " Someone left a note saying they would take her gemstones. "
+                },
+                "reasoning": [
+                    " Miss Marvell cherishes the flawless gem immensely every day.",
+                    " Yadley has collected some very valuable jewelry, including a large diamond.",
+                    " Miss Marvell's husband knows Mrs. Addley.",
+                    " Mrs. Yadley and Miss Marvell each own \"Eastern Star\" and \"Western Star\", and it is considered interesting to compare the two gems.",
+                    " Based on the above clues, Miss Marple does not believe that Lady Adler's gemstones can match her own, so she insists on wearing the gemstones to compare them. "
+                ],
+                "clue_position": [
+                    58,
+                    69,
+                    71,
+                    76,
+                    -1
+                ],
+                "answer_position": 85
+            },
+            {
+                "question": " 200] Why doesn't Mrs. Yadley want to sell the gem?",
+                "options": {
+                    "A": " Mrs. Addley is afraid of being discovered that the diamond has been replaced with a fake.",
+                    "B": " Mrs. Addley is reluctant to sell the diamond.",
+                    "C": " Lady Yardeley believes that diamonds cannot be sold for much money.",
+                    "D": " Lady Yadley wanted to leave the diamond to her child."
+                },
+                "answer": "A",
+                "distraction": {
+                    "B": " Mrs. Yadley may not want to part with this beautiful diamond.",
+                    "C": " It may be due to bidding too low to give up cheap selling",
+                    "D": " Mrs. Yoder loves her children very much."
+                },
+                "reasoning": [
+                    " Miss Marvell said that her diamond was bought by Rolf three years ago from a Chinese man in San Francisco.",
+                    " A few years ago, there were rumors that Lord Aldridge was involved with some female friends and linked the name of Lady Aldridge with Rolf.",
+                    " Mrs. Yadley and Miss Marvell each own the \"Eastern Star\" and the \"Western Star\", respectively, and both are identical in shape and size.",
+                    " Rolf happened to get the 'Western Star' which is exactly the same as the 'Eastern Star' while he was tangled with Mrs. Addley.",
+                    " Mrs. Addley is very fond of her children.",
+                    " Lord Yaldri wants to sell the diamond to change his current lifestyle.",
+                    " Mrs. Addley is firmly against selling the diamond necklace. ",
+                    " The ransom letter received by Mrs. Addley was a copy of the letter sent to Miss Marple, both sent through the mail. ",
+                    " Based on the above clues, Rolf had an affair with Lady Adele, during which he deceived Lady Adele to obtain the real diamond. When Lord Adele wanted to sell the diamond, Lady Adele strongly opposed, fearing that people would discover that the diamond had been replaced with a fake, and therefore refused to sell it."
+                ],
+                "clue_position": [
+                    45,
+                    61,
+                    76,
+                    -1,
+                    183,
+                    187,
+                    162,
+                    112,
+                    -1
+                ],
+                "answer_position": 283
+            },
+            {
+                "question": " The thief of the diamond is ( )",
+                "options": {
+                    "A": " Miss Marvell",
+                    "B": " Lord Yardley",
+                    "C": " Mrs. Addley",
+                    "D": " Gregory Rolf"
+                },
+                "answer": "D",
+                "distraction": {
+                    "A": " Key figures in the case",
+                    "B": " Lord Yardley may have staged his own disappearance.",
+                    "C": " Key figures in the case"
+                },
+                "reasoning": [
+                    " Miss Marvell said that her diamond was bought by Gregory three years ago from a Chinese man in San Francisco.",
+                    " The total insurance value of this precious gem is as high as 50,000 pounds.",
+                    " There were rumors a few years ago that Lord Addis was involved with some female friends and linked Lady Addis with the name of Rolf.",
+                    " Mrs. Yaderly and Miss Marvell each possess an 'Eastern Star' and a 'Western Star', which are identical in shape and size. ",
+                    " Miss Marple's diamond, which she obtained as 'The Western Star' while Rolf was entangled with Mrs. Addley, indicates that the 'Eastern Star' had been replaced with a fake at that time.",
+                    " There is a buyer who intends to purchase this diamond.",
+                    " Mrs. Yalden firmly opposed selling the diamond necklace.",
+                    " If a diamond is purchased, it will be found to be a fake diamond.",
+                    " Poirot suggests not to wear the gemstones on Friday to the Adler Estate. ",
+                    " Rolf, however, said that Marvell was completely obsessed with the idea of other women being better at jewelry than her, and could not bear the thought of it. She would definitely bring it. ",
+                    " Marvell said that Rolf was just talking nonsense. ",
+                    " Explaining that Marvell did not have such thoughts, it was Rolf who stirred Marvell Miss's competitive spirit.",
+                    " The clues suggest that Miss Marple's diamond is insured for £50,000, and it is likely that Rolf tricked Mrs. Ardley into giving him the diamond, which Mrs. Ardley was concerned about selling, and may have contacted Rolf, leading Rolf to encourage Mrs. Ardley to bring the gem.",
+                    " The fake Rolf, who stole Miss Marple's diamond, had an upward slanting eye like an Oriental.",
+                    " Rolf disguised himself in a way that made him appear to be Chinese.",
+                    " Based on the above clues, Rolf once blackmailed Lady Adele with diamonds, and now, in order to prevent the truth from being exposed, he pretended to steal the fake diamonds and then disguised himself as a Chinese person to steal the real diamonds. "
+                ],
+                "clue_position": [
+                    45,
+                    27,
+                    61,
+                    76,
+                    -1,
+                    187,
+                    162,
+                    -1,
+                    84,
+                    85,
+                    86,
+                    -1,
+                    -1,
+                    246,
+                    -1,
+                    -1
+                ],
+                "answer_position": 279
+            },
+            {
+                "question": " The person who killed Mr. Maltravers is ( ).",
+                "options": {
+                    "A": " Mr. Maltravas himself",
+                    "B": " Dr. Ralph Bernard",
+                    "C": " Mrs. Martellas",
+                    "D": " Captain Black"
+                },
+                "answer": "C",
+                "distraction": {
+                    "A": " Suicide Risk",
+                    "B": " Major suspect related to the case",
+                    "D": " Important suspects related to this case"
+                },
+                "reasoning": [
+                    " Mr. Martelavas has taken out a high insurance policy.",
+                    " Mr. Martelass has suffered heavy losses recently and is on the brink of bankruptcy.",
+                    " Mr. Martell was found dead with blood on his lips, but most of the bleeding occurred internally. ",
+                    " Black once told the Maltres couple a story about a man who committed suicide with a shotgun at a particular spot on the farm.",
+                    " In summary, Mr. Maltravers' near bankruptcy and Mrs. Maltravers' inspiration from Black's story led her to tempt him into taking out a large insurance policy and then murder him. "
+                ],
+                "clue_position": [
+                    304,
+                    317,
+                    327,
+                    429,
+                    -1
+                ],
+                "answer_position": 479
+            },
+            {
+                "question": " The person who directly killed Harington Pace was ( )",
+                "options": {
+                    "A": " Harlington Pace",
+                    "B": " Mr. Harvardling",
+                    "C": " Mrs. Emery",
+                    "D": " Mrs. Harling"
+                },
+                "answer": "D",
+                "distraction": {
+                    "A": " Suicide possibility",
+                    "B": " Key Characters in the Case",
+                    "C": " Ex-housekeeper"
+                },
+                "reasoning": [
+                    " Harlington Pace has a considerable fortune.",
+                    " Mr. Havelin is a man without moral principles.",
+                    " Mr. Haveling left the crime scene at 6:15, proving that he was not present at the time of the incident.",
+                    " A brown paper package was found wedged between the rails on the route that Mr. Harrington's train was traveling on, containing the guns that the police were searching for. ",
+                    " The register of London agencies has never had a female housekeeper's name on it.",
+                    " The housekeeper went upstairs to call Mrs. Haveling, and then she disappeared after Mrs. Haveling came down. ",
+                    " Mrs. Havelin and the housekeeper have never appeared together, and there is no mention of a housekeeper at all, which suggests that the housekeeper is a disguise of Mrs. Havelin. ",
+                    " In summary, the Harlings coveted Harrington Peas' property, so Mr. Harling fabricated an alibi, while Mrs. Harling disguised herself as a housekeeper and murdered Harrington Peas. "
+                ],
+                "clue_position": [
+                    706,
+                    792,
+                    764,
+                    769,
+                    784,
+                    735,
+                    -1,
+                    -1
+                ],
+                "answer_position": 806
+            },
+            {
+                "question": " The thief of bonds is ( ).",
+                "options": {
+                    "A": " Emily Fagre",
+                    "B": " Mr. Wawasu",
+                    "C": " Philip Ricci",
+                    "D": " Mr. Xiao"
+                },
+                "answer": "D",
+                "distraction": {
+                    "A": " The complainant may have staged the incident himself.",
+                    "B": " Key figures in the case",
+                    "C": " The person responsible for completing the bond delivery "
+                },
+                "reasoning": [
+                    " The hard case was scratched and had marks of forceful hacking, indicating someone had tried to forcefully open the lock.",
+                    " The thief had the key from the beginning, and each key was unique; the marks on the suitcase were deliberately faked.",
+                    " Bonds cannot be taken on board or hidden on the ship, so the bonds have been replaced before boarding.",
+                    " The keys were custom-made by Mr. Xiao, and Mr. Xiao and his colleague keep two keys, with one held by Mr. Richie.",
+                    " Mr. Xiao took a leave of absence two weeks ago due to asthma.",
+                    " Mr. Ventura, an elderly gentleman with glasses who lives next to Philip Richie, is quite sick and has hardly left his cabin. He is one of the last people to disembark the ship. ",
+                    " Mr. Xiao disguised himself as Fontaine and created obvious signs of tampering on the box, disguising it as a theft case. ",
+                    " Based on the clues, Mr. Xiao initially used the key to open the box and replace the real bond with a fake one. He was afraid that someone would open the bond package and discover it was a fake, so he pretended to be a patient and planned a fake theft."
+                ],
+                "clue_position": [
+                    858,
+                    861,
+                    870,
+                    882,
+                    886,
+                    908,
+                    -1,
+                    -1
+                ],
+                "answer_position": 942
+            },
+            {
+                "question": " The fundamental reason for Mr. Breen's suicide was ( )",
+                "options": {
+                    "A": " He was exposed for murdering someone.",
+                    "B": " He suffers from a severe psychological disorder.",
+                    "C": " He found out that he was a leper.",
+                    "D": " He is threatened by others."
+                },
+                "answer": "C",
+                "distraction": {
+                    "A": " Possible Causes of Suicide",
+                    "B": " Possible reasons for suicide",
+                    "D": " Possible Causes of Suicide"
+                },
+                "reasoning": [
+                    " Young Rupert Breen is a beachcomber living on the South Pacific Islands, where skin diseases are prevalent. ",
+                    " Mr. Brennan wrote in the letter he left behind that it was better for him to be dead, as he was a leper and a homeless man. ",
+                    " Dr. Ames is a renowned doctor who joined the expedition team due to his professional skills and had a prior acquaintance with Mr. Brennan.",
+                    " Mr. Brennan has not left a will.",
+                    " In summary, Dr. Eames took advantage of Breen's wealth, as a well-known doctor and a friend of Breen, he could easily infect Breen with the disease. When Breen heard that Dr. Eames had leprosy, he did not suspect anything and committed suicide in despair."
+                ],
+                "clue_position": [
+                    987,
+                    987,
+                    976,
+                    1079,
+                    -1
+                ],
+                "answer_position": 1121
+            },
+            {
+                "question": " The thief who stole the jewels from the Metropolitan Museum is ( ).",
+                "options": {
+                    "A": " Mrs. Opalson",
+                    "B": " Mr. Opalson",
+                    "C": " Maid Saladin",
+                    "D": " Male and female servers"
+                },
+                "answer": "D",
+                "distraction": {
+                    "A": " Main Characters in the Case",
+                    "B": " Main Characters in the Case",
+                    "C": " Suspect in the case"
+                },
+                "reasoning": [
+                    " Anyone entering the room must have the maid Celestine present.",
+                    " The maid, Celsine, took her first departure from the room after 12 seconds, and the second after 15 seconds.",
+                    " Taking out the necklace and locking the box took forty-six seconds.",
+                    " Due to time constraints, the waitress is unable to retrieve the necklace, let alone hide it.",
+                    " There is an unsealed room covered in dust, and there is a rectangular pattern on the table by the window.",
+                    " The server did not perform their duties properly, and someone recently placed a box-shaped object on the table. ",
+                    " The drawers of the vanity table were coated with talcum powder to make them slide more smoothly when pulled out.",
+                    " Based on the clues, the female server took advantage of the French maid leaving the room to quickly open the jewelry box, take out the necklace, and pass the jewelry to the male server. However, their tracks were eventually exposed due to the square mark left by the male server when he placed the jewelry box back."
+                ],
+                "clue_position": [
+                    1194,
+                    1263,
+                    1267,
+                    -1,
+                    1294,
+                    -1,
+                    1349,
+                    -1
+                ],
+                "answer_position": 1373
+            }
+        ]
+    }
+]

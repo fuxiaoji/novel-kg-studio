@@ -1,0 +1,72 @@
+novel_path: ../kg-detect/datasets/external/detectiveqa/novel_103.txt
+question: "How did the killer leave the scene?"
+output_dir: outputs/demo
+
+model:
+  name: deepseek-chat
+  temperature: 0.0
+  max_tokens_pass1: 2500
+  max_tokens_pass2: 4000
+  retries: 3
+
+chunking:
+  size: 1500
+  overlap: 100
+
+pass1_workers: 8
+pass2_workers: 8
+
+retrieval:
+  k1: 8
+  k2: 12
+  k3: 15
+
+viz:
+  time_frames: 12
+  max_edge_traces: 1500
+
+coref:
+  enabled: true
+  batch_size: 8
+  window: 1
+
+entity_consolidation:
+  enabled: true
+  cap: 150
+
+question_set:
+  - question: "How did the killer leave the scene?"
+    mask: 1.0
+    choices: ["Through the front door", "Through the backdoor", "Through the window", "Through the Roof"]
+  - question: "Who killed Mr. Renault?"
+    mask: 1.0
+    choices: ["Jack Renault", "Marte Daubreuil", "Bella Duveen", "Madame Berodsky"]
+  - question: "What weapon was used in the murder?"
+    mask: 1.0
+    choices: ["Rope", "paper knife", "Letter opener", "Statue"]
+  - question: "Who was the accomplice of the killer?"
+    mask: 1.0
+    choices: ["Bella Duveen", "Jack Renault", "Marte Daubreuil", "Madame Berodsky"]
+  - question: "What did the killer use to cover the footprints?"
+    mask: 1.0
+    choices: ["Gardener's boots", "Shovel", "rake", "A coat"]
+  - question: "Who was the woman Jack Renault loved?"
+    mask: 0.65
+    choices: ["Marte Daubreuil", "Bella Duveen", "Danielle", "The actress Cinderella"]
+  - question: "Who is the millionaire found dead at the villa?"
+    mask: 0.55
+    choices: ["Mr. Stoner", "Monsieur Alt", "Jack Renault", "Mr. Renault"]
+
+novels:
+  "103":
+    novel_path: ../kg-detect/datasets/external/detectiveqa/novel_103.txt
+    anno_path: ../kg-detect/datasets/external/detectiveqa/anno_103.json
+    output_dir: outputs/demo
+  "104":
+    novel_path: datasets/104.txt
+    anno_path: datasets/104.json
+    output_dir: outputs/demo/novel_104
+  "117":
+    novel_path: datasets/117.txt
+    anno_path: datasets/117.json
+    output_dir: outputs/demo/novel_117

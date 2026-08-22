@@ -1,0 +1,42 @@
+{
+  "protocol_version": "dqa60-single-qwen35-9b-v1",
+  "answer_model": "qwen3.5:9b",
+  "graph_build_model": "qwen3.5:9b",
+  "thinking": "disabled",
+  "external_api": false,
+  "mask": "unmasked",
+  "novels": [
+    "15", "16", "25", "26", "27", "28", "29", "30", "31", "33",
+    "40", "53", "56", "79", "81", "82", "83", "84", "87", "90",
+    "93", "97", "99", "100", "103", "104", "105", "106", "107", "108",
+    "109", "110", "114", "116", "117", "118", "120", "121", "124", "126",
+    "127", "128", "130", "132", "133", "134", "136", "137", "138", "140",
+    "142", "144", "145", "149", "150", "151", "198", "203", "209", "219"
+  ],
+  "held_out_unused_novels": ["241", "252"],
+  "batches": {
+    "batch01": ["26", "27", "28", "30", "31", "33", "40", "53", "56", "79"],
+    "batch02": ["15", "16", "25", "29", "81", "82", "83", "84", "87", "90"],
+    "batch03": ["93", "97", "99", "100", "103", "104", "105", "106", "107", "108"],
+    "batch04": ["109", "110", "114", "116", "117", "118", "120", "121", "124", "126"],
+    "batch05": ["127", "128", "130", "132", "133", "134", "136", "137", "138", "140"],
+    "batch06": ["142", "144", "145", "149", "150", "151", "198", "203", "209", "219"]
+  },
+  "graph_methods": {
+    "G1": "C15 original-order option-conditioned graph retrieval",
+    "G2": "C21 reversed-order option-conditioned graph retrieval mapped to original labels",
+    "G3": "C23 cyclic-order option-conditioned graph retrieval mapped to original labels",
+    "G4": "pure-9B original/reversed stability gate; otherwise pure-9B tail",
+    "G5": "pure-9B three-permutation majority; no-majority fallback to pure-9B tail"
+  },
+  "baselines": {
+    "B1": "tail window, 50000 characters",
+    "B2": "full-novel map-reduce compression",
+    "B3": "ordinary RAG without graph, BGE-M3 plus BM25 RRF"
+  },
+  "frozen_after_novels": [
+    "15", "16", "25", "26", "27", "28", "29", "30", "31", "33",
+    "40", "53", "56", "79", "81", "82", "83", "84", "87", "90"
+  ],
+  "selection_note": "The two remaining local DetectiveQA novels 241 and 252 are excluded before large-scale execution and retained for optional final blind audit."
+}
