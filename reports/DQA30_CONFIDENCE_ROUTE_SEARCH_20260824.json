@@ -1,0 +1,392 @@
+{
+  "metadata": {
+    "pure_graph_calibration": "legacy 20 novels only; evaluated on new 10 novels",
+    "composite_calibration": "exploratory leave-one-novel-out on new 10 novels",
+    "warning": "Rules were designed after viewing aggregate validation results and require a new holdout."
+  },
+  "baselines": {
+    "B1": {
+      "correct": 29,
+      "total": 70,
+      "accuracy": 0.4142857142857143
+    },
+    "B2": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142
+    },
+    "B3": {
+      "correct": 35,
+      "total": 70,
+      "accuracy": 0.5
+    },
+    "G1": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142
+    },
+    "G5": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142
+    }
+  },
+  "pure_graph": {
+    "old20_lono_by_blend": {
+      "0.0": 0.5060975609756098,
+      "0.25": 0.5060975609756098,
+      "0.5": 0.5,
+      "0.75": 0.5,
+      "1.0": 0.5
+    },
+    "selected_blend": 0.0,
+    "frozen_new10": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142,
+      "vs_B1": {
+        "wins": 15,
+        "losses": 8,
+        "exact_p": 0.21003961563110352
+      },
+      "vs_B2": {
+        "wins": 14,
+        "losses": 14,
+        "exact_p": 1.0
+      },
+      "vs_B3": {
+        "wins": 6,
+        "losses": 5,
+        "exact_p": 1.0
+      }
+    }
+  },
+  "fixed_composites_posthoc": {
+    "G1": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142,
+      "vs_B1": {
+        "wins": 16,
+        "losses": 9,
+        "exact_p": 0.2295229434967041
+      },
+      "vs_B2": {
+        "wins": 14,
+        "losses": 14,
+        "exact_p": 1.0
+      },
+      "vs_B3": {
+        "wins": 3,
+        "losses": 2,
+        "exact_p": 1.0
+      }
+    },
+    "G5": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142,
+      "vs_B1": {
+        "wins": 15,
+        "losses": 8,
+        "exact_p": 0.21003961563110352
+      },
+      "vs_B2": {
+        "wins": 14,
+        "losses": 14,
+        "exact_p": 1.0
+      },
+      "vs_B3": {
+        "wins": 6,
+        "losses": 5,
+        "exact_p": 1.0
+      }
+    },
+    "B2_if_unanimous_else_G1": {
+      "correct": 39,
+      "total": 70,
+      "accuracy": 0.5571428571428572,
+      "vs_B1": {
+        "wins": 17,
+        "losses": 7,
+        "exact_p": 0.06391465663909912
+      },
+      "vs_B2": {
+        "wins": 8,
+        "losses": 5,
+        "exact_p": 0.5810546875
+      },
+      "vs_B3": {
+        "wins": 10,
+        "losses": 6,
+        "exact_p": 0.454498291015625
+      }
+    },
+    "B3_if_unanimous_else_G1": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142,
+      "vs_B1": {
+        "wins": 16,
+        "losses": 9,
+        "exact_p": 0.2295229434967041
+      },
+      "vs_B2": {
+        "wins": 14,
+        "losses": 14,
+        "exact_p": 1.0
+      },
+      "vs_B3": {
+        "wins": 1,
+        "losses": 0,
+        "exact_p": 1.0
+      }
+    },
+    "G1_if_unanimous_else_B2": {
+      "correct": 33,
+      "total": 70,
+      "accuracy": 0.4714285714285714,
+      "vs_B1": {
+        "wins": 13,
+        "losses": 9,
+        "exact_p": 0.5234670639038086
+      },
+      "vs_B2": {
+        "wins": 6,
+        "losses": 9,
+        "exact_p": 0.60723876953125
+      },
+      "vs_B3": {
+        "wins": 7,
+        "losses": 9,
+        "exact_p": 0.803619384765625
+      }
+    },
+    "G1_if_unanimous_else_B3": {
+      "correct": 35,
+      "total": 70,
+      "accuracy": 0.5,
+      "vs_B1": {
+        "wins": 15,
+        "losses": 9,
+        "exact_p": 0.30745625495910645
+      },
+      "vs_B2": {
+        "wins": 13,
+        "losses": 14,
+        "exact_p": 1.0
+      },
+      "vs_B3": {
+        "wins": 2,
+        "losses": 2,
+        "exact_p": 1.0
+      }
+    },
+    "G1_B3_agree_else_B2": {
+      "correct": 37,
+      "total": 70,
+      "accuracy": 0.5285714285714286,
+      "vs_B1": {
+        "wins": 15,
+        "losses": 7,
+        "exact_p": 0.13380050659179688
+      },
+      "vs_B2": {
+        "wins": 13,
+        "losses": 12,
+        "exact_p": 1.0
+      },
+      "vs_B3": {
+        "wins": 2,
+        "losses": 0,
+        "exact_p": 0.5
+      }
+    },
+    "graph_majority_plus_B2_B3": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142,
+      "vs_B1": {
+        "wins": 16,
+        "losses": 9,
+        "exact_p": 0.2295229434967041
+      },
+      "vs_B2": {
+        "wins": 14,
+        "losses": 14,
+        "exact_p": 1.0
+      },
+      "vs_B3": {
+        "wins": 3,
+        "losses": 2,
+        "exact_p": 1.0
+      }
+    },
+    "graph_majority_plus_B2": {
+      "correct": 38,
+      "total": 70,
+      "accuracy": 0.5428571428571428,
+      "vs_B1": {
+        "wins": 16,
+        "losses": 7,
+        "exact_p": 0.0931396484375
+      },
+      "vs_B2": {
+        "wins": 13,
+        "losses": 11,
+        "exact_p": 0.8388197422027588
+      },
+      "vs_B3": {
+        "wins": 7,
+        "losses": 4,
+        "exact_p": 0.548828125
+      }
+    },
+    "graph_majority_plus_B3": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142,
+      "vs_B1": {
+        "wins": 16,
+        "losses": 9,
+        "exact_p": 0.2295229434967041
+      },
+      "vs_B2": {
+        "wins": 14,
+        "losses": 14,
+        "exact_p": 1.0
+      },
+      "vs_B3": {
+        "wins": 3,
+        "losses": 2,
+        "exact_p": 1.0
+      }
+    }
+  },
+  "nested_rule_lono": {
+    "correct": 35,
+    "total": 70,
+    "accuracy": 0.5,
+    "chosen_rules_by_fold": {
+      "B2_if_unanimous_else_G1": 9,
+      "G1_B3_agree_else_B2": 1
+    },
+    "vs_B1": {
+      "wins": 15,
+      "losses": 9,
+      "exact_p": 0.30745625495910645
+    },
+    "vs_B2": {
+      "wins": 7,
+      "losses": 8,
+      "exact_p": 1.0
+    },
+    "vs_B3": {
+      "wins": 6,
+      "losses": 6,
+      "exact_p": 1.0
+    }
+  },
+  "weighted_vote_lono": {
+    "0.0": {
+      "correct": 34,
+      "total": 70,
+      "accuracy": 0.4857142857142857,
+      "vs_B1": {
+        "wins": 14,
+        "losses": 9,
+        "exact_p": 0.4048728942871094
+      },
+      "vs_B2": {
+        "wins": 12,
+        "losses": 14,
+        "exact_p": 0.8450189828872681
+      },
+      "vs_B3": {
+        "wins": 2,
+        "losses": 3,
+        "exact_p": 1.0
+      }
+    },
+    "0.25": {
+      "correct": 34,
+      "total": 70,
+      "accuracy": 0.4857142857142857,
+      "vs_B1": {
+        "wins": 14,
+        "losses": 9,
+        "exact_p": 0.4048728942871094
+      },
+      "vs_B2": {
+        "wins": 12,
+        "losses": 14,
+        "exact_p": 0.8450189828872681
+      },
+      "vs_B3": {
+        "wins": 2,
+        "losses": 3,
+        "exact_p": 1.0
+      }
+    },
+    "0.5": {
+      "correct": 34,
+      "total": 70,
+      "accuracy": 0.4857142857142857,
+      "vs_B1": {
+        "wins": 14,
+        "losses": 9,
+        "exact_p": 0.4048728942871094
+      },
+      "vs_B2": {
+        "wins": 12,
+        "losses": 14,
+        "exact_p": 0.8450189828872681
+      },
+      "vs_B3": {
+        "wins": 2,
+        "losses": 3,
+        "exact_p": 1.0
+      }
+    },
+    "0.75": {
+      "correct": 34,
+      "total": 70,
+      "accuracy": 0.4857142857142857,
+      "vs_B1": {
+        "wins": 14,
+        "losses": 9,
+        "exact_p": 0.4048728942871094
+      },
+      "vs_B2": {
+        "wins": 12,
+        "losses": 14,
+        "exact_p": 0.8450189828872681
+      },
+      "vs_B3": {
+        "wins": 2,
+        "losses": 3,
+        "exact_p": 1.0
+      }
+    },
+    "1.0": {
+      "correct": 34,
+      "total": 70,
+      "accuracy": 0.4857142857142857,
+      "vs_B1": {
+        "wins": 14,
+        "losses": 9,
+        "exact_p": 0.4048728942871094
+      },
+      "vs_B2": {
+        "wins": 12,
+        "losses": 14,
+        "exact_p": 0.8450189828872681
+      },
+      "vs_B3": {
+        "wins": 2,
+        "losses": 3,
+        "exact_p": 1.0
+      }
+    }
+  }
+}
