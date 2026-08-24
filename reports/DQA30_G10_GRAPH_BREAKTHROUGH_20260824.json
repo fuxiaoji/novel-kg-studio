@@ -1,0 +1,33 @@
+{
+  "status": "development_result_requires_frozen_heldout_validation",
+  "model": "qwen3.5:9b",
+  "thinking": false,
+  "novels": 10,
+  "questions": 70,
+  "scores": {
+    "G10": {"correct": 41, "total": 70, "accuracy": 0.5857142857142857},
+    "G7": {"correct": 37, "total": 70, "accuracy": 0.5285714285714286},
+    "G9": {"correct": 36, "total": 70, "accuracy": 0.5142857142857142},
+    "tail_B1": {"correct": 29, "total": 70, "accuracy": 0.4142857142857143},
+    "compression_B2": {"correct": 36, "total": 70, "accuracy": 0.5142857142857142},
+    "rag_B3": {"correct": 35, "total": 70, "accuracy": 0.5}
+  },
+  "hard_q0_excluded": {
+    "questions": 37,
+    "G10": 19,
+    "G7": 17,
+    "tail_B1": 10,
+    "compression_B2": 14,
+    "rag_B3": 12
+  },
+  "paired": {
+    "G10_vs_G7": {"wins": 6, "losses": 2, "mcnemar_exact_p": 0.2890625},
+    "G10_vs_G9": {"wins": 6, "losses": 1, "mcnemar_exact_p": 0.125},
+    "G10_vs_tail_B1": {"wins": 15, "losses": 3, "mcnemar_exact_p": 0.007537841796875},
+    "G10_vs_compression_B2": {"wins": 13, "losses": 8, "mcnemar_exact_p": 0.38331031799316406},
+    "G10_vs_rag_B3": {"wins": 14, "losses": 8, "mcnemar_exact_p": 0.28627872467041016}
+  },
+  "g7_g9_oracle_correct": 43,
+  "disagreement_questions": 19,
+  "integrity": {"baseline_access_count": 0, "gold_access_count": 0}
+}
