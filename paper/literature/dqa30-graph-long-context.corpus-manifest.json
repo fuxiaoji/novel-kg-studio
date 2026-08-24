@@ -1,0 +1,40 @@
+{
+  "assurance_verdict": "insufficient",
+  "challenge_ids": [],
+  "corpus_version": 1,
+  "coverage_questions": [
+    {
+      "amendment_id": null,
+      "answer_summary": "",
+      "blocked_mitigation": "",
+      "closure_reason": "",
+      "created_after_freeze": false,
+      "critical_for_novelty": false,
+      "decision_role": "Support a bounded related-work and discussion section without a completeness claim.",
+      "perspective": "primary review question",
+      "priority": "high",
+      "protocol_boundary": "",
+      "question": "For a fixed small local language model with a limited context window, when and why can graph-structured retrieval improve long-document narrative reasoning over tail-window context, hierarchical compression, and ordinary chunk RAG?",
+      "question_id": "CQ-001",
+      "record_ids": [],
+      "residual_gap": "Initial scaffold; discovery is not complete.",
+      "scope_consequence": "",
+      "search_run_ids": [
+        "run-001"
+      ],
+      "status": "open"
+    }
+  ],
+  "freeze_date": null,
+  "post_freeze_amendments": [],
+  "records": [],
+  "review_profile": "critical-evidence-map",
+  "schema_version": "1.1",
+  "search_strategy_review": {
+    "independence": "self-review",
+    "notes": "",
+    "performed": false
+  },
+  "seed_ids": [],
+  "topic": "dqa30-graph-long-context"
+}

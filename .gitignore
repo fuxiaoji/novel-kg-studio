@@ -20,3 +20,12 @@ plotly_inline.js
 outputs/**
 !outputs/**/
 !outputs/**/*.md
+
+# ---- DQA30 paper: large generated data stays local; keep results + PDFs ----
+paper/generated/dqa30_answer_records.jsonl
+paper/generated/*.png
+paper/generated/*.svg
+paper/build/qa/
+
+# ---- Scratch / vendored agent output ----
+tmp/

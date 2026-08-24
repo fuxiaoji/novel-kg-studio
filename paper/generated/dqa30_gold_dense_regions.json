@@ -1,0 +1,993 @@
+{
+  "metadata": {
+    "protocol": "dqa30-gold-dense-audit-v1",
+    "guard": "Gold was loaded after graph freeze and used only for offline scoring and visualization.",
+    "visual_dense_definition": "undirected degree >= 2 and normalized spring-layout radius <= 0.45",
+    "topological_dense_definition": "membership in the undirected simple graph 2-core",
+    "layout_seeds": [
+      20260824,
+      20260825,
+      20260826,
+      20260827,
+      20260828
+    ],
+    "evidence_match": "normalized node evidence substring overlap; minimum 8 characters",
+    "cohort_warning": "The old20 and new10 graphs were built by different graph pipelines; pooled results are descriptive."
+  },
+  "summary": {
+    "old20": {
+      "core2": {
+        "gold_dense": 66,
+        "gold_total": 123,
+        "gold_rate_micro": 0.5365853658536586,
+        "gold_rate_macro": 0.5722814494873318,
+        "nongold_dense": 1835,
+        "nongold_total": 10095,
+        "nongold_rate_micro": 0.1817731550272412,
+        "enrichment_ratio": 2.951950554927893,
+        "odds_ratio_haldane": 5.204820390131821,
+        "novel_cluster_bootstrap_95": {
+          "gold_rate_micro": [
+            0.4489795918367347,
+            0.6201550387596899
+          ],
+          "enrichment_ratio": [
+            2.4261244927911596,
+            3.518282624633431
+          ],
+          "odds_ratio_haldane": [
+            3.6045286993154293,
+            7.445596997615888
+          ]
+        }
+      },
+      "visual_dense": {
+        "gold_dense": 71,
+        "gold_total": 123,
+        "gold_rate_micro": 0.5772357723577236,
+        "gold_rate_macro": 0.6584197937139113,
+        "nongold_dense": 2113,
+        "nongold_total": 10095,
+        "nongold_rate_micro": 0.20931154036651808,
+        "enrichment_ratio": 2.7577828310228205,
+        "odds_ratio_haldane": 5.143792175019996,
+        "novel_cluster_bootstrap_95": {
+          "gold_rate_micro": [
+            0.49523809523809526,
+            0.6703296703296703
+          ],
+          "enrichment_ratio": [
+            2.3368925784972947,
+            3.2564338235294117
+          ],
+          "odds_ratio_haldane": [
+            3.678997469265059,
+            7.634639961688103
+          ]
+        }
+      },
+      "gold_position_recall": 0.1632075471698113,
+      "answer_position_recall": 0.23225806451612904
+    },
+    "new10": {
+      "core2": {
+        "gold_dense": 362,
+        "gold_total": 672,
+        "gold_rate_micro": 0.5386904761904762,
+        "gold_rate_macro": 0.545611142104513,
+        "nongold_dense": 1524,
+        "nongold_total": 4557,
+        "nongold_rate_micro": 0.3344305464121132,
+        "enrichment_ratio": 1.6107693569553805,
+        "odds_ratio_haldane": 2.323073640469223,
+        "novel_cluster_bootstrap_95": {
+          "gold_rate_micro": [
+            0.502092050209205,
+            0.5801011804384486
+          ],
+          "enrichment_ratio": [
+            1.4844783520280995,
+            1.7487272727272727
+          ],
+          "odds_ratio_haldane": [
+            1.988399071925754,
+            2.736369686588139
+          ]
+        }
+      },
+      "visual_dense": {
+        "gold_dense": 402,
+        "gold_total": 672,
+        "gold_rate_micro": 0.5982142857142857,
+        "gold_rate_macro": 0.6037569345297871,
+        "nongold_dense": 1701,
+        "nongold_total": 4557,
+        "nongold_rate_micro": 0.37327188940092165,
+        "enrichment_ratio": 1.6026234567901234,
+        "odds_ratio_haldane": 2.4980486392619756,
+        "novel_cluster_bootstrap_95": {
+          "gold_rate_micro": [
+            0.5483443708609271,
+            0.655448717948718
+          ],
+          "enrichment_ratio": [
+            1.5161915740934815,
+            1.6890300687614015
+          ],
+          "odds_ratio_haldane": [
+            2.176697250943844,
+            2.942926390639639
+          ]
+        }
+      },
+      "gold_position_recall": 0.7323340471092077,
+      "answer_position_recall": 0.8823529411764706
+    },
+    "descriptive30": {
+      "core2": {
+        "gold_dense": 428,
+        "gold_total": 795,
+        "gold_rate_micro": 0.5383647798742138,
+        "gold_rate_macro": 0.5627563397077536,
+        "nongold_dense": 3359,
+        "nongold_total": 14652,
+        "nongold_rate_micro": 0.22925197925197927,
+        "enrichment_ratio": 2.3483539013745105,
+        "odds_ratio_haldane": 3.919650944169899,
+        "novel_cluster_bootstrap_95": {
+          "gold_rate_micro": [
+            0.5022522522522522,
+            0.5759398496240602
+          ],
+          "enrichment_ratio": [
+            2.0400099570655765,
+            2.731461451110505
+          ],
+          "odds_ratio_haldane": [
+            3.155931894473688,
+            4.954397986375078
+          ]
+        }
+      },
+      "visual_dense": {
+        "gold_dense": 473,
+        "gold_total": 795,
+        "gold_rate_micro": 0.5949685534591195,
+        "gold_rate_macro": 0.6388973440052955,
+        "nongold_dense": 3814,
+        "nongold_total": 14652,
+        "nongold_rate_micro": 0.2603057603057603,
+        "enrichment_ratio": 2.285652660011279,
+        "odds_ratio_haldane": 4.171784124429324,
+        "novel_cluster_bootstrap_95": {
+          "gold_rate_micro": [
+            0.5484784147204529,
+            0.6436781609195402
+          ],
+          "enrichment_ratio": [
+            2.018102436852089,
+            2.620049310182028
+          ],
+          "odds_ratio_haldane": [
+            3.3671151157096038,
+            5.3289733818205205
+          ]
+        }
+      },
+      "gold_position_recall": 0.3372626064178127,
+      "answer_position_recall": 0.4304932735426009
+    }
+  },
+  "per_novel": [
+    {
+      "novel": "26",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "c3726c44d96656c0c5bcb94d5550a4b7c0307d73b76c8ac409576c46d953d484",
+      "nodes": 427,
+      "simple_edges": 253,
+      "gold_positions": 61,
+      "gold_positions_covered": 18,
+      "answer_positions": 8,
+      "answer_positions_covered": 6,
+      "gold_nodes": 10,
+      "answer_nodes": 6,
+      "core2": 50,
+      "gold_core2": 7,
+      "answer_core2": 4,
+      "visual_dense": 74,
+      "gold_visual_dense": 8,
+      "answer_visual_dense": 5,
+      "visual_gold_rate_by_seed": [
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "novel": "27",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "8a1129d3cda2734ee26380d03511d881d203806643a182a2d03f9727ee24318c",
+      "nodes": 394,
+      "simple_edges": 294,
+      "gold_positions": 82,
+      "gold_positions_covered": 12,
+      "answer_positions": 10,
+      "answer_positions_covered": 3,
+      "gold_nodes": 5,
+      "answer_nodes": 3,
+      "core2": 87,
+      "gold_core2": 2,
+      "answer_core2": 2,
+      "visual_dense": 91,
+      "gold_visual_dense": 2,
+      "answer_visual_dense": 2,
+      "visual_gold_rate_by_seed": [
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "novel": "28",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "b9bdcddac0ed4920282bb10921bb3a387b7ab369447199d37fc1db7898334620",
+      "nodes": 412,
+      "simple_edges": 327,
+      "gold_positions": 63,
+      "gold_positions_covered": 14,
+      "answer_positions": 7,
+      "answer_positions_covered": 0,
+      "gold_nodes": 17,
+      "answer_nodes": 0,
+      "core2": 84,
+      "gold_core2": 8,
+      "answer_core2": 0,
+      "visual_dense": 102,
+      "gold_visual_dense": 9,
+      "answer_visual_dense": 0,
+      "visual_gold_rate_by_seed": [
+        0.5294117647058824,
+        0.5294117647058824,
+        0.5294117647058824,
+        0.5294117647058824,
+        0.5294117647058824
+      ]
+    },
+    {
+      "novel": "30",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "1ef0895f6511976e7b07a120f6722e905865624b3de24763c552cced4e8b18c1",
+      "nodes": 312,
+      "simple_edges": 187,
+      "gold_positions": 43,
+      "gold_positions_covered": 9,
+      "answer_positions": 9,
+      "answer_positions_covered": 3,
+      "gold_nodes": 10,
+      "answer_nodes": 1,
+      "core2": 55,
+      "gold_core2": 4,
+      "answer_core2": 0,
+      "visual_dense": 60,
+      "gold_visual_dense": 4,
+      "answer_visual_dense": 0,
+      "visual_gold_rate_by_seed": [
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "novel": "31",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "eed05919fbd1ca43b40890d5380648a0a0c731e4987f57b552266196c98d6116",
+      "nodes": 290,
+      "simple_edges": 210,
+      "gold_positions": 61,
+      "gold_positions_covered": 0,
+      "answer_positions": 8,
+      "answer_positions_covered": 0,
+      "gold_nodes": 0,
+      "answer_nodes": 0,
+      "core2": 61,
+      "gold_core2": 0,
+      "answer_core2": 0,
+      "visual_dense": 70,
+      "gold_visual_dense": 0,
+      "answer_visual_dense": 0,
+      "visual_gold_rate_by_seed": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "novel": "33",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "07e531f3974bd71d8e697318a2431bcfbbeb9b82e5f8e1cb5bd887fc4eaed436",
+      "nodes": 296,
+      "simple_edges": 227,
+      "gold_positions": 39,
+      "gold_positions_covered": 10,
+      "answer_positions": 6,
+      "answer_positions_covered": 2,
+      "gold_nodes": 6,
+      "answer_nodes": 2,
+      "core2": 60,
+      "gold_core2": 2,
+      "answer_core2": 2,
+      "visual_dense": 76,
+      "gold_visual_dense": 4,
+      "answer_visual_dense": 2,
+      "visual_gold_rate_by_seed": [
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666
+      ]
+    },
+    {
+      "novel": "40",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "d01ebbd770ccf7b0f0f271856c19a006fd54f42bc0af54911f417e5c83338930",
+      "nodes": 491,
+      "simple_edges": 342,
+      "gold_positions": 64,
+      "gold_positions_covered": 5,
+      "answer_positions": 8,
+      "answer_positions_covered": 1,
+      "gold_nodes": 4,
+      "answer_nodes": 1,
+      "core2": 78,
+      "gold_core2": 1,
+      "answer_core2": 1,
+      "visual_dense": 105,
+      "gold_visual_dense": 1,
+      "answer_visual_dense": 1,
+      "visual_gold_rate_by_seed": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "novel": "53",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "e4ce0a4be9f3dd6942f88001b1163681d9c94877122ed821a915578a946f0f2b",
+      "nodes": 346,
+      "simple_edges": 232,
+      "gold_positions": 48,
+      "gold_positions_covered": 15,
+      "answer_positions": 7,
+      "answer_positions_covered": 3,
+      "gold_nodes": 13,
+      "answer_nodes": 3,
+      "core2": 57,
+      "gold_core2": 6,
+      "answer_core2": 2,
+      "visual_dense": 72,
+      "gold_visual_dense": 6,
+      "answer_visual_dense": 2,
+      "visual_gold_rate_by_seed": [
+        0.46153846153846156,
+        0.46153846153846156,
+        0.46153846153846156,
+        0.46153846153846156,
+        0.46153846153846156
+      ]
+    },
+    {
+      "novel": "56",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "4902a3c316e740a0e84dadaa11e6a92290a6d967a443f34a9d79f13b67f40db7",
+      "nodes": 257,
+      "simple_edges": 164,
+      "gold_positions": 55,
+      "gold_positions_covered": 3,
+      "answer_positions": 10,
+      "answer_positions_covered": 0,
+      "gold_nodes": 1,
+      "answer_nodes": 0,
+      "core2": 43,
+      "gold_core2": 1,
+      "answer_core2": 0,
+      "visual_dense": 58,
+      "gold_visual_dense": 1,
+      "answer_visual_dense": 0,
+      "visual_gold_rate_by_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "novel": "79",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "de8bf0dc435b5447ff638affc9aa9b73e882eceace7fa11ad359334ae6709c7a",
+      "nodes": 539,
+      "simple_edges": 373,
+      "gold_positions": 46,
+      "gold_positions_covered": 3,
+      "answer_positions": 10,
+      "answer_positions_covered": 1,
+      "gold_nodes": 2,
+      "answer_nodes": 1,
+      "core2": 100,
+      "gold_core2": 2,
+      "answer_core2": 1,
+      "visual_dense": 122,
+      "gold_visual_dense": 2,
+      "answer_visual_dense": 1,
+      "visual_gold_rate_by_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "novel": "15",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "0993a8c732dcb39bff895c98d9da97c038ad4f36e2bd84af5eb6d6784f5372af",
+      "nodes": 648,
+      "simple_edges": 445,
+      "gold_positions": 57,
+      "gold_positions_covered": 15,
+      "answer_positions": 8,
+      "answer_positions_covered": 3,
+      "gold_nodes": 15,
+      "answer_nodes": 3,
+      "core2": 125,
+      "gold_core2": 9,
+      "answer_core2": 3,
+      "visual_dense": 131,
+      "gold_visual_dense": 8,
+      "answer_visual_dense": 3,
+      "visual_gold_rate_by_seed": [
+        0.5333333333333333,
+        0.5333333333333333,
+        0.5333333333333333,
+        0.5333333333333333,
+        0.5333333333333333
+      ]
+    },
+    {
+      "novel": "16",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "0d02ea8dfae906504e44eb3b450e1d077b11d74fe7aedb866d430b33c757e0ed",
+      "nodes": 549,
+      "simple_edges": 381,
+      "gold_positions": 36,
+      "gold_positions_covered": 0,
+      "answer_positions": 6,
+      "answer_positions_covered": 0,
+      "gold_nodes": 0,
+      "answer_nodes": 0,
+      "core2": 112,
+      "gold_core2": 0,
+      "answer_core2": 0,
+      "visual_dense": 99,
+      "gold_visual_dense": 0,
+      "answer_visual_dense": 0,
+      "visual_gold_rate_by_seed": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "novel": "25",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "1abeef2fef63fb3fa2a2a166ed7f400a4bd0e0d58e8c6f351d88e4538a04cee3",
+      "nodes": 267,
+      "simple_edges": 197,
+      "gold_positions": 66,
+      "gold_positions_covered": 16,
+      "answer_positions": 8,
+      "answer_positions_covered": 3,
+      "gold_nodes": 8,
+      "answer_nodes": 2,
+      "core2": 51,
+      "gold_core2": 5,
+      "answer_core2": 1,
+      "visual_dense": 62,
+      "gold_visual_dense": 6,
+      "answer_visual_dense": 2,
+      "visual_gold_rate_by_seed": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "novel": "29",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "d197c7940a796503c785234d39e17ef2b6ac25389a7cb37ffd2dacbd1e0ed27f",
+      "nodes": 405,
+      "simple_edges": 280,
+      "gold_positions": 57,
+      "gold_positions_covered": 4,
+      "answer_positions": 7,
+      "answer_positions_covered": 1,
+      "gold_nodes": 1,
+      "answer_nodes": 1,
+      "core2": 63,
+      "gold_core2": 0,
+      "answer_core2": 0,
+      "visual_dense": 96,
+      "gold_visual_dense": 1,
+      "answer_visual_dense": 1,
+      "visual_gold_rate_by_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "novel": "81",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "cd81a0a5b5ba1a96da13b0f85da6bbc6c2f9451b0cb86e01f124dd98a31cab20",
+      "nodes": 889,
+      "simple_edges": 728,
+      "gold_positions": 38,
+      "gold_positions_covered": 15,
+      "answer_positions": 6,
+      "answer_positions_covered": 3,
+      "gold_nodes": 11,
+      "answer_nodes": 3,
+      "core2": 221,
+      "gold_core2": 8,
+      "answer_core2": 3,
+      "visual_dense": 245,
+      "gold_visual_dense": 8,
+      "answer_visual_dense": 3,
+      "visual_gold_rate_by_seed": [
+        0.7272727272727273,
+        0.7272727272727273,
+        0.7272727272727273,
+        0.7272727272727273,
+        0.7272727272727273
+      ]
+    },
+    {
+      "novel": "82",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "b859b28b3d0e2293cd184cf15fabd6f06ebe7bbeb5beda00236658ea76600786",
+      "nodes": 538,
+      "simple_edges": 406,
+      "gold_positions": 50,
+      "gold_positions_covered": 11,
+      "answer_positions": 9,
+      "answer_positions_covered": 2,
+      "gold_nodes": 6,
+      "answer_nodes": 1,
+      "core2": 117,
+      "gold_core2": 1,
+      "answer_core2": 1,
+      "visual_dense": 114,
+      "gold_visual_dense": 1,
+      "answer_visual_dense": 1,
+      "visual_gold_rate_by_seed": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666
+      ]
+    },
+    {
+      "novel": "83",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "0f2ac81cc4951c5f21c161c07eb207bf8e19d5398d0f565ff8d7b80be5082868",
+      "nodes": 920,
+      "simple_edges": 590,
+      "gold_positions": 69,
+      "gold_positions_covered": 9,
+      "answer_positions": 9,
+      "answer_positions_covered": 2,
+      "gold_nodes": 2,
+      "answer_nodes": 2,
+      "core2": 180,
+      "gold_core2": 2,
+      "answer_core2": 2,
+      "visual_dense": 192,
+      "gold_visual_dense": 2,
+      "answer_visual_dense": 2,
+      "visual_gold_rate_by_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "novel": "84",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "7df17eb0a8936393cf683cb96857b2784a38ab91222f8e687a409c4a026c93ae",
+      "nodes": 427,
+      "simple_edges": 327,
+      "gold_positions": 51,
+      "gold_positions_covered": 3,
+      "answer_positions": 7,
+      "answer_positions_covered": 0,
+      "gold_nodes": 2,
+      "answer_nodes": 0,
+      "core2": 70,
+      "gold_core2": 1,
+      "answer_core2": 0,
+      "visual_dense": 90,
+      "gold_visual_dense": 1,
+      "answer_visual_dense": 0,
+      "visual_gold_rate_by_seed": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "novel": "87",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "4fd4fd03903b917ccd356efcd7ff0127617356c8762688a3a3be143d8d1eb5d6",
+      "nodes": 1071,
+      "simple_edges": 674,
+      "gold_positions": 39,
+      "gold_positions_covered": 10,
+      "answer_positions": 6,
+      "answer_positions_covered": 3,
+      "gold_nodes": 9,
+      "answer_nodes": 3,
+      "core2": 162,
+      "gold_core2": 6,
+      "answer_core2": 2,
+      "visual_dense": 179,
+      "gold_visual_dense": 6,
+      "answer_visual_dense": 2,
+      "visual_gold_rate_by_seed": [
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666
+      ]
+    },
+    {
+      "novel": "90",
+      "cohort": "old20",
+      "graph_builder": "legacy-qwen2.5-7b-c4-pipeline",
+      "graph_sha256": "02aeedf1a70dac7d267dbdf462ba5b117a256fd761d2994541e27ae3fb3f8415",
+      "nodes": 740,
+      "simple_edges": 496,
+      "gold_positions": 35,
+      "gold_positions_covered": 1,
+      "answer_positions": 6,
+      "answer_positions_covered": 0,
+      "gold_nodes": 1,
+      "answer_nodes": 0,
+      "core2": 125,
+      "gold_core2": 1,
+      "answer_core2": 0,
+      "visual_dense": 146,
+      "gold_visual_dense": 1,
+      "answer_visual_dense": 0,
+      "visual_gold_rate_by_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "novel": "93",
+      "cohort": "new10",
+      "graph_builder": "qwen3.5:9b-pass2-v4",
+      "graph_sha256": "f1078174b998a8c9612ff1872d3f3444f50941b726f2e6cbfb4a6ea8c79ca8d7",
+      "nodes": 718,
+      "simple_edges": 779,
+      "gold_positions": 56,
+      "gold_positions_covered": 47,
+      "answer_positions": 7,
+      "answer_positions_covered": 7,
+      "gold_nodes": 109,
+      "answer_nodes": 18,
+      "core2": 269,
+      "gold_core2": 50,
+      "answer_core2": 7,
+      "visual_dense": 256,
+      "gold_visual_dense": 54,
+      "answer_visual_dense": 8,
+      "visual_gold_rate_by_seed": [
+        0.4954128440366973,
+        0.48623853211009177,
+        0.5321100917431193,
+        0.47706422018348627,
+        0.5229357798165137
+      ]
+    },
+    {
+      "novel": "97",
+      "cohort": "new10",
+      "graph_builder": "qwen3.5:9b-pass2-v4",
+      "graph_sha256": "53cd849aa96931882feb1414c35e7b25f652537dd0d6526a30f4ff04c7b7e246",
+      "nodes": 676,
+      "simple_edges": 770,
+      "gold_positions": 47,
+      "gold_positions_covered": 32,
+      "answer_positions": 5,
+      "answer_positions_covered": 5,
+      "gold_nodes": 59,
+      "answer_nodes": 9,
+      "core2": 209,
+      "gold_core2": 27,
+      "answer_core2": 3,
+      "visual_dense": 230,
+      "gold_visual_dense": 29,
+      "answer_visual_dense": 1,
+      "visual_gold_rate_by_seed": [
+        0.4915254237288136,
+        0.5254237288135594,
+        0.4576271186440678,
+        0.5423728813559322,
+        0.5423728813559322
+      ]
+    },
+    {
+      "novel": "99",
+      "cohort": "new10",
+      "graph_builder": "qwen3.5:9b-pass2-v4",
+      "graph_sha256": "e5654af97a483b6c9085645c14e2e519890d862bbca125284146c55affb6da31",
+      "nodes": 570,
+      "simple_edges": 668,
+      "gold_positions": 42,
+      "gold_positions_covered": 33,
+      "answer_positions": 6,
+      "answer_positions_covered": 5,
+      "gold_nodes": 58,
+      "answer_nodes": 9,
+      "core2": 195,
+      "gold_core2": 32,
+      "answer_core2": 7,
+      "visual_dense": 204,
+      "gold_visual_dense": 33,
+      "answer_visual_dense": 7,
+      "visual_gold_rate_by_seed": [
+        0.5689655172413793,
+        0.5862068965517241,
+        0.603448275862069,
+        0.5862068965517241,
+        0.5862068965517241
+      ]
+    },
+    {
+      "novel": "100",
+      "cohort": "new10",
+      "graph_builder": "qwen3.5:9b-pass2-v4",
+      "graph_sha256": "334cc5620303bc2fa5cd1f6243eb7477d65fa2e701db42ccc55423f3336459e3",
+      "nodes": 826,
+      "simple_edges": 990,
+      "gold_positions": 72,
+      "gold_positions_covered": 51,
+      "answer_positions": 8,
+      "answer_positions_covered": 8,
+      "gold_nodes": 84,
+      "answer_nodes": 30,
+      "core2": 328,
+      "gold_core2": 51,
+      "answer_core2": 19,
+      "visual_dense": 374,
+      "gold_visual_dense": 62,
+      "answer_visual_dense": 24,
+      "visual_gold_rate_by_seed": [
+        0.7380952380952381,
+        0.6547619047619048,
+        0.7142857142857143,
+        0.6666666666666666,
+        0.6547619047619048
+      ]
+    },
+    {
+      "novel": "103",
+      "cohort": "new10",
+      "graph_builder": "qwen3.5:9b-pass2-v4",
+      "graph_sha256": "9ad5560631ebe2b7fecbe2ae4134ef54c090b472605fca0117978ccf4338fa2d",
+      "nodes": 396,
+      "simple_edges": 539,
+      "gold_positions": 32,
+      "gold_positions_covered": 22,
+      "answer_positions": 5,
+      "answer_positions_covered": 5,
+      "gold_nodes": 47,
+      "answer_nodes": 24,
+      "core2": 140,
+      "gold_core2": 30,
+      "answer_core2": 18,
+      "visual_dense": 169,
+      "gold_visual_dense": 34,
+      "answer_visual_dense": 18,
+      "visual_gold_rate_by_seed": [
+        0.723404255319149,
+        0.723404255319149,
+        0.723404255319149,
+        0.723404255319149,
+        0.723404255319149
+      ]
+    },
+    {
+      "novel": "104",
+      "cohort": "new10",
+      "graph_builder": "qwen3.5:9b-pass2-v4",
+      "graph_sha256": "31b7c5666cf8831426c2e1d3b7838a52edc44cf8cd4164f5c64dafab744a1700",
+      "nodes": 465,
+      "simple_edges": 542,
+      "gold_positions": 46,
+      "gold_positions_covered": 33,
+      "answer_positions": 8,
+      "answer_positions_covered": 7,
+      "gold_nodes": 80,
+      "answer_nodes": 27,
+      "core2": 171,
+      "gold_core2": 40,
+      "answer_core2": 13,
+      "visual_dense": 199,
+      "gold_visual_dense": 47,
+      "answer_visual_dense": 16,
+      "visual_gold_rate_by_seed": [
+        0.5875,
+        0.5875,
+        0.5875,
+        0.5875,
+        0.5875
+      ]
+    },
+    {
+      "novel": "105",
+      "cohort": "new10",
+      "graph_builder": "qwen3.5:9b-pass2-v4",
+      "graph_sha256": "bda1cb24b753cb6b96493d8feaac94abfc1d23b941d0c8acba620864345ee248",
+      "nodes": 425,
+      "simple_edges": 627,
+      "gold_positions": 52,
+      "gold_positions_covered": 36,
+      "answer_positions": 7,
+      "answer_positions_covered": 7,
+      "gold_nodes": 76,
+      "answer_nodes": 47,
+      "core2": 164,
+      "gold_core2": 45,
+      "answer_core2": 26,
+      "visual_dense": 180,
+      "gold_visual_dense": 47,
+      "answer_visual_dense": 28,
+      "visual_gold_rate_by_seed": [
+        0.618421052631579,
+        0.618421052631579,
+        0.618421052631579,
+        0.618421052631579,
+        0.618421052631579
+      ]
+    },
+    {
+      "novel": "106",
+      "cohort": "new10",
+      "graph_builder": "qwen3.5:9b-pass2-v4",
+      "graph_sha256": "e216162d4f96815cca217c38d2e78d733c956dcb8c50ad7c38663cd767939d8a",
+      "nodes": 389,
+      "simple_edges": 532,
+      "gold_positions": 35,
+      "gold_positions_covered": 24,
+      "answer_positions": 6,
+      "answer_positions_covered": 4,
+      "gold_nodes": 54,
+      "answer_nodes": 8,
+      "core2": 134,
+      "gold_core2": 29,
+      "answer_core2": 5,
+      "visual_dense": 162,
+      "gold_visual_dense": 34,
+      "answer_visual_dense": 7,
+      "visual_gold_rate_by_seed": [
+        0.6296296296296297,
+        0.6296296296296297,
+        0.6296296296296297,
+        0.6296296296296297,
+        0.6296296296296297
+      ]
+    },
+    {
+      "novel": "107",
+      "cohort": "new10",
+      "graph_builder": "qwen3.5:9b-pass2-v4",
+      "graph_sha256": "fddceb857be5715c3808ed73a3f3a7f5a308e21ec7d2f7a76946074d551b0753",
+      "nodes": 409,
+      "simple_edges": 502,
+      "gold_positions": 54,
+      "gold_positions_covered": 38,
+      "answer_positions": 10,
+      "answer_positions_covered": 7,
+      "gold_nodes": 65,
+      "answer_nodes": 16,
+      "core2": 134,
+      "gold_core2": 35,
+      "answer_core2": 10,
+      "visual_dense": 161,
+      "gold_visual_dense": 38,
+      "answer_visual_dense": 11,
+      "visual_gold_rate_by_seed": [
+        0.5846153846153846,
+        0.5846153846153846,
+        0.5846153846153846,
+        0.5846153846153846,
+        0.5846153846153846
+      ]
+    },
+    {
+      "novel": "108",
+      "cohort": "new10",
+      "graph_builder": "qwen3.5:9b-pass2-v4",
+      "graph_sha256": "55651dd1cc5bd24862e64dcb4096efbb80b077baff5ca9a2862e71dd73802e86",
+      "nodes": 355,
+      "simple_edges": 506,
+      "gold_positions": 31,
+      "gold_positions_covered": 26,
+      "answer_positions": 6,
+      "answer_positions_covered": 5,
+      "gold_nodes": 40,
+      "answer_nodes": 15,
+      "core2": 142,
+      "gold_core2": 23,
+      "answer_core2": 12,
+      "visual_dense": 168,
+      "gold_visual_dense": 24,
+      "answer_visual_dense": 12,
+      "visual_gold_rate_by_seed": [
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ]
+    }
+  ]
+}

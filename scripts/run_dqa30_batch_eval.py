@@ -58,11 +58,17 @@ def call_json(
     max_tokens: int,
 ) -> tuple[str | None, Any]:
     payload: Any = {}
-    for _ in range(2):
-        payload = client.complete_json(system, prompt, max_tokens=max_tokens)
+    for attempt in range(4):
+        try:
+            payload = client.complete_json(system, prompt, max_tokens=max_tokens)
+        except Exception:
+            payload = {}
         letter = select_letter(payload)
-        if letter in LETTERS:
+        if letter is not None and letter in LETTERS:
             return letter, payload
+        if attempt < 3:
+            prompt = prompt + "\n\nYour previous response was invalid or empty. Return strict JSON only."
+            time.sleep(2.0 * (attempt + 1))
     return None, payload
 
 

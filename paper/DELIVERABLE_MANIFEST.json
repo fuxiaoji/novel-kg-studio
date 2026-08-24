@@ -1,0 +1,300 @@
+{
+  "protocol": "dqa30-final-deliverables-v1",
+  "graph_integrity": {
+    "records": 30,
+    "unchanged": true,
+    "manifest_sha256": "5f550c244f1e60988286508442114b3a512696e9bf35dd78a1d4f3c9279cba28"
+  },
+  "files": [
+    {
+      "path": "config\\dqa30_frozen_graphs.csv",
+      "bytes": 9213,
+      "sha256": "a7be371a81b69c99a261558b15bebeafc7d2c12318eafab9b2e54e729f6980e1"
+    },
+    {
+      "path": "config\\dqa30_frozen_graphs.json",
+      "bytes": 32785,
+      "sha256": "5f550c244f1e60988286508442114b3a512696e9bf35dd78a1d4f3c9279cba28"
+    },
+    {
+      "path": "paper\\generated\\dqa30_accuracy.pdf",
+      "bytes": 23797,
+      "sha256": "1c92deeabac0634f02eb70a74212c58be6cbc1ac9a8ca1bb74f744d91daa8745"
+    },
+    {
+      "path": "paper\\generated\\dqa30_accuracy.svg",
+      "bytes": 49103,
+      "sha256": "64a342ee0ec900c2c4f8b0c603bb50e5fdba06bab2e26f531e9984f5f8eea8b6"
+    },
+    {
+      "path": "paper\\generated\\dqa30_answer_records.jsonl",
+      "bytes": 14737550,
+      "sha256": "0126fa2cae133f2d6b9f8caca8a8ae60f00aabc7c4fd52c72cec36b8bd52ff66"
+    },
+    {
+      "path": "paper\\generated\\dqa30_frozen_results.json",
+      "bytes": 43834,
+      "sha256": "ea84dccff5964a76db49c7be1b0306aa041bb2a3a9f11ab24222d3ebf9f7f95a"
+    },
+    {
+      "path": "paper\\generated\\dqa30_gold_dense_regions.csv",
+      "bytes": 6499,
+      "sha256": "546000ccdc9412d92e5c12de7d864adf22cf092f8a8d0cced7ce300282e8758d"
+    },
+    {
+      "path": "paper\\generated\\dqa30_gold_dense_regions.json",
+      "bytes": 28591,
+      "sha256": "0e834c7478356929c7473d0812fc48cabd07f0a672eb21ec4a6ea911bd0d0072"
+    },
+    {
+      "path": "paper\\generated\\dqa30_gold_node_audit.csv",
+      "bytes": 1007607,
+      "sha256": "3dd34d924eae47ea9d061a4ee2dbd1ad633a86ccbc1d94af9cdd64e464a3af3a"
+    },
+    {
+      "path": "paper\\generated\\dqa30_method_summary.csv",
+      "bytes": 8147,
+      "sha256": "0455d3fadb88c4d2e278e47c990453267ae69a759a467e2ec796fa4c1cfc3d04"
+    },
+    {
+      "path": "paper\\generated\\dqa30_novel_relationships.csv",
+      "bytes": 5415,
+      "sha256": "dcee23946020a4650f7179acc71d89f2b2619818b8ce42eb0a66045258064532"
+    },
+    {
+      "path": "paper\\generated\\dqa30_pairwise.pdf",
+      "bytes": 27880,
+      "sha256": "c688d78d50d7be8ecc75c0f5dd7970f3211468b3020556e23f9621ad3e87c4a7"
+    },
+    {
+      "path": "paper\\generated\\dqa30_pairwise.svg",
+      "bytes": 81981,
+      "sha256": "f883b12ccdf8dfa1cc6169e580267ebcce1ed77847a45af9453c54ddb849fa91"
+    },
+    {
+      "path": "paper\\generated\\dqa30_per_question.csv",
+      "bytes": 115938,
+      "sha256": "c2a3c8ed3e31a27fe600dcd6674a8f8c84dcecec8c739aca5c67b50ce022becc"
+    },
+    {
+      "path": "paper\\generated\\dqa30_relationship_correlations.json",
+      "bytes": 3893,
+      "sha256": "fe2e749d8c9b97575b12d9efd4a61814d186336d85aaed390237c21401402060"
+    },
+    {
+      "path": "paper\\generated\\dqa30_relationships.pdf",
+      "bytes": 25856,
+      "sha256": "beb27d1c33d8872761cd90c500ee1e502236dd52ea71e535705347c0201fba01"
+    },
+    {
+      "path": "paper\\generated\\dqa30_relationships.svg",
+      "bytes": 82150,
+      "sha256": "a64e8095ace3c70b1a4ccce8849cc8f23901b1dcbfa37a014af0085a774434fc"
+    },
+    {
+      "path": "paper\\generated\\force_graph_novel103.pdf",
+      "bytes": 38121,
+      "sha256": "e2fc1e16417da60b14f52ea3a80637bfe1a32475c0019dad46b1932b3734e482"
+    },
+    {
+      "path": "paper\\generated\\force_graph_novel103.svg",
+      "bytes": 213005,
+      "sha256": "d0e8aecc7e2669ff1c713fc7c1c7569e1c3b4c2beb88aa9af3ca9c6f057ada43"
+    },
+    {
+      "path": "paper\\generated\\force_graph_novel103_paper.pdf",
+      "bytes": 39230,
+      "sha256": "781dcc3127b9c1d9e536472c57f6c90df0b88c782b8e5ea8d4cac9d75cbae0cd"
+    },
+    {
+      "path": "paper\\generated\\force_graph_novel103_paper.svg",
+      "bytes": 210889,
+      "sha256": "c10111ba66538612d89b83ba9c74c476171c0e4c86be8fb3e8c436625e63dbdd"
+    },
+    {
+      "path": "paper\\generated\\gold_dense_core_enrichment.pdf",
+      "bytes": 21969,
+      "sha256": "d2aa7dda95d6c838c6112e366877dde1c680858fe4e9f36ea84255d6064e6ae8"
+    },
+    {
+      "path": "paper\\generated\\gold_dense_core_enrichment.svg",
+      "bytes": 47160,
+      "sha256": "cc58a1d70310bac3af5b3683a52531812b0e7830e068346b68b736e6cebae7b7"
+    },
+    {
+      "path": "paper\\generated\\main_results_table.tex",
+      "bytes": 657,
+      "sha256": "f0e55f4bd235b9bc4a68cc8362af50296e190018a51240b7bb98b239245dea8c"
+    },
+    {
+      "path": "paper\\generated\\novel103_plot_manifest.json",
+      "bytes": 187,
+      "sha256": "58d39cdadf1e675f34d4f3eb8a71183f3510c97560ac9b99f2263365097f84b6"
+    },
+    {
+      "path": "paper\\generated\\results_macros.tex",
+      "bytes": 280,
+      "sha256": "0456c0e63aa21aadf7a0b70ef7ac3958f2d6e8fca46755fd57820d4bd21a7663"
+    },
+    {
+      "path": "paper\\manuscript.tex",
+      "bytes": 15813,
+      "sha256": "c9591e555ff51813bca9139883b99bb732604d1a94b45a70db9e0863ffd392da"
+    },
+    {
+      "path": "paper\\references.bib",
+      "bytes": 4290,
+      "sha256": "e5055244228dda852053610fc1c74b111346518b16f985de609cd315b65e165d"
+    },
+    {
+      "path": "paper\\REPRODUCIBILITY.md",
+      "bytes": 3190,
+      "sha256": "e17ca699466bd5cc0df3510c3ab0c3f2841df5b6eca5e919f3b681f19aef99a8"
+    },
+    {
+      "path": "paper\\中文分析报告.md",
+      "bytes": 6274,
+      "sha256": "8cc8898cca24227b8dd0f99d7f4ad8efdb95ee542ba54479c7ce6308d27bdac6"
+    },
+    {
+      "path": "paper\\最终结果报告.md",
+      "bytes": 2965,
+      "sha256": "3ace61558a1df7dced2c31a9be6f4cd2e52d275a95746bf474c7202871c2a66e"
+    },
+    {
+      "path": "scripts\\aggregate_dqa30_paper_results.py",
+      "bytes": 10873,
+      "sha256": "20b1d2c46803c3cde1ec68bdd6a615c183813f193fcef2ec2ff0d875a82861ae"
+    },
+    {
+      "path": "scripts\\aggregate_dqa30_pure_graph_results.py",
+      "bytes": 12000,
+      "sha256": "52eca3d5c1537170ece3ff77bd4d8df31fd778045b3f7af12a8fc1d59e3fa905"
+    },
+    {
+      "path": "scripts\\analyze_dqa30_dense_regions.py",
+      "bytes": 18776,
+      "sha256": "8b944ac3a70c56bf0e2812392e4af068234ab1ccbf7b8e28e1f8042b15488310"
+    },
+    {
+      "path": "scripts\\analyze_dqa30_effect_relationships.py",
+      "bytes": 4115,
+      "sha256": "72b9baa60e4a1802cbdd0580c074239af94de8a24fb2457738cdb04c580b873e"
+    },
+    {
+      "path": "scripts\\analyze_dqa30_g6_breakthrough.py",
+      "bytes": 9963,
+      "sha256": "d07d8498747c105acfd441c900b63345b9bffdb48d239d4d01632371d4a4a968"
+    },
+    {
+      "path": "scripts\\analyze_dqa30_graph_effectiveness.py",
+      "bytes": 23263,
+      "sha256": "79d6806f0514f959a68496e38b85a0eb66a19bcae06b8453cd4d9b6aaa51a564"
+    },
+    {
+      "path": "scripts\\analyze_dqa30_graph_only_g7.py",
+      "bytes": 5352,
+      "sha256": "29a105c054d90f2f2c591af867b37bd99502c5a96da955f240aadba1ed0bbfbf"
+    },
+    {
+      "path": "scripts\\archive_dqa30_answer_records.py",
+      "bytes": 6424,
+      "sha256": "d4dda14ba33b130588ac31ea810f5e2481bc3b7fe957bbe555e3c29c44801b3c"
+    },
+    {
+      "path": "scripts\\audit_dqa30_graph_native_recall.py",
+      "bytes": 7222,
+      "sha256": "320f264c8b822684d31feb71f4ed2d64c831c629cd7c8a67251333f7ea23c3f8"
+    },
+    {
+      "path": "scripts\\audit_dqa30_graph_recall.py",
+      "bytes": 9264,
+      "sha256": "b7546eb3d446b5b6724b2126b242c96a3e275e46ca6f170a0db94685f807dee3"
+    },
+    {
+      "path": "scripts\\finalize_dqa30_deliverables.py",
+      "bytes": 2065,
+      "sha256": "d1de5628a5d78b8bec5efebca3fde41a71e420d2b36c5109c59dfb1547dd54f7"
+    },
+    {
+      "path": "scripts\\freeze_dqa30_graphs.py",
+      "bytes": 6865,
+      "sha256": "6e96644e95ccf6688c0d61452bfdeb068e8107d865e05232da4e74c73d2442fb"
+    },
+    {
+      "path": "scripts\\monitor_dqa30_eval.py",
+      "bytes": 5367,
+      "sha256": "37f57f219e666f1468e9419ec743b541691a56974d0e6f10cb8fe2f7c0ea5b95"
+    },
+    {
+      "path": "scripts\\plot_dqa30_pairwise.py",
+      "bytes": 1834,
+      "sha256": "d0c71db483daa3511541b634955b10a12dd0262c31a76984f4d9e175ad011818"
+    },
+    {
+      "path": "scripts\\plot_dqa30_paper_figures.py",
+      "bytes": 6854,
+      "sha256": "5834844dd6b107532b6a9c82f4a638611893ecbc41d36e4c069ca2fa4eef534f"
+    },
+    {
+      "path": "scripts\\run_dqa30_batch_eval.py",
+      "bytes": 21814,
+      "sha256": "7bafecef64c9e7042a94008961b47890ddcf79da2067f7e8cfd391bab1257fa1"
+    },
+    {
+      "path": "scripts\\run_dqa30_g6.py",
+      "bytes": 293,
+      "sha256": "35dd7362be74505af4104f5450b874138c39839876c2d4971c6966566b361f79"
+    },
+    {
+      "path": "scripts\\run_dqa30_g6_final.py",
+      "bytes": 676,
+      "sha256": "3c3c3e2a5337c48b520d59d6808ae536cf94b8d44268e5f8dffe788c9acde5fe"
+    },
+    {
+      "path": "scripts\\run_dqa30_g6_graph_expansion.py",
+      "bytes": 13862,
+      "sha256": "a1f4a08e2b0d1993d45c3742edf16444f6ba3993eb134532a01b797bf406d242"
+    },
+    {
+      "path": "scripts\\run_dqa30_g6_production.py",
+      "bytes": 2215,
+      "sha256": "6c9cb80255d7cfc4fefebd4df29816cad82c8c0476a97bafacd67796792b2bf4"
+    },
+    {
+      "path": "scripts\\run_dqa30_g6_robust.py",
+      "bytes": 1546,
+      "sha256": "ddaedffb38c24604d18cbd59f04a3d75d77fd98da01ffb16444ad3a37f61d6dd"
+    },
+    {
+      "path": "scripts\\run_dqa30_g6_strict.py",
+      "bytes": 1092,
+      "sha256": "e16bdb5b2a74ad8da922bfa9cc444e4e62f1b52483baa36e76ec34e75703f53b"
+    },
+    {
+      "path": "scripts\\run_dqa30_missing_baselines.py",
+      "bytes": 9108,
+      "sha256": "685c058e6cd98de51a5a8875f96a4dc6c2edde5fefb31c209653e0a88ac19cb5"
+    },
+    {
+      "path": "scripts\\run_dqa30_paper_pipeline.py",
+      "bytes": 3439,
+      "sha256": "5007d7146ff18665020afbe42befb4d18f1e5e4ba3697435a067178fb47636a7"
+    },
+    {
+      "path": "scripts\\run_dqa30_pipeline.py",
+      "bytes": 3129,
+      "sha256": "96aa69dfd2509f8f17c3980525eacb96648236f060ddd9520f3a3db8d2fe2d58"
+    },
+    {
+      "path": "scripts\\search_dqa30_confidence_routes.py",
+      "bytes": 11921,
+      "sha256": "90c38dcf0946d947e3775aeee0b7b6ec291a8c871c701628f07bd35eb0ecb6fd"
+    },
+    {
+      "path": "scripts\\write_dqa30_final_report.py",
+      "bytes": 4074,
+      "sha256": "a8b0c5871fdb7df44e09d6477ab5240f6fb99114aad2540857e55a732e743593"
+    }
+  ]
+}

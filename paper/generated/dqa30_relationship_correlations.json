@@ -1,0 +1,116 @@
+{
+  "warning": "exploratory novel-level associations; no causal interpretation",
+  "correlations": {
+    "old20": {
+      "gold_position_recall_vs_G5_accuracy": {
+        "n": 20,
+        "pearson_r": 0.346488483160112,
+        "pearson_p": 0.1345022623375706,
+        "spearman_rho": 0.4015405346350128,
+        "spearman_p": 0.07928650471167543
+      },
+      "gold_position_recall_vs_G5_minus_tail": {
+        "n": 20,
+        "pearson_r": 0.2420988654392993,
+        "pearson_p": 0.30376823698334643,
+        "spearman_rho": 0.04377883815276118,
+        "spearman_p": 0.8545896238300481
+      },
+      "core2_gold_rate_vs_G5_accuracy": {
+        "n": 20,
+        "pearson_r": 0.1675947899248628,
+        "pearson_p": 0.48002241706314397,
+        "spearman_rho": -0.034773069465192055,
+        "spearman_p": 0.8842845079667438
+      },
+      "isolate_rate_vs_G5_accuracy": {
+        "n": 20,
+        "pearson_r": 0.5160239125788486,
+        "pearson_p": 0.01985393863978728,
+        "spearman_rho": 0.5061076671240372,
+        "spearman_p": 0.022793735692832457
+      },
+      "novel_characters_vs_G5_accuracy": {
+        "n": 20,
+        "pearson_r": 0.18279669544317403,
+        "pearson_p": 0.44047701751116153,
+        "spearman_rho": 0.24317485507461242,
+        "spearman_p": 0.30155747110485626
+      }
+    },
+    "new10": {
+      "gold_position_recall_vs_G5_accuracy": {
+        "n": 10,
+        "pearson_r": -0.40974649280940606,
+        "pearson_p": 0.23961155318588293,
+        "spearman_rho": -0.2400284074096988,
+        "spearman_p": 0.504157229610697
+      },
+      "gold_position_recall_vs_G5_minus_tail": {
+        "n": 10,
+        "pearson_r": -0.2730581381632338,
+        "pearson_p": 0.44526452858436383,
+        "spearman_rho": -0.19512557866211333,
+        "spearman_p": 0.5890463048965601
+      },
+      "core2_gold_rate_vs_G5_accuracy": {
+        "n": 10,
+        "pearson_r": 0.40551377559213697,
+        "pearson_p": 0.24497953928479263,
+        "spearman_rho": 0.3261924510952317,
+        "spearman_p": 0.3576522252018224
+      },
+      "isolate_rate_vs_G5_accuracy": {
+        "n": 10,
+        "pearson_r": 0.1907161296853422,
+        "pearson_p": 0.5976545336477823,
+        "spearman_rho": 0.42466564387869793,
+        "spearman_p": 0.2212236735692718
+      },
+      "novel_characters_vs_G5_accuracy": {
+        "n": 10,
+        "pearson_r": -0.6009688700857903,
+        "pearson_p": 0.06613392406825903,
+        "spearman_rho": -0.6523849021904634,
+        "spearman_p": 0.04090178912869298
+      }
+    },
+    "descriptive30": {
+      "gold_position_recall_vs_G5_accuracy": {
+        "n": 30,
+        "pearson_r": 0.04420600303923405,
+        "pearson_p": 0.8165759905636996,
+        "spearman_rho": -0.0041523185481690235,
+        "spearman_p": 0.9826259732005178
+      },
+      "gold_position_recall_vs_G5_minus_tail": {
+        "n": 30,
+        "pearson_r": 0.16853883845043788,
+        "pearson_p": 0.3733086588240021,
+        "spearman_rho": -0.0015702592522792028,
+        "spearman_p": 0.9934293400527388
+      },
+      "core2_gold_rate_vs_G5_accuracy": {
+        "n": 30,
+        "pearson_r": 0.16715013280845992,
+        "pearson_p": 0.3773165490201388,
+        "spearman_rho": 0.042374829867933096,
+        "spearman_p": 0.8240538901618133
+      },
+      "isolate_rate_vs_G5_accuracy": {
+        "n": 30,
+        "pearson_r": 0.12291215388021519,
+        "pearson_p": 0.5175852301537024,
+        "spearman_rho": 0.37676711731310425,
+        "spearman_p": 0.040142847706257145
+      },
+      "novel_characters_vs_G5_accuracy": {
+        "n": 30,
+        "pearson_r": 0.059720876239794836,
+        "pearson_p": 0.7539118840049126,
+        "spearman_rho": 0.06440271749187668,
+        "spearman_p": 0.7352797873775078
+      }
+    }
+  }
+}
