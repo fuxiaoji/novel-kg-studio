@@ -1,0 +1,284 @@
+{
+  "metadata": {
+    "metric": "causal gold-evidence attribution proxy, not internal attention",
+    "model": "qwen3.5:9b",
+    "questions": 70,
+    "alignment_threshold": 0.55
+  },
+  "interpretation_guard": "Causal option-logprob attribution proxy; not an internal attention tensor.",
+  "all70": {
+    "n": 70,
+    "graph": {
+      "mean_delta": 0.14927823213594302,
+      "median_delta": 0.0,
+      "positive_fraction": 0.32857142857142857,
+      "argmax_accuracy": 0.4857142857142857
+    },
+    "compression": {
+      "mean_delta": 0.13293888402570572,
+      "median_delta": 0.034355878829956055,
+      "positive_fraction": 0.5857142857142857,
+      "argmax_accuracy": 0.5571428571428572
+    },
+    "paired_graph_minus_compression": {
+      "mean": 0.01633934811023729,
+      "median": -0.012776881456375122,
+      "positive_fraction": 0.4714285714285714
+    }
+  },
+  "graph_gold_retained": {
+    "n": 40,
+    "graph": {
+      "mean_delta": 0.26123690623790025,
+      "median_delta": 0.020732910372316837,
+      "positive_fraction": 0.575,
+      "argmax_accuracy": 0.625
+    },
+    "compression": {
+      "mean_delta": 0.16715021973941474,
+      "median_delta": 0.04099389957264066,
+      "positive_fraction": 0.55,
+      "argmax_accuracy": 0.6
+    },
+    "paired_graph_minus_compression": {
+      "mean": 0.0940866864984855,
+      "median": 0.028971239924430847,
+      "positive_fraction": 0.55
+    }
+  },
+  "graph_gold_missed": {
+    "n": 30,
+    "graph": {
+      "mean_delta": 0.0,
+      "median_delta": 0.0,
+      "positive_fraction": 0.0,
+      "argmax_accuracy": 0.3
+    },
+    "compression": {
+      "mean_delta": 0.08732376974076032,
+      "median_delta": 0.034355878829956055,
+      "positive_fraction": 0.6333333333333333,
+      "argmax_accuracy": 0.5
+    },
+    "paired_graph_minus_compression": {
+      "mean": -0.08732376974076032,
+      "median": -0.034355878829956055,
+      "positive_fraction": 0.36666666666666664
+    }
+  },
+  "graph_retention": 0.5714285714285714,
+  "compression_retention_sensitivity": {
+    "0.45": 1.0,
+    "0.5": 1.0,
+    "0.55": 1.0,
+    "0.6": 0.9857142857142858,
+    "0.65": 0.9,
+    "0.7": 0.7285714285714285
+  },
+  "cluster_bootstrap95_graph_minus_compression": [
+    -0.1453881684852683,
+    0.17578941418398772
+  ],
+  "per_novel": {
+    "93": {
+      "n": 7,
+      "graph": {
+        "mean_delta": -0.02067650854587555,
+        "median_delta": 0.0,
+        "positive_fraction": 0.14285714285714285,
+        "argmax_accuracy": 0.2857142857142857
+      },
+      "compression": {
+        "mean_delta": 0.24768697044679097,
+        "median_delta": 0.2442772388458252,
+        "positive_fraction": 0.8571428571428571,
+        "argmax_accuracy": 0.42857142857142855
+      },
+      "paired_graph_minus_compression": {
+        "mean": -0.2683634789926665,
+        "median": -0.24482369422912598,
+        "positive_fraction": 0.14285714285714285
+      }
+    },
+    "97": {
+      "n": 5,
+      "graph": {
+        "mean_delta": -0.016960775852203368,
+        "median_delta": 0.0,
+        "positive_fraction": 0.0,
+        "argmax_accuracy": 0.4
+      },
+      "compression": {
+        "mean_delta": 0.14506263732910157,
+        "median_delta": 0.03193926811218262,
+        "positive_fraction": 0.6,
+        "argmax_accuracy": 0.2
+      },
+      "paired_graph_minus_compression": {
+        "mean": -0.16202341318130492,
+        "median": -0.03193926811218262,
+        "positive_fraction": 0.4
+      }
+    },
+    "99": {
+      "n": 6,
+      "graph": {
+        "mean_delta": 0.17545819779237112,
+        "median_delta": 0.0,
+        "positive_fraction": 0.3333333333333333,
+        "argmax_accuracy": 0.3333333333333333
+      },
+      "compression": {
+        "mean_delta": -0.3053373694419861,
+        "median_delta": -0.21511495113372803,
+        "positive_fraction": 0.3333333333333333,
+        "argmax_accuracy": 0.3333333333333333
+      },
+      "paired_graph_minus_compression": {
+        "mean": 0.4807955672343572,
+        "median": 0.4713713377714157,
+        "positive_fraction": 0.8333333333333334
+      }
+    },
+    "100": {
+      "n": 8,
+      "graph": {
+        "mean_delta": 0.33371574175544083,
+        "median_delta": 0.0,
+        "positive_fraction": 0.25,
+        "argmax_accuracy": 0.5
+      },
+      "compression": {
+        "mean_delta": 0.683054186636582,
+        "median_delta": 0.018754594027996063,
+        "positive_fraction": 0.5,
+        "argmax_accuracy": 0.5
+      },
+      "paired_graph_minus_compression": {
+        "mean": -0.3493384448811412,
+        "median": 0.052931807935237885,
+        "positive_fraction": 0.625
+      }
+    },
+    "103": {
+      "n": 6,
+      "graph": {
+        "mean_delta": 0.05386484507471323,
+        "median_delta": 0.0014121774584054947,
+        "positive_fraction": 0.5,
+        "argmax_accuracy": 0.8333333333333334
+      },
+      "compression": {
+        "mean_delta": -0.3368602277090152,
+        "median_delta": -0.061940647661685944,
+        "positive_fraction": 0.5,
+        "argmax_accuracy": 0.8333333333333334
+      },
+      "paired_graph_minus_compression": {
+        "mean": 0.3907250727837284,
+        "median": 0.07114870194345713,
+        "positive_fraction": 0.5
+      }
+    },
+    "104": {
+      "n": 8,
+      "graph": {
+        "mean_delta": 0.012020786292850971,
+        "median_delta": 0.06455901265144348,
+        "positive_fraction": 0.5,
+        "argmax_accuracy": 0.5
+      },
+      "compression": {
+        "mean_delta": -0.17642509401775897,
+        "median_delta": -0.13968975841999054,
+        "positive_fraction": 0.25,
+        "argmax_accuracy": 0.625
+      },
+      "paired_graph_minus_compression": {
+        "mean": 0.18844588031060994,
+        "median": 0.26993244886398315,
+        "positive_fraction": 0.625
+      }
+    },
+    "105": {
+      "n": 7,
+      "graph": {
+        "mean_delta": 0.3313482933278595,
+        "median_delta": 0.06692278385162354,
+        "positive_fraction": 0.5714285714285714,
+        "argmax_accuracy": 0.5714285714285714
+      },
+      "compression": {
+        "mean_delta": 0.48887061859880176,
+        "median_delta": 0.14284729957580566,
+        "positive_fraction": 0.8571428571428571,
+        "argmax_accuracy": 0.5714285714285714
+      },
+      "paired_graph_minus_compression": {
+        "mean": -0.1575223252709423,
+        "median": -0.12166838347911835,
+        "positive_fraction": 0.42857142857142855
+      }
+    },
+    "106": {
+      "n": 7,
+      "graph": {
+        "mean_delta": 0.052213119875107496,
+        "median_delta": 0.0,
+        "positive_fraction": 0.42857142857142855,
+        "argmax_accuracy": 0.5714285714285714
+      },
+      "compression": {
+        "mean_delta": 0.11745414536978517,
+        "median_delta": 0.0384150892496109,
+        "positive_fraction": 0.7142857142857143,
+        "argmax_accuracy": 1.0
+      },
+      "paired_graph_minus_compression": {
+        "mean": -0.06524102549467768,
+        "median": -0.01415938138961792,
+        "positive_fraction": 0.42857142857142855
+      }
+    },
+    "107": {
+      "n": 10,
+      "graph": {
+        "mean_delta": 0.1958179920911789,
+        "median_delta": 0.0,
+        "positive_fraction": 0.3,
+        "argmax_accuracy": 0.4
+      },
+      "compression": {
+        "mean_delta": 0.003115847986191511,
+        "median_delta": 0.04649406811222434,
+        "positive_fraction": 0.6,
+        "argmax_accuracy": 0.5
+      },
+      "paired_graph_minus_compression": {
+        "mean": 0.19270214410498737,
+        "median": -0.05468243360519409,
+        "positive_fraction": 0.4
+      }
+    },
+    "108": {
+      "n": 6,
+      "graph": {
+        "mean_delta": 0.31567923227945965,
+        "median_delta": 0.0,
+        "positive_fraction": 0.16666666666666666,
+        "argmax_accuracy": 0.5
+      },
+      "compression": {
+        "mean_delta": 0.39522015272329253,
+        "median_delta": 0.08077198918908834,
+        "positive_fraction": 0.6666666666666666,
+        "argmax_accuracy": 0.5
+      },
+      "paired_graph_minus_compression": {
+        "mean": -0.07954092044383287,
+        "median": -0.025243046693503857,
+        "positive_fraction": 0.3333333333333333
+      }
+    }
+  }
+}
