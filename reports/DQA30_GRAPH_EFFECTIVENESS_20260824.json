@@ -1,0 +1,1482 @@
+{
+  "metadata": {
+    "generated": "2026-08-24",
+    "development": {
+      "novels": 20,
+      "questions": 164,
+      "legacy_graph_builder": true
+    },
+    "validation": {
+      "novels": 10,
+      "questions": 70,
+      "graph_builder": "qwen3.5:9b v4"
+    },
+    "warning": "Pooled values are descriptive because graph construction and retrieval versions differ."
+  },
+  "old20": {
+    "all": {
+      "Q0": {
+        "correct": 61,
+        "total": 164,
+        "accuracy": 0.3719512195121951,
+        "wilson_95": [
+          0.3017028864828616,
+          0.44806096629162584
+        ]
+      },
+      "tail": {
+        "correct": 79,
+        "total": 164,
+        "accuracy": 0.4817073170731707,
+        "wilson_95": [
+          0.40653251804101626,
+          0.5577194609267676
+        ]
+      },
+      "graph": {
+        "correct": 82,
+        "total": 164,
+        "accuracy": 0.5,
+        "wilson_95": [
+          0.424357047388029,
+          0.5756429526119711
+        ]
+      },
+      "reverse": {
+        "correct": 81,
+        "total": 164,
+        "accuracy": 0.49390243902439024,
+        "wilson_95": [
+          0.4184045401918173,
+          0.569679452797444
+        ]
+      },
+      "cyclic": {
+        "correct": 84,
+        "total": 164,
+        "accuracy": 0.5121951219512195,
+        "wilson_95": [
+          0.4362950420323061,
+          0.5875369719891712
+        ]
+      },
+      "consensus": {
+        "correct": 88,
+        "total": 164,
+        "accuracy": 0.5365853658536586,
+        "wilson_95": [
+          0.4603031878123809,
+          0.6111928542520513
+        ]
+      }
+    },
+    "q0_wrong": {
+      "tail": {
+        "correct": 37,
+        "total": 103,
+        "accuracy": 0.3592233009708738,
+        "wilson_95": [
+          0.2731709258664398,
+          0.45539886043094663
+        ]
+      },
+      "graph": {
+        "correct": 40,
+        "total": 103,
+        "accuracy": 0.3883495145631068,
+        "wilson_95": [
+          0.29986199561845933,
+          0.4848657659277437
+        ]
+      },
+      "reverse": {
+        "correct": 41,
+        "total": 103,
+        "accuracy": 0.39805825242718446,
+        "wilson_95": [
+          0.3088339434875273,
+          0.4946131431416146
+        ]
+      },
+      "cyclic": {
+        "correct": 42,
+        "total": 103,
+        "accuracy": 0.4077669902912621,
+        "wilson_95": [
+          0.3178425371515976,
+          0.5043238745604832
+        ]
+      },
+      "consensus": {
+        "correct": 43,
+        "total": 103,
+        "accuracy": 0.4174757281553398,
+        "wilson_95": [
+          0.3268873640675524,
+          0.5139983727274672
+        ]
+      }
+    }
+  },
+  "new10": {
+    "all": {
+      "G1": {
+        "correct": 36,
+        "total": 70,
+        "accuracy": 0.5142857142857142,
+        "wilson_95": [
+          0.39954383919009234,
+          0.6275412161696143
+        ]
+      },
+      "G2": {
+        "correct": 31,
+        "total": 70,
+        "accuracy": 0.44285714285714284,
+        "wilson_95": [
+          0.3324952890930533,
+          0.55916448946812
+        ]
+      },
+      "G3": {
+        "correct": 34,
+        "total": 70,
+        "accuracy": 0.4857142857142857,
+        "wilson_95": [
+          0.37245878383038566,
+          0.6004561608099076
+        ]
+      },
+      "G4": {
+        "correct": 34,
+        "total": 70,
+        "accuracy": 0.4857142857142857,
+        "wilson_95": [
+          0.37245878383038566,
+          0.6004561608099076
+        ]
+      },
+      "G5": {
+        "correct": 36,
+        "total": 70,
+        "accuracy": 0.5142857142857142,
+        "wilson_95": [
+          0.39954383919009234,
+          0.6275412161696143
+        ]
+      },
+      "B1": {
+        "correct": 29,
+        "total": 70,
+        "accuracy": 0.4142857142857143,
+        "wilson_95": [
+          0.30630178568736466,
+          0.5311878821543955
+        ]
+      },
+      "B2": {
+        "correct": 36,
+        "total": 70,
+        "accuracy": 0.5142857142857142,
+        "wilson_95": [
+          0.39954383919009234,
+          0.6275412161696143
+        ]
+      },
+      "B3": {
+        "correct": 35,
+        "total": 70,
+        "accuracy": 0.5,
+        "wilson_95": [
+          0.3859571764530239,
+          0.6140428235469761
+        ]
+      },
+      "Q0": {
+        "correct": 33,
+        "total": 70,
+        "accuracy": 0.4714285714285714,
+        "wilson_95": [
+          0.3590487639638429,
+          0.5867811253167438
+        ]
+      }
+    },
+    "q0_wrong": {
+      "G1": {
+        "correct": 12,
+        "total": 37,
+        "accuracy": 0.32432432432432434,
+        "wilson_95": [
+          0.19633266528144183,
+          0.48536332758027806
+        ]
+      },
+      "G2": {
+        "correct": 11,
+        "total": 37,
+        "accuracy": 0.2972972972972973,
+        "wilson_95": [
+          0.17489478649832016,
+          0.45783135911135664
+        ]
+      },
+      "G3": {
+        "correct": 13,
+        "total": 37,
+        "accuracy": 0.35135135135135137,
+        "wilson_95": [
+          0.2182560713392713,
+          0.5124097687744917
+        ]
+      },
+      "G4": {
+        "correct": 11,
+        "total": 37,
+        "accuracy": 0.2972972972972973,
+        "wilson_95": [
+          0.17489478649832016,
+          0.45783135911135664
+        ]
+      },
+      "G5": {
+        "correct": 13,
+        "total": 37,
+        "accuracy": 0.35135135135135137,
+        "wilson_95": [
+          0.2182560713392713,
+          0.5124097687744917
+        ]
+      },
+      "B1": {
+        "correct": 10,
+        "total": 37,
+        "accuracy": 0.2702702702702703,
+        "wilson_95": [
+          0.15397461511049093,
+          0.4297816832471427
+        ]
+      },
+      "B2": {
+        "correct": 14,
+        "total": 37,
+        "accuracy": 0.3783783783783784,
+        "wilson_95": [
+          0.24063999175798265,
+          0.5389956956078235
+        ]
+      },
+      "B3": {
+        "correct": 12,
+        "total": 37,
+        "accuracy": 0.32432432432432434,
+        "wilson_95": [
+          0.19633266528144183,
+          0.48536332758027806
+        ]
+      }
+    },
+    "q0_correct_preservation": {
+      "G1": {
+        "correct": 24,
+        "total": 33,
+        "accuracy": 0.7272727272727273,
+        "wilson_95": [
+          0.5578244099712737,
+          0.8493255911457935
+        ]
+      },
+      "G2": {
+        "correct": 20,
+        "total": 33,
+        "accuracy": 0.6060606060606061,
+        "wilson_95": [
+          0.43683440819940234,
+          0.7531689256552291
+        ]
+      },
+      "G3": {
+        "correct": 21,
+        "total": 33,
+        "accuracy": 0.6363636363636364,
+        "wilson_95": [
+          0.466161783022664,
+          0.7781282176475764
+        ]
+      },
+      "G4": {
+        "correct": 23,
+        "total": 33,
+        "accuracy": 0.696969696969697,
+        "wilson_95": [
+          0.5266186485419944,
+          0.8262446857594641
+        ]
+      },
+      "G5": {
+        "correct": 23,
+        "total": 33,
+        "accuracy": 0.696969696969697,
+        "wilson_95": [
+          0.5266186485419944,
+          0.8262446857594641
+        ]
+      },
+      "B1": {
+        "correct": 19,
+        "total": 33,
+        "accuracy": 0.5757575757575758,
+        "wilson_95": [
+          0.4080726333731245,
+          0.7276440336658979
+        ]
+      },
+      "B2": {
+        "correct": 22,
+        "total": 33,
+        "accuracy": 0.6666666666666666,
+        "wilson_95": [
+          0.4960789442780561,
+          0.8024977232077931
+        ]
+      },
+      "B3": {
+        "correct": 23,
+        "total": 33,
+        "accuracy": 0.696969696969697,
+        "wilson_95": [
+          0.5266186485419944,
+          0.8262446857594641
+        ]
+      }
+    },
+    "paired": {
+      "G1_vs_B1": {
+        "wins": 16,
+        "losses": 9,
+        "discordant": 25,
+        "exact_p": 0.2295229434967041,
+        "accuracy_delta": 0.09999999999999992,
+        "novel_cluster_delta_95": [
+          -0.0273972602739726,
+          0.24637681159420288
+        ]
+      },
+      "G1_vs_B2": {
+        "wins": 14,
+        "losses": 14,
+        "discordant": 28,
+        "exact_p": 1.0,
+        "accuracy_delta": 0.0,
+        "novel_cluster_delta_95": [
+          -0.13043478260869568,
+          0.15000000000000008
+        ]
+      },
+      "G1_vs_B3": {
+        "wins": 3,
+        "losses": 2,
+        "discordant": 5,
+        "exact_p": 1.0,
+        "accuracy_delta": 0.014285714285714235,
+        "novel_cluster_delta_95": [
+          -0.046875,
+          0.07462686567164178
+        ]
+      },
+      "G3_vs_B1": {
+        "wins": 13,
+        "losses": 8,
+        "discordant": 21,
+        "exact_p": 0.38331031799316406,
+        "accuracy_delta": 0.0714285714285714,
+        "novel_cluster_delta_95": [
+          -0.05194805194805191,
+          0.2121212121212121
+        ]
+      },
+      "G3_vs_B2": {
+        "wins": 13,
+        "losses": 15,
+        "discordant": 28,
+        "exact_p": 0.8505540192127228,
+        "accuracy_delta": -0.028571428571428525,
+        "novel_cluster_delta_95": [
+          -0.1265822784810126,
+          0.07575757575757575
+        ]
+      },
+      "G3_vs_B3": {
+        "wins": 6,
+        "losses": 7,
+        "discordant": 13,
+        "exact_p": 1.0,
+        "accuracy_delta": -0.01428571428571429,
+        "novel_cluster_delta_95": [
+          -0.11428571428571432,
+          0.08823529411764702
+        ]
+      },
+      "G5_vs_B1": {
+        "wins": 15,
+        "losses": 8,
+        "discordant": 23,
+        "exact_p": 0.21003961563110352,
+        "accuracy_delta": 0.09999999999999992,
+        "novel_cluster_delta_95": [
+          0.0,
+          0.21538461538461534
+        ]
+      },
+      "G5_vs_B2": {
+        "wins": 14,
+        "losses": 14,
+        "discordant": 28,
+        "exact_p": 1.0,
+        "accuracy_delta": 0.0,
+        "novel_cluster_delta_95": [
+          -0.0897435897435897,
+          0.10294117647058826
+        ]
+      },
+      "G5_vs_B3": {
+        "wins": 6,
+        "losses": 5,
+        "discordant": 11,
+        "exact_p": 1.0,
+        "accuracy_delta": 0.014285714285714235,
+        "novel_cluster_delta_95": [
+          -0.07042253521126762,
+          0.09459459459459457
+        ]
+      }
+    },
+    "per_novel": {
+      "93": {
+        "questions": 7,
+        "G1": {
+          "correct": 1,
+          "total": 7,
+          "accuracy": 0.14285714285714285,
+          "wilson_95": [
+            0.02567962434474355,
+            0.5131278292743189
+          ]
+        },
+        "G5": {
+          "correct": 1,
+          "total": 7,
+          "accuracy": 0.14285714285714285,
+          "wilson_95": [
+            0.02567962434474355,
+            0.5131278292743189
+          ]
+        },
+        "B1": {
+          "correct": 2,
+          "total": 7,
+          "accuracy": 0.2857142857142857,
+          "wilson_95": [
+            0.08221892400405678,
+            0.6410655481673808
+          ]
+        },
+        "B2": {
+          "correct": 1,
+          "total": 7,
+          "accuracy": 0.14285714285714285,
+          "wilson_95": [
+            0.02567962434474355,
+            0.5131278292743189
+          ]
+        },
+        "B3": {
+          "correct": 1,
+          "total": 7,
+          "accuracy": 0.14285714285714285,
+          "wilson_95": [
+            0.02567962434474355,
+            0.5131278292743189
+          ]
+        },
+        "Q0": {
+          "correct": 2,
+          "total": 7,
+          "accuracy": 0.2857142857142857,
+          "wilson_95": [
+            0.08221892400405678,
+            0.6410655481673808
+          ]
+        },
+        "quality": {
+          "nodes": 718.0,
+          "edges": 910.0,
+          "isolates": 40.0,
+          "isolate_rate": 0.055710306406685235,
+          "edge_node_ratio": 1.267409470752089,
+          "ungrounded_nodes": 48.0,
+          "ungrounded_isolates": 0.0,
+          "dangling_edges": 0.0,
+          "dropped_relations": 142.0,
+          "relation_candidates": 1055.0,
+          "dropped_relation_rate": 0.13459715639810427
+        }
+      },
+      "97": {
+        "questions": 5,
+        "G1": {
+          "correct": 3,
+          "total": 5,
+          "accuracy": 0.6,
+          "wilson_95": [
+            0.2307242812760128,
+            0.882379225767352
+          ]
+        },
+        "G5": {
+          "correct": 2,
+          "total": 5,
+          "accuracy": 0.4,
+          "wilson_95": [
+            0.11762077423264783,
+            0.769275718723987
+          ]
+        },
+        "B1": {
+          "correct": 0,
+          "total": 5,
+          "accuracy": 0.0,
+          "wilson_95": [
+            0.0,
+            0.43448246478317476
+          ]
+        },
+        "B2": {
+          "correct": 2,
+          "total": 5,
+          "accuracy": 0.4,
+          "wilson_95": [
+            0.11762077423264783,
+            0.769275718723987
+          ]
+        },
+        "B3": {
+          "correct": 3,
+          "total": 5,
+          "accuracy": 0.6,
+          "wilson_95": [
+            0.2307242812760128,
+            0.882379225767352
+          ]
+        },
+        "Q0": {
+          "correct": 3,
+          "total": 5,
+          "accuracy": 0.6,
+          "wilson_95": [
+            0.2307242812760128,
+            0.882379225767352
+          ]
+        },
+        "quality": {
+          "nodes": 676.0,
+          "edges": 922.0,
+          "isolates": 27.0,
+          "isolate_rate": 0.03994082840236687,
+          "edge_node_ratio": 1.363905325443787,
+          "ungrounded_nodes": 26.0,
+          "ungrounded_isolates": 0.0,
+          "dangling_edges": 0.0,
+          "dropped_relations": 73.0,
+          "relation_candidates": 1003.0,
+          "dropped_relation_rate": 0.07278165503489531
+        }
+      },
+      "99": {
+        "questions": 6,
+        "G1": {
+          "correct": 3,
+          "total": 6,
+          "accuracy": 0.5,
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "G5": {
+          "correct": 4,
+          "total": 6,
+          "accuracy": 0.6666666666666666,
+          "wilson_95": [
+            0.299993315138392,
+            0.9032285888942195
+          ]
+        },
+        "B1": {
+          "correct": 3,
+          "total": 6,
+          "accuracy": 0.5,
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "B2": {
+          "correct": 4,
+          "total": 6,
+          "accuracy": 0.6666666666666666,
+          "wilson_95": [
+            0.299993315138392,
+            0.9032285888942195
+          ]
+        },
+        "B3": {
+          "correct": 3,
+          "total": 6,
+          "accuracy": 0.5,
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "Q0": {
+          "correct": 2,
+          "total": 6,
+          "accuracy": 0.3333333333333333,
+          "wilson_95": [
+            0.09677141110578041,
+            0.700006684861608
+          ]
+        },
+        "quality": {
+          "nodes": 570.0,
+          "edges": 759.0,
+          "isolates": 32.0,
+          "isolate_rate": 0.056140350877192984,
+          "edge_node_ratio": 1.331578947368421,
+          "ungrounded_nodes": 27.0,
+          "ungrounded_isolates": 0.0,
+          "dangling_edges": 0.0,
+          "dropped_relations": 101.0,
+          "relation_candidates": 861.0,
+          "dropped_relation_rate": 0.1173054587688734
+        }
+      },
+      "100": {
+        "questions": 8,
+        "G1": {
+          "correct": 6,
+          "total": 8,
+          "accuracy": 0.75,
+          "wilson_95": [
+            0.40927543031016883,
+            0.9285207872478909
+          ]
+        },
+        "G5": {
+          "correct": 5,
+          "total": 8,
+          "accuracy": 0.625,
+          "wilson_95": [
+            0.30574239460262737,
+            0.8631557141764026
+          ]
+        },
+        "B1": {
+          "correct": 5,
+          "total": 8,
+          "accuracy": 0.625,
+          "wilson_95": [
+            0.30574239460262737,
+            0.8631557141764026
+          ]
+        },
+        "B2": {
+          "correct": 4,
+          "total": 8,
+          "accuracy": 0.5,
+          "wilson_95": [
+            0.21521606221387757,
+            0.7847839377861224
+          ]
+        },
+        "B3": {
+          "correct": 6,
+          "total": 8,
+          "accuracy": 0.75,
+          "wilson_95": [
+            0.40927543031016883,
+            0.9285207872478909
+          ]
+        },
+        "Q0": {
+          "correct": 5,
+          "total": 8,
+          "accuracy": 0.625,
+          "wilson_95": [
+            0.30574239460262737,
+            0.8631557141764026
+          ]
+        },
+        "quality": {
+          "nodes": 826.0,
+          "edges": 1078.0,
+          "isolates": 35.0,
+          "isolate_rate": 0.0423728813559322,
+          "edge_node_ratio": 1.305084745762712,
+          "ungrounded_nodes": 62.0,
+          "ungrounded_isolates": 0.0,
+          "dangling_edges": 0.0,
+          "dropped_relations": 87.0,
+          "relation_candidates": 1176.0,
+          "dropped_relation_rate": 0.07397959183673469
+        }
+      },
+      "103": {
+        "questions": 6,
+        "G1": {
+          "correct": 3,
+          "total": 6,
+          "accuracy": 0.5,
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "G5": {
+          "correct": 3,
+          "total": 6,
+          "accuracy": 0.5,
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "B1": {
+          "correct": 2,
+          "total": 6,
+          "accuracy": 0.3333333333333333,
+          "wilson_95": [
+            0.09677141110578041,
+            0.700006684861608
+          ]
+        },
+        "B2": {
+          "correct": 4,
+          "total": 6,
+          "accuracy": 0.6666666666666666,
+          "wilson_95": [
+            0.299993315138392,
+            0.9032285888942195
+          ]
+        },
+        "B3": {
+          "correct": 2,
+          "total": 6,
+          "accuracy": 0.3333333333333333,
+          "wilson_95": [
+            0.09677141110578041,
+            0.700006684861608
+          ]
+        },
+        "Q0": {
+          "correct": 3,
+          "total": 6,
+          "accuracy": 0.5,
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "quality": {
+          "nodes": 396.0,
+          "edges": 647.0,
+          "isolates": 23.0,
+          "isolate_rate": 0.05808080808080808,
+          "edge_node_ratio": 1.6338383838383839,
+          "ungrounded_nodes": 17.0,
+          "ungrounded_isolates": 0.0,
+          "dangling_edges": 0.0,
+          "dropped_relations": 63.0,
+          "relation_candidates": 717.0,
+          "dropped_relation_rate": 0.08786610878661087
+        }
+      },
+      "104": {
+        "questions": 8,
+        "G1": {
+          "correct": 4,
+          "total": 8,
+          "accuracy": 0.5,
+          "wilson_95": [
+            0.21521606221387757,
+            0.7847839377861224
+          ]
+        },
+        "G5": {
+          "correct": 4,
+          "total": 8,
+          "accuracy": 0.5,
+          "wilson_95": [
+            0.21521606221387757,
+            0.7847839377861224
+          ]
+        },
+        "B1": {
+          "correct": 1,
+          "total": 8,
+          "accuracy": 0.125,
+          "wilson_95": [
+            0.02241749145005667,
+            0.4708881822128535
+          ]
+        },
+        "B2": {
+          "correct": 4,
+          "total": 8,
+          "accuracy": 0.5,
+          "wilson_95": [
+            0.21521606221387757,
+            0.7847839377861224
+          ]
+        },
+        "B3": {
+          "correct": 4,
+          "total": 8,
+          "accuracy": 0.5,
+          "wilson_95": [
+            0.21521606221387757,
+            0.7847839377861224
+          ]
+        },
+        "Q0": {
+          "correct": 3,
+          "total": 8,
+          "accuracy": 0.375,
+          "wilson_95": [
+            0.13684428582359742,
+            0.6942576053973727
+          ]
+        },
+        "quality": {
+          "nodes": 465.0,
+          "edges": 625.0,
+          "isolates": 28.0,
+          "isolate_rate": 0.060215053763440864,
+          "edge_node_ratio": 1.3440860215053763,
+          "ungrounded_nodes": 17.0,
+          "ungrounded_isolates": 0.0,
+          "dangling_edges": 0.0,
+          "dropped_relations": 101.0,
+          "relation_candidates": 740.0,
+          "dropped_relation_rate": 0.13648648648648648
+        }
+      },
+      "105": {
+        "questions": 7,
+        "G1": {
+          "correct": 3,
+          "total": 7,
+          "accuracy": 0.42857142857142855,
+          "wilson_95": [
+            0.15821985525146975,
+            0.7495416354723428
+          ]
+        },
+        "G5": {
+          "correct": 3,
+          "total": 7,
+          "accuracy": 0.42857142857142855,
+          "wilson_95": [
+            0.15821985525146975,
+            0.7495416354723428
+          ]
+        },
+        "B1": {
+          "correct": 4,
+          "total": 7,
+          "accuracy": 0.5714285714285714,
+          "wilson_95": [
+            0.2504583645276572,
+            0.8417801447485302
+          ]
+        },
+        "B2": {
+          "correct": 4,
+          "total": 7,
+          "accuracy": 0.5714285714285714,
+          "wilson_95": [
+            0.2504583645276572,
+            0.8417801447485302
+          ]
+        },
+        "B3": {
+          "correct": 4,
+          "total": 7,
+          "accuracy": 0.5714285714285714,
+          "wilson_95": [
+            0.2504583645276572,
+            0.8417801447485302
+          ]
+        },
+        "Q0": {
+          "correct": 3,
+          "total": 7,
+          "accuracy": 0.42857142857142855,
+          "wilson_95": [
+            0.15821985525146975,
+            0.7495416354723428
+          ]
+        },
+        "quality": {
+          "nodes": 425.0,
+          "edges": 786.0,
+          "isolates": 28.0,
+          "isolate_rate": 0.06588235294117648,
+          "edge_node_ratio": 1.8494117647058823,
+          "ungrounded_nodes": 18.0,
+          "ungrounded_isolates": 0.0,
+          "dangling_edges": 0.0,
+          "dropped_relations": 89.0,
+          "relation_candidates": 879.0,
+          "dropped_relation_rate": 0.1012514220705347
+        }
+      },
+      "106": {
+        "questions": 7,
+        "G1": {
+          "correct": 5,
+          "total": 7,
+          "accuracy": 0.7142857142857143,
+          "wilson_95": [
+            0.35893445183261935,
+            0.9177810759959433
+          ]
+        },
+        "G5": {
+          "correct": 6,
+          "total": 7,
+          "accuracy": 0.8571428571428571,
+          "wilson_95": [
+            0.4868721707256811,
+            0.9743203756552565
+          ]
+        },
+        "B1": {
+          "correct": 5,
+          "total": 7,
+          "accuracy": 0.7142857142857143,
+          "wilson_95": [
+            0.35893445183261935,
+            0.9177810759959433
+          ]
+        },
+        "B2": {
+          "correct": 5,
+          "total": 7,
+          "accuracy": 0.7142857142857143,
+          "wilson_95": [
+            0.35893445183261935,
+            0.9177810759959433
+          ]
+        },
+        "B3": {
+          "correct": 6,
+          "total": 7,
+          "accuracy": 0.8571428571428571,
+          "wilson_95": [
+            0.4868721707256811,
+            0.9743203756552565
+          ]
+        },
+        "Q0": {
+          "correct": 5,
+          "total": 7,
+          "accuracy": 0.7142857142857143,
+          "wilson_95": [
+            0.35893445183261935,
+            0.9177810759959433
+          ]
+        },
+        "quality": {
+          "nodes": 389.0,
+          "edges": 664.0,
+          "isolates": 23.0,
+          "isolate_rate": 0.05912596401028278,
+          "edge_node_ratio": 1.7069408740359897,
+          "ungrounded_nodes": 22.0,
+          "ungrounded_isolates": 0.0,
+          "dangling_edges": 0.0,
+          "dropped_relations": 70.0,
+          "relation_candidates": 739.0,
+          "dropped_relation_rate": 0.09472259810554803
+        }
+      },
+      "107": {
+        "questions": 10,
+        "G1": {
+          "correct": 3,
+          "total": 10,
+          "accuracy": 0.3,
+          "wilson_95": [
+            0.10779126740630099,
+            0.6032218525388546
+          ]
+        },
+        "G5": {
+          "correct": 4,
+          "total": 10,
+          "accuracy": 0.4,
+          "wilson_95": [
+            0.16818032970623614,
+            0.6873262302663417
+          ]
+        },
+        "B1": {
+          "correct": 4,
+          "total": 10,
+          "accuracy": 0.4,
+          "wilson_95": [
+            0.16818032970623614,
+            0.6873262302663417
+          ]
+        },
+        "B2": {
+          "correct": 6,
+          "total": 10,
+          "accuracy": 0.6,
+          "wilson_95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ]
+        },
+        "B3": {
+          "correct": 2,
+          "total": 10,
+          "accuracy": 0.2,
+          "wilson_95": [
+            0.05668215145437519,
+            0.5098375284633583
+          ]
+        },
+        "Q0": {
+          "correct": 3,
+          "total": 10,
+          "accuracy": 0.3,
+          "wilson_95": [
+            0.10779126740630099,
+            0.6032218525388546
+          ]
+        },
+        "quality": {
+          "nodes": 409.0,
+          "edges": 603.0,
+          "isolates": 30.0,
+          "isolate_rate": 0.07334963325183375,
+          "edge_node_ratio": 1.4743276283618583,
+          "ungrounded_nodes": 24.0,
+          "ungrounded_isolates": 0.0,
+          "dangling_edges": 0.0,
+          "dropped_relations": 85.0,
+          "relation_candidates": 704.0,
+          "dropped_relation_rate": 0.12073863636363637
+        }
+      },
+      "108": {
+        "questions": 6,
+        "G1": {
+          "correct": 5,
+          "total": 6,
+          "accuracy": 0.8333333333333334,
+          "wilson_95": [
+            0.43649717781352987,
+            0.9699466302516935
+          ]
+        },
+        "G5": {
+          "correct": 4,
+          "total": 6,
+          "accuracy": 0.6666666666666666,
+          "wilson_95": [
+            0.299993315138392,
+            0.9032285888942195
+          ]
+        },
+        "B1": {
+          "correct": 3,
+          "total": 6,
+          "accuracy": 0.5,
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "B2": {
+          "correct": 2,
+          "total": 6,
+          "accuracy": 0.3333333333333333,
+          "wilson_95": [
+            0.09677141110578041,
+            0.700006684861608
+          ]
+        },
+        "B3": {
+          "correct": 4,
+          "total": 6,
+          "accuracy": 0.6666666666666666,
+          "wilson_95": [
+            0.299993315138392,
+            0.9032285888942195
+          ]
+        },
+        "Q0": {
+          "correct": 4,
+          "total": 6,
+          "accuracy": 0.6666666666666666,
+          "wilson_95": [
+            0.299993315138392,
+            0.9032285888942195
+          ]
+        },
+        "quality": {
+          "nodes": 355.0,
+          "edges": 589.0,
+          "isolates": 20.0,
+          "isolate_rate": 0.056338028169014086,
+          "edge_node_ratio": 1.6591549295774648,
+          "ungrounded_nodes": 15.0,
+          "ungrounded_isolates": 0.0,
+          "dangling_edges": 0.0,
+          "dropped_relations": 46.0,
+          "relation_candidates": 636.0,
+          "dropped_relation_rate": 0.07232704402515723
+        }
+      }
+    }
+  },
+  "descriptive_30": {
+    "all": {
+      "Q0": {
+        "correct": 94,
+        "total": 234,
+        "accuracy": 0.4017094017094017,
+        "wilson_95": [
+          0.3409726376001539,
+          0.465621216019459
+        ]
+      },
+      "tail": {
+        "correct": 108,
+        "total": 234,
+        "accuracy": 0.46153846153846156,
+        "wilson_95": [
+          0.3988009347061522,
+          0.5255183993189138
+        ]
+      },
+      "single_graph": {
+        "correct": 118,
+        "total": 234,
+        "accuracy": 0.5042735042735043,
+        "wilson_95": [
+          0.44066279924739127,
+          0.5677461636387124
+        ]
+      },
+      "graph_consensus": {
+        "correct": 124,
+        "total": 234,
+        "accuracy": 0.5299145299145299,
+        "wilson_95": [
+          0.46599939451976324,
+          0.5928633456829634
+        ]
+      }
+    },
+    "q0_wrong": {
+      "tail": {
+        "correct": 47,
+        "total": 140,
+        "accuracy": 0.3357142857142857,
+        "wilson_95": [
+          0.26280357713393476,
+          0.4173998887017295
+        ]
+      },
+      "single_graph": {
+        "correct": 52,
+        "total": 140,
+        "accuracy": 0.37142857142857144,
+        "wilson_95": [
+          0.2958250811297044,
+          0.45389937039385897
+        ]
+      },
+      "graph_consensus": {
+        "correct": 56,
+        "total": 140,
+        "accuracy": 0.4,
+        "wilson_95": [
+          0.3225668105142923,
+          0.4827744295595903
+        ]
+      }
+    }
+  },
+  "graph_quality_new10": {
+    "novels": 10,
+    "nodes": 5229.0,
+    "edges": 7583.0,
+    "isolates": 286.0,
+    "micro_isolate_rate": 0.05469497035762096,
+    "edge_node_ratio": 1.4501816790973419,
+    "dropped_relations": 857.0,
+    "relation_candidates": 8510.0,
+    "dropped_relation_rate": 0.10070505287896592
+  },
+  "quality_correlations_new10": {
+    "G1_minus_B1__isolate_rate": -0.6024072299985884,
+    "G1_minus_B1__edge_node_ratio": -0.20949242421310188,
+    "G1_minus_B1__ungrounded_nodes": -0.2261020081434608,
+    "G1_minus_B1__dropped_relation_rate": -0.46130340340014564,
+    "G1_minus_B2__isolate_rate": -0.6406612648174363,
+    "G1_minus_B2__edge_node_ratio": -0.072432180206334,
+    "G1_minus_B2__ungrounded_nodes": 0.19041685595261434,
+    "G1_minus_B2__dropped_relation_rate": -0.6188143377607528,
+    "G1_minus_B3__isolate_rate": 0.018297570077082246,
+    "G1_minus_B3__edge_node_ratio": -0.16395609558766183,
+    "G1_minus_B3__ungrounded_nodes": -0.1382069189816627,
+    "G1_minus_B3__dropped_relation_rate": -0.17230592046206156
+  },
+  "diagnostics": {
+    "new10_graph_method_oracle": {
+      "methods": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5"
+      ],
+      "correct": 43,
+      "total": 70,
+      "accuracy": 0.6142857142857143
+    },
+    "new10_graph_and_text_oracle": {
+      "methods": [
+        "G1",
+        "G3",
+        "G5",
+        "B1",
+        "B2",
+        "B3"
+      ],
+      "correct": 55,
+      "total": 70,
+      "accuracy": 0.7857142857142857
+    },
+    "new10_core_oracle": {
+      "methods": [
+        "G1",
+        "B2",
+        "B3"
+      ],
+      "correct": 50,
+      "total": 70,
+      "accuracy": 0.7142857142857143
+    },
+    "hard_new10_core_oracle": {
+      "methods": [
+        "G1",
+        "B2",
+        "B3"
+      ],
+      "correct": 21,
+      "total": 37,
+      "accuracy": 0.5675675675675675
+    },
+    "prediction_agreement": {
+      "G1_vs_B1": {
+        "same_prediction": 40,
+        "total": 70,
+        "agreement": 0.5714285714285714,
+        "wins": 16,
+        "losses": 9,
+        "discordant": 25,
+        "exact_p": 0.2295229434967041
+      },
+      "G1_vs_B2": {
+        "same_prediction": 36,
+        "total": 70,
+        "agreement": 0.5142857142857142,
+        "wins": 14,
+        "losses": 14,
+        "discordant": 28,
+        "exact_p": 1.0
+      },
+      "G1_vs_B3": {
+        "same_prediction": 62,
+        "total": 70,
+        "agreement": 0.8857142857142857,
+        "wins": 3,
+        "losses": 2,
+        "discordant": 5,
+        "exact_p": 1.0
+      },
+      "G5_vs_B2": {
+        "same_prediction": 34,
+        "total": 70,
+        "agreement": 0.4857142857142857,
+        "wins": 14,
+        "losses": 14,
+        "discordant": 28,
+        "exact_p": 1.0
+      },
+      "G5_vs_B3": {
+        "same_prediction": 57,
+        "total": 70,
+        "agreement": 0.8142857142857143,
+        "wins": 6,
+        "losses": 5,
+        "discordant": 11,
+        "exact_p": 1.0
+      }
+    },
+    "stability": {
+      "unanimous": {
+        "questions": 42,
+        "G1": {
+          "correct": 23,
+          "total": 42,
+          "accuracy": 0.5476190476190477,
+          "wilson_95": [
+            0.3994911903473349,
+            0.6877660676654553
+          ]
+        },
+        "G2": {
+          "correct": 23,
+          "total": 42,
+          "accuracy": 0.5476190476190477,
+          "wilson_95": [
+            0.3994911903473349,
+            0.6877660676654553
+          ]
+        },
+        "G3": {
+          "correct": 23,
+          "total": 42,
+          "accuracy": 0.5476190476190477,
+          "wilson_95": [
+            0.3994911903473349,
+            0.6877660676654553
+          ]
+        },
+        "G5": {
+          "correct": 23,
+          "total": 42,
+          "accuracy": 0.5476190476190477,
+          "wilson_95": [
+            0.3994911903473349,
+            0.6877660676654553
+          ]
+        },
+        "B1": {
+          "correct": 21,
+          "total": 42,
+          "accuracy": 0.5,
+          "wilson_95": [
+            0.3552598959637448,
+            0.6447401040362553
+          ]
+        },
+        "B2": {
+          "correct": 26,
+          "total": 42,
+          "accuracy": 0.6190476190476191,
+          "wilson_95": [
+            0.4681404026715268,
+            0.7500027423604485
+          ]
+        },
+        "B3": {
+          "correct": 23,
+          "total": 42,
+          "accuracy": 0.5476190476190477,
+          "wilson_95": [
+            0.3994911903473349,
+            0.6877660676654553
+          ]
+        }
+      },
+      "non_unanimous": {
+        "questions": 28,
+        "G1": {
+          "correct": 13,
+          "total": 28,
+          "accuracy": 0.4642857142857143,
+          "wilson_95": [
+            0.2953156998279538,
+            0.6418731076553209
+          ]
+        },
+        "G2": {
+          "correct": 8,
+          "total": 28,
+          "accuracy": 0.2857142857142857,
+          "wilson_95": [
+            0.1525399605666909,
+            0.47059288433295715
+          ]
+        },
+        "G3": {
+          "correct": 11,
+          "total": 28,
+          "accuracy": 0.39285714285714285,
+          "wilson_95": [
+            0.2356568654157959,
+            0.5759095570340281
+          ]
+        },
+        "G5": {
+          "correct": 13,
+          "total": 28,
+          "accuracy": 0.4642857142857143,
+          "wilson_95": [
+            0.2953156998279538,
+            0.6418731076553209
+          ]
+        },
+        "B1": {
+          "correct": 8,
+          "total": 28,
+          "accuracy": 0.2857142857142857,
+          "wilson_95": [
+            0.1525399605666909,
+            0.47059288433295715
+          ]
+        },
+        "B2": {
+          "correct": 10,
+          "total": 28,
+          "accuracy": 0.35714285714285715,
+          "wilson_95": [
+            0.2070582950773768,
+            0.5416969348557219
+          ]
+        },
+        "B3": {
+          "correct": 12,
+          "total": 28,
+          "accuracy": 0.42857142857142855,
+          "wilson_95": [
+            0.26508547124123694,
+            0.6092921437253123
+          ]
+        }
+      }
+    },
+    "mean_graph_relation_hints": 8.0,
+    "mean_graph_retrieved_chunks": 6.085714285714285,
+    "mean_rag_retrieved_chunks": 6.085714285714285
+  }
+}
