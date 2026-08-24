@@ -1,0 +1,1268 @@
+{
+  "guard": "Gold is evaluation-only and is never passed to retrieval.",
+  "novels": [
+    "93",
+    "97",
+    "99",
+    "100",
+    "103",
+    "104",
+    "105",
+    "106",
+    "107",
+    "108"
+  ],
+  "variants": {
+    "g7_8": {
+      "questions": 70,
+      "any_gold": 0.7,
+      "answer_gold": 0.24285714285714285,
+      "mean_chunks": 7.4714285714285715,
+      "mean_chars": 11207.142857142857
+    },
+    "g7_12": {
+      "questions": 70,
+      "any_gold": 0.7285714285714285,
+      "answer_gold": 0.2714285714285714,
+      "mean_chunks": 8.757142857142858,
+      "mean_chars": 13135.714285714286
+    },
+    "g7_16": {
+      "questions": 70,
+      "any_gold": 0.7285714285714285,
+      "answer_gold": 0.2714285714285714,
+      "mean_chunks": 8.857142857142858,
+      "mean_chars": 13285.714285714286
+    },
+    "g7_8_neighbor12": {
+      "questions": 70,
+      "any_gold": 0.7428571428571429,
+      "answer_gold": 0.2571428571428571,
+      "mean_chunks": 12.0,
+      "mean_chars": 18000.0
+    },
+    "g7_8_edge12": {
+      "questions": 70,
+      "any_gold": 0.7285714285714285,
+      "answer_gold": 0.2571428571428571,
+      "mean_chunks": 12.0,
+      "mean_chars": 18000.0
+    },
+    "g7_8_neighbor_edge16": {
+      "questions": 70,
+      "any_gold": 0.7714285714285715,
+      "answer_gold": 0.2571428571428571,
+      "mean_chunks": 16.0,
+      "mean_chars": 24000.0
+    },
+    "g7_8_bm25_12": {
+      "questions": 70,
+      "any_gold": 0.8142857142857143,
+      "answer_gold": 0.4,
+      "mean_chunks": 12.0,
+      "mean_chars": 17981.057142857142
+    },
+    "g7_8_bm25_neighbor16": {
+      "questions": 70,
+      "any_gold": 0.8142857142857143,
+      "answer_gold": 0.4142857142857143,
+      "mean_chunks": 16.0,
+      "mean_chars": 23981.057142857142
+    },
+    "candidate_union": {
+      "questions": 70,
+      "any_gold": 0.7285714285714285,
+      "answer_gold": 0.2714285714285714,
+      "mean_chunks": 8.857142857142858,
+      "mean_chars": 13285.714285714286
+    },
+    "bm25_8": {
+      "questions": 70,
+      "any_gold": 0.7714285714285715,
+      "answer_gold": 0.35714285714285715,
+      "mean_chunks": 8.0,
+      "mean_chars": 11981.057142857142
+    },
+    "bm25_12": {
+      "questions": 70,
+      "any_gold": 0.8285714285714286,
+      "answer_gold": 0.42857142857142855,
+      "mean_chunks": 12.0,
+      "mean_chars": 17981.057142857142
+    },
+    "bm25_16": {
+      "questions": 70,
+      "any_gold": 0.8714285714285714,
+      "answer_gold": 0.4714285714285714,
+      "mean_chunks": 16.0,
+      "mean_chars": 23970.614285714284
+    }
+  },
+  "per_novel": {
+    "93": {
+      "g7_8": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 7.714285714285714,
+        "mean_chars": 11571.42857142857
+      },
+      "g7_12": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 9.0,
+        "mean_chars": 13500.0
+      },
+      "g7_16": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 9.0,
+        "mean_chars": 13500.0
+      },
+      "g7_8_neighbor12": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_edge12": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_neighbor_edge16": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "g7_8_bm25_12": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_bm25_neighbor16": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "candidate_union": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 9.0,
+        "mean_chars": 13500.0
+      },
+      "bm25_8": {
+        "questions": 7,
+        "any_gold": 0.7142857142857143,
+        "answer_gold": 0.0,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "bm25_12": {
+        "questions": 7,
+        "any_gold": 0.7142857142857143,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "bm25_16": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "97": {
+      "g7_8": {
+        "questions": 5,
+        "any_gold": 0.4,
+        "answer_gold": 0.0,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "g7_12": {
+        "questions": 5,
+        "any_gold": 0.6,
+        "answer_gold": 0.2,
+        "mean_chunks": 11.8,
+        "mean_chars": 17700.0
+      },
+      "g7_16": {
+        "questions": 5,
+        "any_gold": 0.6,
+        "answer_gold": 0.2,
+        "mean_chunks": 12.6,
+        "mean_chars": 18900.0
+      },
+      "g7_8_neighbor12": {
+        "questions": 5,
+        "any_gold": 0.4,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_edge12": {
+        "questions": 5,
+        "any_gold": 0.4,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_neighbor_edge16": {
+        "questions": 5,
+        "any_gold": 0.4,
+        "answer_gold": 0.0,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "g7_8_bm25_12": {
+        "questions": 5,
+        "any_gold": 0.6,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_bm25_neighbor16": {
+        "questions": 5,
+        "any_gold": 0.6,
+        "answer_gold": 0.0,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "candidate_union": {
+        "questions": 5,
+        "any_gold": 0.6,
+        "answer_gold": 0.2,
+        "mean_chunks": 12.6,
+        "mean_chars": 18900.0
+      },
+      "bm25_8": {
+        "questions": 5,
+        "any_gold": 0.6,
+        "answer_gold": 0.0,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "bm25_12": {
+        "questions": 5,
+        "any_gold": 0.6,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "bm25_16": {
+        "questions": 5,
+        "any_gold": 0.6,
+        "answer_gold": 0.0,
+        "mean_chunks": 16.0,
+        "mean_chars": 23853.8
+      }
+    },
+    "99": {
+      "g7_8": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.16666666666666666,
+        "mean_chunks": 7.666666666666667,
+        "mean_chars": 11500.0
+      },
+      "g7_12": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.16666666666666666,
+        "mean_chunks": 9.666666666666666,
+        "mean_chars": 14500.0
+      },
+      "g7_16": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.16666666666666666,
+        "mean_chunks": 10.0,
+        "mean_chars": 15000.0
+      },
+      "g7_8_neighbor12": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.16666666666666666,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_edge12": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.16666666666666666,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_neighbor_edge16": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.16666666666666666,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "g7_8_bm25_12": {
+        "questions": 6,
+        "any_gold": 0.8333333333333334,
+        "answer_gold": 0.3333333333333333,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_bm25_neighbor16": {
+        "questions": 6,
+        "any_gold": 0.8333333333333334,
+        "answer_gold": 0.3333333333333333,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "candidate_union": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.16666666666666666,
+        "mean_chunks": 10.0,
+        "mean_chars": 15000.0
+      },
+      "bm25_8": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.3333333333333333,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "bm25_12": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.3333333333333333,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "bm25_16": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.3333333333333333,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "100": {
+      "g7_8": {
+        "questions": 8,
+        "any_gold": 0.625,
+        "answer_gold": 0.5,
+        "mean_chunks": 7.75,
+        "mean_chars": 11625.0
+      },
+      "g7_12": {
+        "questions": 8,
+        "any_gold": 0.625,
+        "answer_gold": 0.5,
+        "mean_chunks": 9.0,
+        "mean_chars": 13500.0
+      },
+      "g7_16": {
+        "questions": 8,
+        "any_gold": 0.625,
+        "answer_gold": 0.5,
+        "mean_chunks": 9.0,
+        "mean_chars": 13500.0
+      },
+      "g7_8_neighbor12": {
+        "questions": 8,
+        "any_gold": 0.75,
+        "answer_gold": 0.5,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_edge12": {
+        "questions": 8,
+        "any_gold": 0.625,
+        "answer_gold": 0.5,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_neighbor_edge16": {
+        "questions": 8,
+        "any_gold": 0.875,
+        "answer_gold": 0.5,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "g7_8_bm25_12": {
+        "questions": 8,
+        "any_gold": 0.75,
+        "answer_gold": 0.5,
+        "mean_chunks": 12.0,
+        "mean_chars": 17834.25
+      },
+      "g7_8_bm25_neighbor16": {
+        "questions": 8,
+        "any_gold": 0.75,
+        "answer_gold": 0.5,
+        "mean_chunks": 16.0,
+        "mean_chars": 23834.25
+      },
+      "candidate_union": {
+        "questions": 8,
+        "any_gold": 0.625,
+        "answer_gold": 0.5,
+        "mean_chunks": 9.0,
+        "mean_chars": 13500.0
+      },
+      "bm25_8": {
+        "questions": 8,
+        "any_gold": 0.75,
+        "answer_gold": 0.375,
+        "mean_chunks": 8.0,
+        "mean_chars": 11834.25
+      },
+      "bm25_12": {
+        "questions": 8,
+        "any_gold": 0.875,
+        "answer_gold": 0.375,
+        "mean_chunks": 12.0,
+        "mean_chars": 17834.25
+      },
+      "bm25_16": {
+        "questions": 8,
+        "any_gold": 0.875,
+        "answer_gold": 0.5,
+        "mean_chunks": 16.0,
+        "mean_chars": 23834.25
+      }
+    },
+    "103": {
+      "g7_8": {
+        "questions": 6,
+        "any_gold": 0.5,
+        "answer_gold": 0.0,
+        "mean_chunks": 6.833333333333333,
+        "mean_chars": 10250.0
+      },
+      "g7_12": {
+        "questions": 6,
+        "any_gold": 0.5,
+        "answer_gold": 0.0,
+        "mean_chunks": 7.0,
+        "mean_chars": 10500.0
+      },
+      "g7_16": {
+        "questions": 6,
+        "any_gold": 0.5,
+        "answer_gold": 0.0,
+        "mean_chunks": 7.0,
+        "mean_chars": 10500.0
+      },
+      "g7_8_neighbor12": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_edge12": {
+        "questions": 6,
+        "any_gold": 0.5,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_neighbor_edge16": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.0,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "g7_8_bm25_12": {
+        "questions": 6,
+        "any_gold": 0.5,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_bm25_neighbor16": {
+        "questions": 6,
+        "any_gold": 0.5,
+        "answer_gold": 0.0,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "candidate_union": {
+        "questions": 6,
+        "any_gold": 0.5,
+        "answer_gold": 0.0,
+        "mean_chunks": 7.0,
+        "mean_chars": 10500.0
+      },
+      "bm25_8": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.0,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "bm25_12": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "bm25_16": {
+        "questions": 6,
+        "any_gold": 0.8333333333333334,
+        "answer_gold": 0.16666666666666666,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "104": {
+      "g7_8": {
+        "questions": 8,
+        "any_gold": 0.875,
+        "answer_gold": 0.625,
+        "mean_chunks": 7.25,
+        "mean_chars": 10875.0
+      },
+      "g7_12": {
+        "questions": 8,
+        "any_gold": 0.875,
+        "answer_gold": 0.625,
+        "mean_chunks": 7.75,
+        "mean_chars": 11625.0
+      },
+      "g7_16": {
+        "questions": 8,
+        "any_gold": 0.875,
+        "answer_gold": 0.625,
+        "mean_chunks": 7.75,
+        "mean_chars": 11625.0
+      },
+      "g7_8_neighbor12": {
+        "questions": 8,
+        "any_gold": 1.0,
+        "answer_gold": 0.75,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_edge12": {
+        "questions": 8,
+        "any_gold": 0.875,
+        "answer_gold": 0.625,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_neighbor_edge16": {
+        "questions": 8,
+        "any_gold": 1.0,
+        "answer_gold": 0.75,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "g7_8_bm25_12": {
+        "questions": 8,
+        "any_gold": 1.0,
+        "answer_gold": 0.75,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_bm25_neighbor16": {
+        "questions": 8,
+        "any_gold": 1.0,
+        "answer_gold": 0.875,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "candidate_union": {
+        "questions": 8,
+        "any_gold": 0.875,
+        "answer_gold": 0.625,
+        "mean_chunks": 7.75,
+        "mean_chars": 11625.0
+      },
+      "bm25_8": {
+        "questions": 8,
+        "any_gold": 1.0,
+        "answer_gold": 0.625,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "bm25_12": {
+        "questions": 8,
+        "any_gold": 1.0,
+        "answer_gold": 0.625,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "bm25_16": {
+        "questions": 8,
+        "any_gold": 1.0,
+        "answer_gold": 0.625,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "105": {
+      "g7_8": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.5714285714285714,
+        "mean_chunks": 7.857142857142857,
+        "mean_chars": 11785.714285714286
+      },
+      "g7_12": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.5714285714285714,
+        "mean_chunks": 9.714285714285714,
+        "mean_chars": 14571.42857142857
+      },
+      "g7_16": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.5714285714285714,
+        "mean_chunks": 9.714285714285714,
+        "mean_chars": 14571.42857142857
+      },
+      "g7_8_neighbor12": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.5714285714285714,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_edge12": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.5714285714285714,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_neighbor_edge16": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.5714285714285714,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "g7_8_bm25_12": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.5714285714285714,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_bm25_neighbor16": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.5714285714285714,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "candidate_union": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.5714285714285714,
+        "mean_chunks": 9.714285714285714,
+        "mean_chars": 14571.42857142857
+      },
+      "bm25_8": {
+        "questions": 7,
+        "any_gold": 0.7142857142857143,
+        "answer_gold": 0.42857142857142855,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "bm25_12": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.5714285714285714,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "bm25_16": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.5714285714285714,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "106": {
+      "g7_8": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 7.428571428571429,
+        "mean_chars": 11142.857142857143
+      },
+      "g7_12": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 7.857142857142857,
+        "mean_chars": 11785.714285714286
+      },
+      "g7_16": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 7.857142857142857,
+        "mean_chars": 11785.714285714286
+      },
+      "g7_8_neighbor12": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_edge12": {
+        "questions": 7,
+        "any_gold": 1.0,
+        "answer_gold": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_neighbor_edge16": {
+        "questions": 7,
+        "any_gold": 1.0,
+        "answer_gold": 0.0,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "g7_8_bm25_12": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.42857142857142855,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_bm25_neighbor16": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.42857142857142855,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "candidate_union": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.0,
+        "mean_chunks": 7.857142857142857,
+        "mean_chars": 11785.714285714286
+      },
+      "bm25_8": {
+        "questions": 7,
+        "any_gold": 0.8571428571428571,
+        "answer_gold": 0.42857142857142855,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "bm25_12": {
+        "questions": 7,
+        "any_gold": 1.0,
+        "answer_gold": 0.8571428571428571,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "bm25_16": {
+        "questions": 7,
+        "any_gold": 1.0,
+        "answer_gold": 0.8571428571428571,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "107": {
+      "g7_8": {
+        "questions": 10,
+        "any_gold": 0.7,
+        "answer_gold": 0.1,
+        "mean_chunks": 7.5,
+        "mean_chars": 11250.0
+      },
+      "g7_12": {
+        "questions": 10,
+        "any_gold": 0.8,
+        "answer_gold": 0.2,
+        "mean_chunks": 9.0,
+        "mean_chars": 13500.0
+      },
+      "g7_16": {
+        "questions": 10,
+        "any_gold": 0.8,
+        "answer_gold": 0.2,
+        "mean_chunks": 9.0,
+        "mean_chars": 13500.0
+      },
+      "g7_8_neighbor12": {
+        "questions": 10,
+        "any_gold": 0.7,
+        "answer_gold": 0.1,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_edge12": {
+        "questions": 10,
+        "any_gold": 0.7,
+        "answer_gold": 0.2,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_neighbor_edge16": {
+        "questions": 10,
+        "any_gold": 0.7,
+        "answer_gold": 0.1,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "g7_8_bm25_12": {
+        "questions": 10,
+        "any_gold": 0.8,
+        "answer_gold": 0.4,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_bm25_neighbor16": {
+        "questions": 10,
+        "any_gold": 0.8,
+        "answer_gold": 0.4,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "candidate_union": {
+        "questions": 10,
+        "any_gold": 0.8,
+        "answer_gold": 0.2,
+        "mean_chunks": 9.0,
+        "mean_chars": 13500.0
+      },
+      "bm25_8": {
+        "questions": 10,
+        "any_gold": 0.8,
+        "answer_gold": 0.5,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "bm25_12": {
+        "questions": 10,
+        "any_gold": 0.8,
+        "answer_gold": 0.5,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "bm25_16": {
+        "questions": 10,
+        "any_gold": 0.9,
+        "answer_gold": 0.5,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "108": {
+      "g7_8": {
+        "questions": 6,
+        "any_gold": 0.5,
+        "answer_gold": 0.3333333333333333,
+        "mean_chunks": 6.666666666666667,
+        "mean_chars": 10000.0
+      },
+      "g7_12": {
+        "questions": 6,
+        "any_gold": 0.5,
+        "answer_gold": 0.3333333333333333,
+        "mean_chunks": 7.333333333333333,
+        "mean_chars": 11000.0
+      },
+      "g7_16": {
+        "questions": 6,
+        "any_gold": 0.5,
+        "answer_gold": 0.3333333333333333,
+        "mean_chunks": 7.5,
+        "mean_chars": 11250.0
+      },
+      "g7_8_neighbor12": {
+        "questions": 6,
+        "any_gold": 0.5,
+        "answer_gold": 0.3333333333333333,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_edge12": {
+        "questions": 6,
+        "any_gold": 0.6666666666666666,
+        "answer_gold": 0.3333333333333333,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_neighbor_edge16": {
+        "questions": 6,
+        "any_gold": 0.5,
+        "answer_gold": 0.3333333333333333,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "g7_8_bm25_12": {
+        "questions": 6,
+        "any_gold": 1.0,
+        "answer_gold": 0.8333333333333334,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_8_bm25_neighbor16": {
+        "questions": 6,
+        "any_gold": 1.0,
+        "answer_gold": 0.8333333333333334,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      },
+      "candidate_union": {
+        "questions": 6,
+        "any_gold": 0.5,
+        "answer_gold": 0.3333333333333333,
+        "mean_chunks": 7.5,
+        "mean_chars": 11250.0
+      },
+      "bm25_8": {
+        "questions": 6,
+        "any_gold": 0.8333333333333334,
+        "answer_gold": 0.6666666666666666,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "bm25_12": {
+        "questions": 6,
+        "any_gold": 1.0,
+        "answer_gold": 0.8333333333333334,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "bm25_16": {
+        "questions": 6,
+        "any_gold": 1.0,
+        "answer_gold": 1.0,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    }
+  },
+  "misses": [
+    {
+      "novel": "93",
+      "qi": 4,
+      "qid": "detectiveqa_93_AIsup_anno_4",
+      "gold_positions": [
+        1052,
+        1091,
+        1115,
+        1133,
+        1152,
+        1169,
+        1171,
+        1346,
+        1425
+      ]
+    },
+    {
+      "novel": "97",
+      "qi": 0,
+      "qid": "detectiveqa_97_AIsup_anno_0",
+      "gold_positions": [
+        255,
+        1124,
+        1127,
+        1155
+      ]
+    },
+    {
+      "novel": "97",
+      "qi": 3,
+      "qid": "detectiveqa_97_AIsup_anno_3",
+      "gold_positions": [
+        233,
+        1439,
+        1818,
+        1821,
+        1868,
+        1872,
+        1876,
+        1882,
+        1886,
+        2814
+      ]
+    },
+    {
+      "novel": "97",
+      "qi": 4,
+      "qid": "detectiveqa_97_AIsup_anno_4",
+      "gold_positions": [
+        1230,
+        1248,
+        1579,
+        1592,
+        1632,
+        1645,
+        1653,
+        1974,
+        2430,
+        2744,
+        2761,
+        2763,
+        2765,
+        2811,
+        2836
+      ]
+    },
+    {
+      "novel": "99",
+      "qi": 0,
+      "qid": "detectiveqa_99_AIsup_anno_0",
+      "gold_positions": [
+        1700,
+        1749,
+        1753,
+        1755,
+        1793,
+        1891
+      ]
+    },
+    {
+      "novel": "99",
+      "qi": 3,
+      "qid": "detectiveqa_99_AIsup_anno_3",
+      "gold_positions": [
+        107,
+        407,
+        431,
+        685,
+        1826,
+        1829,
+        1854,
+        1915
+      ]
+    },
+    {
+      "novel": "100",
+      "qi": 3,
+      "qid": "detectiveqa_100_AIsup_anno_3",
+      "gold_positions": [
+        764,
+        807,
+        812,
+        848,
+        865,
+        970,
+        1049,
+        1054
+      ]
+    },
+    {
+      "novel": "100",
+      "qi": 5,
+      "qid": "detectiveqa_100_AIsup_anno_5",
+      "gold_positions": [
+        1172,
+        1176,
+        1179,
+        1188,
+        1216,
+        1369,
+        1489,
+        1515,
+        1607,
+        1629
+      ]
+    },
+    {
+      "novel": "100",
+      "qi": 6,
+      "qid": "detectiveqa_100_AIsup_anno_6",
+      "gold_positions": [
+        1788,
+        1878,
+        2003,
+        2024,
+        2029,
+        2030,
+        2089,
+        2476,
+        2590,
+        3399,
+        3489,
+        3789
+      ]
+    },
+    {
+      "novel": "103",
+      "qi": 2,
+      "qid": "detectiveqa_103_AIsup_anno_2",
+      "gold_positions": [
+        1356,
+        1357,
+        1866
+      ]
+    },
+    {
+      "novel": "103",
+      "qi": 3,
+      "qid": "detectiveqa_103_AIsup_anno_3",
+      "gold_positions": [
+        338,
+        340,
+        342,
+        391,
+        975,
+        1071,
+        2086,
+        2383
+      ]
+    },
+    {
+      "novel": "103",
+      "qi": 5,
+      "qid": "detectiveqa_103_AIsup_anno_5",
+      "gold_positions": [
+        256,
+        264,
+        949,
+        1505,
+        1520,
+        1864
+      ]
+    },
+    {
+      "novel": "104",
+      "qi": 0,
+      "qid": "detectiveqa_104_AIsup_anno_0",
+      "gold_positions": [
+        58,
+        69,
+        71,
+        76,
+        85
+      ]
+    },
+    {
+      "novel": "105",
+      "qi": 2,
+      "qid": "detectiveqa_105_AIsup_anno_2",
+      "gold_positions": [
+        215,
+        233,
+        239,
+        391,
+        443,
+        449,
+        547,
+        548,
+        868
+      ]
+    },
+    {
+      "novel": "106",
+      "qi": 0,
+      "qid": "detectiveqa_106_AIsup_anno_0",
+      "gold_positions": [
+        282,
+        416,
+        757,
+        1366,
+        1531,
+        1533,
+        1931,
+        2336,
+        2541,
+        2607
+      ]
+    },
+    {
+      "novel": "107",
+      "qi": 2,
+      "qid": "detectiveqa_107_AIsup_anno_2",
+      "gold_positions": [
+        674,
+        921,
+        933,
+        995,
+        996,
+        1000
+      ]
+    },
+    {
+      "novel": "107",
+      "qi": 3,
+      "qid": "detectiveqa_107_AIsup_anno_3",
+      "gold_positions": [
+        1126,
+        1133,
+        1190,
+        1617
+      ]
+    },
+    {
+      "novel": "107",
+      "qi": 7,
+      "qid": "detectiveqa_107_AIsup_anno_7",
+      "gold_positions": [
+        664,
+        1616,
+        2222,
+        2377,
+        2457,
+        2478
+      ]
+    },
+    {
+      "novel": "108",
+      "qi": 0,
+      "qid": "detectiveqa_108_AIsup_anno_0",
+      "gold_positions": [
+        152,
+        254,
+        259,
+        278,
+        1644
+      ]
+    },
+    {
+      "novel": "108",
+      "qi": 2,
+      "qid": "detectiveqa_108_AIsup_anno_2",
+      "gold_positions": [
+        55,
+        210,
+        222,
+        643,
+        659,
+        664,
+        686
+      ]
+    },
+    {
+      "novel": "108",
+      "qi": 4,
+      "qid": "detectiveqa_108_AIsup_anno_4",
+      "gold_positions": [
+        600,
+        612,
+        1673,
+        1762,
+        1805
+      ]
+    }
+  ]
+}

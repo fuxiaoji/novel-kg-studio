@@ -1,0 +1,643 @@
+{
+  "guard": "Gold is evaluation-only and never reaches retrieval.",
+  "variants": {
+    "frozen_g7_6": {
+      "questions": 70,
+      "strict_marker_recall": 0.5714285714285714,
+      "content_overlap_recall": 0.6142857142857143,
+      "answer_marker_recall": 0.14285714285714285,
+      "mean_chunks": 5.985714285714286,
+      "mean_chars": 8978.57142857143
+    },
+    "graph_semantic_8": {
+      "questions": 70,
+      "strict_marker_recall": 0.6714285714285714,
+      "content_overlap_recall": 0.7571428571428571,
+      "answer_marker_recall": 0.17142857142857143,
+      "mean_chunks": 8.0,
+      "mean_chars": 12000.0
+    },
+    "graph_semantic_12": {
+      "questions": 70,
+      "strict_marker_recall": 0.7285714285714285,
+      "content_overlap_recall": 0.7857142857142857,
+      "answer_marker_recall": 0.21428571428571427,
+      "mean_chunks": 12.0,
+      "mean_chars": 18000.0
+    },
+    "graph_semantic_28": {
+      "questions": 70,
+      "strict_marker_recall": 0.8714285714285714,
+      "content_overlap_recall": 0.9142857142857143,
+      "answer_marker_recall": 0.34285714285714286,
+      "mean_chunks": 28.0,
+      "mean_chars": 42000.0
+    },
+    "g7_plus_graph_12": {
+      "questions": 70,
+      "strict_marker_recall": 0.7714285714285715,
+      "content_overlap_recall": 0.8285714285714286,
+      "answer_marker_recall": 0.18571428571428572,
+      "mean_chunks": 12.0,
+      "mean_chars": 18000.0
+    },
+    "g7_plus_graph_28": {
+      "questions": 70,
+      "strict_marker_recall": 0.9142857142857143,
+      "content_overlap_recall": 0.9285714285714286,
+      "answer_marker_recall": 0.3142857142857143,
+      "mean_chunks": 28.0,
+      "mean_chars": 42000.0
+    },
+    "g7_plus_graph_neighbor16": {
+      "questions": 70,
+      "strict_marker_recall": 0.8,
+      "content_overlap_recall": 0.8571428571428571,
+      "answer_marker_recall": 0.24285714285714285,
+      "mean_chunks": 16.0,
+      "mean_chars": 24000.0
+    }
+  },
+  "per_novel": {
+    "93": {
+      "frozen_g7_6": {
+        "questions": 7,
+        "strict_marker_recall": 0.42857142857142855,
+        "content_overlap_recall": 0.7142857142857143,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 6.0,
+        "mean_chars": 9000.0
+      },
+      "graph_semantic_8": {
+        "questions": 7,
+        "strict_marker_recall": 0.42857142857142855,
+        "content_overlap_recall": 0.5714285714285714,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "graph_semantic_12": {
+        "questions": 7,
+        "strict_marker_recall": 0.5714285714285714,
+        "content_overlap_recall": 0.5714285714285714,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "graph_semantic_28": {
+        "questions": 7,
+        "strict_marker_recall": 0.8571428571428571,
+        "content_overlap_recall": 0.8571428571428571,
+        "answer_marker_recall": 0.5714285714285714,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_12": {
+        "questions": 7,
+        "strict_marker_recall": 0.7142857142857143,
+        "content_overlap_recall": 0.8571428571428571,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_plus_graph_28": {
+        "questions": 7,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.2857142857142857,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_neighbor16": {
+        "questions": 7,
+        "strict_marker_recall": 0.8571428571428571,
+        "content_overlap_recall": 0.8571428571428571,
+        "answer_marker_recall": 0.14285714285714285,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "97": {
+      "frozen_g7_6": {
+        "questions": 5,
+        "strict_marker_recall": 0.2,
+        "content_overlap_recall": 0.2,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 6.0,
+        "mean_chars": 9000.0
+      },
+      "graph_semantic_8": {
+        "questions": 5,
+        "strict_marker_recall": 0.6,
+        "content_overlap_recall": 0.8,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "graph_semantic_12": {
+        "questions": 5,
+        "strict_marker_recall": 0.8,
+        "content_overlap_recall": 0.8,
+        "answer_marker_recall": 0.2,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "graph_semantic_28": {
+        "questions": 5,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.2,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_12": {
+        "questions": 5,
+        "strict_marker_recall": 0.6,
+        "content_overlap_recall": 0.8,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_plus_graph_28": {
+        "questions": 5,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.2,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_neighbor16": {
+        "questions": 5,
+        "strict_marker_recall": 0.6,
+        "content_overlap_recall": 0.8,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "99": {
+      "frozen_g7_6": {
+        "questions": 6,
+        "strict_marker_recall": 0.5,
+        "content_overlap_recall": 0.5,
+        "answer_marker_recall": 0.16666666666666666,
+        "mean_chunks": 6.0,
+        "mean_chars": 9000.0
+      },
+      "graph_semantic_8": {
+        "questions": 6,
+        "strict_marker_recall": 0.6666666666666666,
+        "content_overlap_recall": 0.6666666666666666,
+        "answer_marker_recall": 0.16666666666666666,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "graph_semantic_12": {
+        "questions": 6,
+        "strict_marker_recall": 0.6666666666666666,
+        "content_overlap_recall": 0.6666666666666666,
+        "answer_marker_recall": 0.16666666666666666,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "graph_semantic_28": {
+        "questions": 6,
+        "strict_marker_recall": 0.8333333333333334,
+        "content_overlap_recall": 0.8333333333333334,
+        "answer_marker_recall": 0.3333333333333333,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_12": {
+        "questions": 6,
+        "strict_marker_recall": 0.6666666666666666,
+        "content_overlap_recall": 0.6666666666666666,
+        "answer_marker_recall": 0.16666666666666666,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_plus_graph_28": {
+        "questions": 6,
+        "strict_marker_recall": 0.8333333333333334,
+        "content_overlap_recall": 0.8333333333333334,
+        "answer_marker_recall": 0.3333333333333333,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_neighbor16": {
+        "questions": 6,
+        "strict_marker_recall": 0.6666666666666666,
+        "content_overlap_recall": 0.6666666666666666,
+        "answer_marker_recall": 0.16666666666666666,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "100": {
+      "frozen_g7_6": {
+        "questions": 8,
+        "strict_marker_recall": 0.5,
+        "content_overlap_recall": 0.5,
+        "answer_marker_recall": 0.25,
+        "mean_chunks": 6.0,
+        "mean_chars": 9000.0
+      },
+      "graph_semantic_8": {
+        "questions": 8,
+        "strict_marker_recall": 0.5,
+        "content_overlap_recall": 0.75,
+        "answer_marker_recall": 0.25,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "graph_semantic_12": {
+        "questions": 8,
+        "strict_marker_recall": 0.625,
+        "content_overlap_recall": 0.75,
+        "answer_marker_recall": 0.25,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "graph_semantic_28": {
+        "questions": 8,
+        "strict_marker_recall": 0.875,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.5,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_12": {
+        "questions": 8,
+        "strict_marker_recall": 0.625,
+        "content_overlap_recall": 0.75,
+        "answer_marker_recall": 0.375,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_plus_graph_28": {
+        "questions": 8,
+        "strict_marker_recall": 0.875,
+        "content_overlap_recall": 0.875,
+        "answer_marker_recall": 0.5,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_neighbor16": {
+        "questions": 8,
+        "strict_marker_recall": 0.75,
+        "content_overlap_recall": 0.875,
+        "answer_marker_recall": 0.375,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "103": {
+      "frozen_g7_6": {
+        "questions": 6,
+        "strict_marker_recall": 0.5,
+        "content_overlap_recall": 0.5,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 6.0,
+        "mean_chars": 9000.0
+      },
+      "graph_semantic_8": {
+        "questions": 6,
+        "strict_marker_recall": 0.5,
+        "content_overlap_recall": 0.5,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "graph_semantic_12": {
+        "questions": 6,
+        "strict_marker_recall": 0.5,
+        "content_overlap_recall": 0.5,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "graph_semantic_28": {
+        "questions": 6,
+        "strict_marker_recall": 0.8333333333333334,
+        "content_overlap_recall": 0.8333333333333334,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_12": {
+        "questions": 6,
+        "strict_marker_recall": 0.5,
+        "content_overlap_recall": 0.5,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_plus_graph_28": {
+        "questions": 6,
+        "strict_marker_recall": 0.6666666666666666,
+        "content_overlap_recall": 0.6666666666666666,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_neighbor16": {
+        "questions": 6,
+        "strict_marker_recall": 0.5,
+        "content_overlap_recall": 0.5,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "104": {
+      "frozen_g7_6": {
+        "questions": 8,
+        "strict_marker_recall": 0.875,
+        "content_overlap_recall": 0.875,
+        "answer_marker_recall": 0.375,
+        "mean_chunks": 6.0,
+        "mean_chars": 9000.0
+      },
+      "graph_semantic_8": {
+        "questions": 8,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.375,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "graph_semantic_12": {
+        "questions": 8,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.375,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "graph_semantic_28": {
+        "questions": 8,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.5,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_12": {
+        "questions": 8,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.375,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_plus_graph_28": {
+        "questions": 8,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.375,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_neighbor16": {
+        "questions": 8,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.625,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "105": {
+      "frozen_g7_6": {
+        "questions": 7,
+        "strict_marker_recall": 0.7142857142857143,
+        "content_overlap_recall": 0.7142857142857143,
+        "answer_marker_recall": 0.2857142857142857,
+        "mean_chunks": 6.0,
+        "mean_chars": 9000.0
+      },
+      "graph_semantic_8": {
+        "questions": 7,
+        "strict_marker_recall": 0.8571428571428571,
+        "content_overlap_recall": 0.8571428571428571,
+        "answer_marker_recall": 0.2857142857142857,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "graph_semantic_12": {
+        "questions": 7,
+        "strict_marker_recall": 0.8571428571428571,
+        "content_overlap_recall": 0.8571428571428571,
+        "answer_marker_recall": 0.5714285714285714,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "graph_semantic_28": {
+        "questions": 7,
+        "strict_marker_recall": 0.8571428571428571,
+        "content_overlap_recall": 0.8571428571428571,
+        "answer_marker_recall": 0.5714285714285714,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_12": {
+        "questions": 7,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.2857142857142857,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_plus_graph_28": {
+        "questions": 7,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.5714285714285714,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_neighbor16": {
+        "questions": 7,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.2857142857142857,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "106": {
+      "frozen_g7_6": {
+        "questions": 7,
+        "strict_marker_recall": 0.7142857142857143,
+        "content_overlap_recall": 0.7142857142857143,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 6.0,
+        "mean_chars": 9000.0
+      },
+      "graph_semantic_8": {
+        "questions": 7,
+        "strict_marker_recall": 0.8571428571428571,
+        "content_overlap_recall": 0.8571428571428571,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "graph_semantic_12": {
+        "questions": 7,
+        "strict_marker_recall": 0.8571428571428571,
+        "content_overlap_recall": 0.8571428571428571,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "graph_semantic_28": {
+        "questions": 7,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_12": {
+        "questions": 7,
+        "strict_marker_recall": 0.8571428571428571,
+        "content_overlap_recall": 0.8571428571428571,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_plus_graph_28": {
+        "questions": 7,
+        "strict_marker_recall": 1.0,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_neighbor16": {
+        "questions": 7,
+        "strict_marker_recall": 0.8571428571428571,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.0,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "107": {
+      "frozen_g7_6": {
+        "questions": 10,
+        "strict_marker_recall": 0.7,
+        "content_overlap_recall": 0.7,
+        "answer_marker_recall": 0.1,
+        "mean_chunks": 6.0,
+        "mean_chars": 9000.0
+      },
+      "graph_semantic_8": {
+        "questions": 10,
+        "strict_marker_recall": 0.6,
+        "content_overlap_recall": 0.7,
+        "answer_marker_recall": 0.3,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "graph_semantic_12": {
+        "questions": 10,
+        "strict_marker_recall": 0.7,
+        "content_overlap_recall": 0.9,
+        "answer_marker_recall": 0.3,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "graph_semantic_28": {
+        "questions": 10,
+        "strict_marker_recall": 0.8,
+        "content_overlap_recall": 0.9,
+        "answer_marker_recall": 0.4,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_12": {
+        "questions": 10,
+        "strict_marker_recall": 0.8,
+        "content_overlap_recall": 0.9,
+        "answer_marker_recall": 0.2,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_plus_graph_28": {
+        "questions": 10,
+        "strict_marker_recall": 0.9,
+        "content_overlap_recall": 1.0,
+        "answer_marker_recall": 0.4,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_neighbor16": {
+        "questions": 10,
+        "strict_marker_recall": 0.8,
+        "content_overlap_recall": 0.9,
+        "answer_marker_recall": 0.2,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    },
+    "108": {
+      "frozen_g7_6": {
+        "questions": 6,
+        "strict_marker_recall": 0.3333333333333333,
+        "content_overlap_recall": 0.5,
+        "answer_marker_recall": 0.16666666666666666,
+        "mean_chunks": 5.833333333333333,
+        "mean_chars": 8750.0
+      },
+      "graph_semantic_8": {
+        "questions": 6,
+        "strict_marker_recall": 0.6666666666666666,
+        "content_overlap_recall": 0.8333333333333334,
+        "answer_marker_recall": 0.16666666666666666,
+        "mean_chunks": 8.0,
+        "mean_chars": 12000.0
+      },
+      "graph_semantic_12": {
+        "questions": 6,
+        "strict_marker_recall": 0.6666666666666666,
+        "content_overlap_recall": 0.8333333333333334,
+        "answer_marker_recall": 0.16666666666666666,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "graph_semantic_28": {
+        "questions": 6,
+        "strict_marker_recall": 0.6666666666666666,
+        "content_overlap_recall": 0.8333333333333334,
+        "answer_marker_recall": 0.16666666666666666,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_12": {
+        "questions": 6,
+        "strict_marker_recall": 0.8333333333333334,
+        "content_overlap_recall": 0.8333333333333334,
+        "answer_marker_recall": 0.3333333333333333,
+        "mean_chunks": 12.0,
+        "mean_chars": 18000.0
+      },
+      "g7_plus_graph_28": {
+        "questions": 6,
+        "strict_marker_recall": 0.8333333333333334,
+        "content_overlap_recall": 0.8333333333333334,
+        "answer_marker_recall": 0.3333333333333333,
+        "mean_chunks": 28.0,
+        "mean_chars": 42000.0
+      },
+      "g7_plus_graph_neighbor16": {
+        "questions": 6,
+        "strict_marker_recall": 0.8333333333333334,
+        "content_overlap_recall": 0.8333333333333334,
+        "answer_marker_recall": 0.5,
+        "mean_chunks": 16.0,
+        "mean_chars": 24000.0
+      }
+    }
+  }
+}
