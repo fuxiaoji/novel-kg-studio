@@ -1,0 +1,65 @@
+{
+  "constraint": "graph-only inference; baselines inaccessible to rules",
+  "fixed_posthoc": {
+    "G6": {
+      "correct": 37,
+      "total": 70,
+      "accuracy": 0.5285714285714286
+    },
+    "G5": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142
+    },
+    "perm3_majority_G1_tie": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142
+    },
+    "graph5_majority_G6_tie": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142
+    },
+    "G6_G5_agree_else_G1": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142
+    },
+    "G6_G5_agree_else_perm3": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142
+    },
+    "G6_any_agree_else_perm3": {
+      "correct": 35,
+      "total": 70,
+      "accuracy": 0.5
+    },
+    "G6_two_agree_else_perm3": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142
+    },
+    "G6_if_perm_unstable_else_G5": {
+      "correct": 36,
+      "total": 70,
+      "accuracy": 0.5142857142857142
+    },
+    "G5_if_perm_unstable_else_G6": {
+      "correct": 37,
+      "total": 70,
+      "accuracy": 0.5285714285714286
+    }
+  },
+  "nested_lono": {
+    "correct": 33,
+    "total": 70,
+    "accuracy": 0.4714285714285714,
+    "selected_rules": {
+      "G6": 8,
+      "G5_if_perm_unstable_else_G6": 1,
+      "G6_G5_agree_else_G1": 1
+    }
+  }
+}
