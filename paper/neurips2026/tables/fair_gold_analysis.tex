@@ -1,0 +1,33 @@
+\begin{subtable}{\linewidth}
+\centering
+\caption{Per-gold-letter accuracy}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Run & A & B & C & D \\
+\midrule
+Fair gold oracle & 55.2\% & 47.2\% & 53.4\% & 61.5\% \\
+Question-only (terse) & 32.8\% & 34.0\% & 46.6\% & 46.2\% \\
+Options-first gold oracle & 21.8\% & 24.5\% & 40.0\% & \textbf{79.4}\% \\
+\bottomrule
+\end{tabular}
+\end{subtable}
+\vspace{6pt}
+\begin{subtable}{\linewidth}
+\centering
+\caption{Selected-letter distribution}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Run & A & B & C & D \\
+\midrule
+Fair gold oracle & 50 (21.4\%$^{\dagger}$) & 47 (20.1\%$^{\dagger}$) & 71 (30.3\%$^{\dagger}$) & 66 (28.2\%$^{\dagger}$) \\
+Question-only (terse) & 30 (12.8\%$^{\dagger}$) & 64 (27.4\%$^{\dagger}$) & 88 (37.6\%$^{\dagger}$) & 52 (22.2\%$^{\dagger}$) \\
+Options-first gold oracle & 23 (9.8\%$^{\dagger}$) & 17 (7.3\%$^{\dagger}$) & 48 (20.5\%$^{\dagger}$) & 138 (59.0\%$^{\dagger}$) \\
+Gold-letter distribution & 58 (24.8\%$^{\dagger}$) & 53 (22.6\%$^{\dagger}$) & 58 (24.8\%$^{\dagger}$) & 65 (27.8\%$^{\dagger}$) \\
+\bottomrule
+\end{tabular}
+\end{subtable}
+\vspace{2pt}\begin{scriptsize}
+ $^{\dagger}$Column shares are percent of the 234 questions. The options-first gold oracle piles onto D (138/234 = 59\% of questions) regardless of content, while the de-biased fair gold oracle matches the content-implied gold distribution. The options-first oracle refused to select a letter on 8 questions (its row sums to 226).
+\end{scriptsize}

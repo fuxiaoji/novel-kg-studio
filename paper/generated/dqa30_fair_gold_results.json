@@ -1,0 +1,366 @@
+{
+  "metadata": {
+    "protocol": "dqa30-fair-gold-v1",
+    "answer_model": "qwen3.5:9b",
+    "thinking": "disabled",
+    "question_set": "frozen 30-novel 234 q",
+    "gold_definition": "question + options + every nonnegative official clue_position paragraph; no final-answer paragraph",
+    "fair_protocol": "evidence-before-options + per-qid sha256-seeded option shuffle + terse 'Answer: [letter]'",
+    "old20": "20 legacy graphs",
+    "new10": "10 Pass2-v4 graphs",
+    "warning": "pooled 30 is descriptive (heterogeneous graph cohorts)"
+  },
+  "old20": {
+    "B1": {
+      "n": 164,
+      "correct": 79,
+      "micro": 0.4817073170731707
+    },
+    "B2": {
+      "n": 164,
+      "correct": 84,
+      "micro": 0.5121951219512195
+    },
+    "B3": {
+      "n": 164,
+      "correct": 86,
+      "micro": 0.524390243902439
+    },
+    "Q0": {
+      "n": 164,
+      "correct": 61,
+      "micro": 0.3719512195121951
+    },
+    "Q0T": {
+      "n": 164,
+      "correct": 68,
+      "micro": 0.4146341463414634
+    },
+    "GOLD_ORIG": {
+      "n": 164,
+      "correct": 63,
+      "micro": 0.38414634146341464
+    },
+    "GOLD_V1": {
+      "n": 164,
+      "correct": 97,
+      "micro": 0.5914634146341463
+    },
+    "GOLD_V2": {
+      "n": 164,
+      "correct": 93,
+      "micro": 0.5670731707317073
+    },
+    "GOLD_V3": {
+      "n": 164,
+      "correct": 88,
+      "micro": 0.5365853658536586
+    },
+    "G7": {
+      "n": 164,
+      "correct": 89,
+      "micro": 0.5426829268292683
+    },
+    "G9": {
+      "n": 164,
+      "correct": 83,
+      "micro": 0.5060975609756098
+    },
+    "G10": {
+      "n": 164,
+      "correct": 84,
+      "micro": 0.5121951219512195
+    }
+  },
+  "new10": {
+    "B1": {
+      "n": 70,
+      "correct": 29,
+      "micro": 0.4142857142857143
+    },
+    "B2": {
+      "n": 70,
+      "correct": 36,
+      "micro": 0.5142857142857142
+    },
+    "B3": {
+      "n": 70,
+      "correct": 35,
+      "micro": 0.5
+    },
+    "Q0": {
+      "n": 70,
+      "correct": 33,
+      "micro": 0.4714285714285714
+    },
+    "Q0T": {
+      "n": 70,
+      "correct": 26,
+      "micro": 0.37142857142857144
+    },
+    "GOLD_ORIG": {
+      "n": 70,
+      "correct": 34,
+      "micro": 0.4857142857142857
+    },
+    "GOLD_V1": {
+      "n": 70,
+      "correct": 38,
+      "micro": 0.5428571428571428
+    },
+    "GOLD_V2": {
+      "n": 70,
+      "correct": 35,
+      "micro": 0.5
+    },
+    "GOLD_V3": {
+      "n": 70,
+      "correct": 35,
+      "micro": 0.5
+    },
+    "G7": {
+      "n": 70,
+      "correct": 37,
+      "micro": 0.5285714285714286
+    },
+    "G9": {
+      "n": 70,
+      "correct": 36,
+      "micro": 0.5142857142857142
+    },
+    "G10": {
+      "n": 70,
+      "correct": 41,
+      "micro": 0.5857142857142857
+    }
+  },
+  "pooled": {
+    "B1": {
+      "n": 234,
+      "correct": 108,
+      "micro": 0.46153846153846156
+    },
+    "B2": {
+      "n": 234,
+      "correct": 120,
+      "micro": 0.5128205128205128
+    },
+    "B3": {
+      "n": 234,
+      "correct": 121,
+      "micro": 0.5170940170940171
+    },
+    "Q0": {
+      "n": 234,
+      "correct": 94,
+      "micro": 0.4017094017094017
+    },
+    "Q0T": {
+      "n": 234,
+      "correct": 94,
+      "micro": 0.4017094017094017
+    },
+    "GOLD_ORIG": {
+      "n": 234,
+      "correct": 97,
+      "micro": 0.41452991452991456
+    },
+    "GOLD_V1": {
+      "n": 234,
+      "correct": 135,
+      "micro": 0.5769230769230769
+    },
+    "GOLD_V2": {
+      "n": 234,
+      "correct": 128,
+      "micro": 0.5470085470085471
+    },
+    "GOLD_V3": {
+      "n": 234,
+      "correct": 123,
+      "micro": 0.5256410256410257
+    },
+    "G7": {
+      "n": 234,
+      "correct": 126,
+      "micro": 0.5384615384615384
+    },
+    "G9": {
+      "n": 234,
+      "correct": 119,
+      "micro": 0.5085470085470085
+    },
+    "G10": {
+      "n": 234,
+      "correct": 125,
+      "micro": 0.5341880341880342
+    }
+  },
+  "per_gold_letter": {
+    "GOLD_V2": {
+      "A": {
+        "correct": 32,
+        "n": 58,
+        "acc": 0.5517241379310345
+      },
+      "B": {
+        "correct": 25,
+        "n": 53,
+        "acc": 0.4716981132075472
+      },
+      "C": {
+        "correct": 31,
+        "n": 58,
+        "acc": 0.5344827586206896
+      },
+      "D": {
+        "correct": 40,
+        "n": 65,
+        "acc": 0.6153846153846154
+      }
+    },
+    "GOLD_V3": {
+      "A": {
+        "correct": 32,
+        "n": 58,
+        "acc": 0.5517241379310345
+      },
+      "B": {
+        "correct": 30,
+        "n": 53,
+        "acc": 0.5660377358490566
+      },
+      "C": {
+        "correct": 25,
+        "n": 58,
+        "acc": 0.43103448275862066
+      },
+      "D": {
+        "correct": 36,
+        "n": 65,
+        "acc": 0.5538461538461539
+      }
+    },
+    "Q0T": {
+      "A": {
+        "correct": 19,
+        "n": 58,
+        "acc": 0.3275862068965517
+      },
+      "B": {
+        "correct": 18,
+        "n": 53,
+        "acc": 0.33962264150943394
+      },
+      "C": {
+        "correct": 27,
+        "n": 58,
+        "acc": 0.46551724137931033
+      },
+      "D": {
+        "correct": 30,
+        "n": 65,
+        "acc": 0.46153846153846156
+      }
+    },
+    "GOLD_ORIG": {
+      "A": {
+        "correct": 12,
+        "n": 55,
+        "acc": 0.21818181818181817
+      },
+      "B": {
+        "correct": 13,
+        "n": 53,
+        "acc": 0.24528301886792453
+      },
+      "C": {
+        "correct": 22,
+        "n": 55,
+        "acc": 0.4
+      },
+      "D": {
+        "correct": 50,
+        "n": 63,
+        "acc": 0.7936507936507936
+      }
+    }
+  },
+  "selected_letter_dist": {
+    "GOLD_V2": {
+      "C": 71,
+      "B": 47,
+      "A": 50,
+      "D": 66
+    },
+    "GOLD_V3": {
+      "B": 52,
+      "A": 46,
+      "D": 57,
+      "C": 79
+    },
+    "Q0T": {
+      "D": 52,
+      "B": 64,
+      "A": 30,
+      "C": 88
+    }
+  },
+  "paired": {
+    "GOLD_V2_vs_Q0T": {
+      "wins": 63,
+      "losses": 29,
+      "discordant": 92,
+      "exact_p": 0.0005090902243497337,
+      "delta": 0.14529914529914534,
+      "novel_cluster_delta_95": [
+        0.06896551724137934,
+        0.23360655737704916
+      ]
+    },
+    "GOLD_V2_vs_GOLD_V3": {
+      "wins": 32,
+      "losses": 27,
+      "discordant": 59,
+      "exact_p": 0.6029232012571503,
+      "delta": 0.021367521367521403,
+      "novel_cluster_delta_95": [
+        -0.033333333333333326,
+        0.07826086956521738
+      ]
+    },
+    "GOLD_V2_vs_G7": {
+      "wins": 42,
+      "losses": 40,
+      "discordant": 82,
+      "exact_p": 0.9121566075526039,
+      "delta": 0.008547008547008628,
+      "novel_cluster_delta_95": [
+        -0.05932203389830504,
+        0.08000000000000002
+      ]
+    },
+    "GOLD_V2_vs_G10": {
+      "wins": 46,
+      "losses": 43,
+      "discordant": 89,
+      "exact_p": 0.8322577540225787,
+      "delta": 0.012820512820512886,
+      "novel_cluster_delta_95": [
+        -0.06557377049180324,
+        0.09722222222222221
+      ]
+    },
+    "GOLD_ORIG_vs_Q0": {
+      "wins": 43,
+      "losses": 40,
+      "discordant": 83,
+      "exact_p": 0.8264047244491933,
+      "delta": 0.01282051282051283,
+      "novel_cluster_delta_95": [
+        -0.049107142857142905,
+        0.07826086956521738
+      ]
+    }
+  }
+}

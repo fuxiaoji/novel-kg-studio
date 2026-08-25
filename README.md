@@ -4,6 +4,13 @@
 提供图+词法混合 RAG 检索（题目 -> 一阶线索 -> 二阶扩散线索），
 并生成三维动态可视化 dashboard（HTML，浏览器直接打开）。
 
+## 论文与总报告
+
+- **[数据、发现与论文全记录](docs/PROJECT_REPORT.md)** —— 所有数据、所有发现、中英文论文全文（推荐从这里开始）
+- 英文 NeurIPS 2026 草稿：[`paper/neurips2026/main.tex`](paper/neurips2026/main.tex) / [PDF](paper/neurips2026/build/main.pdf)
+- 中文完整版：[`paper/neurips2026_zh/main_zh.tex`](paper/neurips2026_zh/main_zh.tex) / [PDF](paper/neurips2026_zh/build/main_zh.pdf)
+- 30 部小说冻结评测报告：[`outputs/four_datasets/dqa30_attention/REPORT_30_novels.md`](outputs/four_datasets/dqa30_attention/REPORT_30_novels.md)
+
 ## 流程
 
 1. **第一遍 LLM**：遍历全文，剔除文学性内容，保留情节相关句子并按时间排序。

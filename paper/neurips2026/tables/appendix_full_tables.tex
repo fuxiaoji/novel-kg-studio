@@ -1,0 +1,70 @@
+\begin{tabular}{lcc}
+\toprule
+Method & correct/total & micro acc. (old20) \\
+\midrule
+Fair gold oracle (gold ceiling) & 93/164 & 56.7\% \\
+Gold oracle (evidence-first, original order) & 97/164 & 59.1\% \\
+Gold oracle (options-first, shuffled) & 88/164 & 53.7\% \\
+Options-first gold oracle & 63/164 & 38.4\% \\
+Graph-guided evidence expansion & 89/164 & 54.3\% \\
+Graph-native chunk reranking & 83/164 & 50.6\% \\
+Graph-based disagreement arbitration & 84/164 & 51.2\% \\
+Recent-window baseline & 79/164 & 48.2\% \\
+Whole-book compression baseline & 84/164 & 51.2\% \\
+Vector RAG baseline & 86/164 & 52.4\% \\
+Question-only control (terse) & 68/164 & 41.5\% \\
+Question-only control & 61/164 & 37.2\% \\
+\bottomrule
+\end{tabular}
+
+\begin{tabular}{lcc}
+\toprule
+Method & correct/total & micro acc. (new10) \\
+\midrule
+Fair gold oracle (gold ceiling) & 35/70 & 50.0\% \\
+Gold oracle (evidence-first, original order) & 38/70 & 54.3\% \\
+Gold oracle (options-first, shuffled) & 35/70 & 50.0\% \\
+Options-first gold oracle & 34/70 & 48.6\% \\
+Graph-guided evidence expansion & 37/70 & 52.9\% \\
+Graph-native chunk reranking & 36/70 & 51.4\% \\
+Graph-based disagreement arbitration & 41/70 & 58.6\% \\
+Recent-window baseline & 29/70 & 41.4\% \\
+Whole-book compression baseline & 36/70 & 51.4\% \\
+Vector RAG baseline & 35/70 & 50.0\% \\
+Question-only control (terse) & 26/70 & 37.1\% \\
+Question-only control & 33/70 & 47.1\% \\
+\bottomrule
+\end{tabular}
+
+\begin{tabular}{lcc}
+\toprule
+Method & correct/total & micro acc. (pooled) \\
+\midrule
+Fair gold oracle (gold ceiling) & 128/234 & 54.7\% \\
+Gold oracle (evidence-first, original order) & 135/234 & 57.7\% \\
+Gold oracle (options-first, shuffled) & 123/234 & 52.6\% \\
+Options-first gold oracle & 97/234 & 41.5\% \\
+Graph-guided evidence expansion & 126/234 & 53.8\% \\
+Graph-native chunk reranking & 119/234 & 50.9\% \\
+Graph-based disagreement arbitration & 125/234 & 53.4\% \\
+Recent-window baseline & 108/234 & 46.2\% \\
+Whole-book compression baseline & 120/234 & 51.3\% \\
+Vector RAG baseline & 121/234 & 51.7\% \\
+Question-only control (terse) & 94/234 & 40.2\% \\
+Question-only control & 94/234 & 40.2\% \\
+\bottomrule
+\end{tabular}
+
+\begin{tabular}{lc}
+\toprule
+Method & preservation on control-correct (pooled) \\
+\midrule
+Graph-guided evidence expansion & 70.2\% \\
+Graph-native chunk reranking & 59.6\% \\
+Graph-based disagreement arbitration & 71.3\% \\
+Recent-window baseline & 64.9\% \\
+Whole-book compression baseline & 72.3\% \\
+Vector RAG baseline & 74.5\% \\
+Options-first gold oracle & 57.4\% \\
+\bottomrule
+\end{tabular}

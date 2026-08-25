@@ -27,5 +27,15 @@ paper/generated/*.png
 paper/generated/*.svg
 paper/build/qa/
 
+# ---- Scratch QA screenshots (layout checks, regenerable) ----
+.qacheck/
+paper/neurips2026/qa/
+paper/**/qa/
+
+# ---- LaTeX intermediates (the compiled PDFs are tracked) ----
+*.aux
+*.bbl
+*.out
+
 # ---- Scratch / vendored agent output ----
 tmp/

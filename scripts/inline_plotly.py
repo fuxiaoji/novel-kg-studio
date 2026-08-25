@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DASH = ROOT / "outputs" / "demo" / "dashboard.html"
-PLOTLY = ROOT / "plotly_inline.js"
+PLOTLY = ROOT / "scripts" / "plotly_inline.js"
 
 
 def main() -> None:

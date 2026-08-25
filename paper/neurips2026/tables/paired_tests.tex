@@ -1,0 +1,18 @@
+% L = ragged-right wrapping label column; R = wrapping CI column.
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedright\arraybackslash}p{2.2cm}}
+\small
+\begin{tabularx}{\linewidth}{L rrrrR}
+\toprule
+Paired contrast & $\Delta$ & W/L & exact $p$ & Holm $p$ & bootstrap 95\% CI \\
+\midrule
+Fair gold vs. question-only (terse) & +14.53pp & 63/29 & \textbf{0.0005} & -- & [6.9, 23.4] \\
+Fair gold vs. graph-guided expansion & +0.85pp & 42/40 & 0.912 & -- & [-5.9, 8.0] \\
+Fair gold vs. graph arbitration & +1.28pp & 46/43 & 0.832 & -- & [-6.6, 9.7] \\
+Options-first gold vs. question-only (artifact) & +1.28pp & 43/40 & 0.826 & -- & [-4.9, 7.8] \\
+\midrule
+Graph-guided expansion vs. recent-window (pooled) & +7.69pp & 47/29 & 0.050 & 0.454 & [2.0, 13.9] \\
+Graph arbitration vs. recent-window (new10) & +17.14pp & 15/3 & 0.008 & 0.068 & [5.4, 31.9] \\
+\bottomrule
+\end{tabularx}
+\vspace{2pt}\begin{scriptsize}Exact two-sided paired McNemar over the same 234 questions; \textit{W/L} = wins/losses on discordant pairs. Bootstrap deltas are novel-clustered (5,000 resamples of whole novels).\end{scriptsize}
